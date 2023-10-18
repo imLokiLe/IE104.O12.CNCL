@@ -6,12 +6,106 @@
 }
 
 .sidebar-filter{
-    width: 25%;
+    width: 20%;
     /* width: 299px; */
 }
 
 .content-product{
     flex: 1;
+}
+
+/* Filter */
+.filter-block{
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+}
+
+.filter-block:not(:last-child){
+    border-bottom: 1px solid #ccc;
+}
+
+/* Filter Dogs and Cats */
+.filter-title{
+    display: flex;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    align-items: center;
+}
+
+.filter-block h4{
+    margin: 0;
+    font-family: Quicksand;
+    font-size: 25px;
+    font-weight: 700;
+    width: 45%;
+}
+
+.checkbox-all{
+    width: 55%;
+    text-align: right;
+    display: flex;
+    align-items: center;
+}
+
+.filter-block li{
+    display: flex;
+    font-size: 0.9em;
+    position: relative;
+    line-height: 2;    
+    align-items: center;
+    justify-content: space-around;
+}
+
+.pets-checkbox{
+    padding-left: 3px;
+    list-style: none;
+}
+
+input[type="checkbox"]{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #BBB;
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0 10px;
+}
+
+input[type="checkbox"]:after{
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f00c";
+    font-size: 13px;
+    display: none;
+}
+
+input[type="checkbox"]:hover {
+    background-color: #BBB;
+}
+
+input[type="checkbox"]:checked:after {
+    display: block;
+}
+
+.filter-block label .pets-name{
+    font-family: Quicksand;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.filter-block li .pets-count{
+    margin-left: auto;
+    color: #BBB;
+    font-family: Quicksand;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: right;
 }
 
 
