@@ -57,10 +57,10 @@
                 <div class="filter-title">
                     <h4>Chó</h4 >
                     <div class="checkbox-all">
-                        <input type="checkbox" name="checkbox" id="dogs">
                         <label for="dogs">
                             <span class="pets-name">Chọn tất cả</span>
                         </label> 
+                        <input type="checkbox" name="checkbox" id="dogs">
                     </div>
                 </div> 
                 
@@ -129,10 +129,10 @@
                 <div class="filter-title">
                     <h4> Mèo</h4 >
                     <div class="checkbox-all">
-                        <input type="checkbox" name="checkbox" id="cats">
                         <label for="cats">
                             <span class="pets-name">Chọn tất cả</span>
                         </label> 
+                        <input type="checkbox" name="checkbox" id="cats">
                     </div>
                 </div> 
                 
@@ -408,15 +408,19 @@
             </div>
             <!-- Pagination -->
             <div class="pagination-container">
-                <button class="btn-prep">prep</button>
+                <button class="btn-prep">
+                    <i class="fa-solid fa-caret-left"></i>
+                </button>
                 <ul class="pagination">
                     <li class="page-product" value="1">1</li>
                     <li class="page-product" value="2">2</li>
                     <li class="page-product" value="3">3</li>
-                    <li class="page-product" value="4">4</li>
-                    <li class="page-product" value="5">5</li>
+                    <li class="page-product" value="4">...</li>
+                    <li class="page-product" value="5">16</li>
                 </ul>
-                <button class="btn-next">next</button>
+                <button class="btn-next">
+                    <i class="fa-solid fa-caret-right"></i>
+                </button>
             </div>
         </div>
     </section>

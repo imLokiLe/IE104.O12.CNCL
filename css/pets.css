@@ -225,3 +225,39 @@ input[type="checkbox"]:checked:after {
     font-weight: 400;
     text-align: left;
 }
+
+/* Pagination */
+.pagination-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    color: #383838;
+    padding: 10px 40px;
+    border-radius: 6px;
+}
+.pagination{
+    margin: 20px 30px;
+    padding: 0;
+}
+.pagination li{
+    display: inline-block;
+    margin: 0 10px;
+    width: 45px;
+    height: 45px;
+    border: 2px solid #ccc;
+    box-shadow: 0 0 3px #ccc inset;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 45px;
+    cursor: pointer;
+}
+.btn-prep, .btn-next{
+    background: transparent;
+    outline: none;
+    border: none;
+    color: #EFBB3F;
+    font-size: 42px;
+}
