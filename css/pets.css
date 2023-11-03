@@ -1,4 +1,7 @@
 /* Sidebar pet filter */
+html, body {
+    height: 100%;
+}
 .page-container{
     display: flex;
     justify-content: space-between; 
@@ -22,6 +25,32 @@
 
 .filter-block:not(:last-child){
     border-bottom: 1px solid #ccc;
+}
+
+
+/* Filter Price */
+.price-input{
+    width: 100%;
+    display: flex;
+}
+.field input{
+    width: 85%;
+    height: 100%;
+    outline: none;
+    margin-left: 5%;
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+    text-align: center;
+    font-family: Quicksand;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+.price-input .seperator{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Filter Dogs and Cats */
@@ -258,6 +287,6 @@ input[type="checkbox"]:checked:after {
     background: transparent;
     outline: none;
     border: none;
-    color: #EFBB3F;
+    color: rgba(238, 190, 98, 0.50);;
     font-size: 42px;
 }
