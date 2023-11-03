@@ -1,4 +1,4 @@
-p, h3{
+p, h3, h4{
     margin: 0;
 }
 /* Product infromation */
@@ -122,7 +122,6 @@ p, h3{
     font-weight: bold;
     border-radius: 15px;
     cursor: pointer;
-
 }
 .infomation .btn-cart-buy .add-cart{
     border: 1px solid #000;
@@ -130,4 +129,40 @@ p, h3{
 .infomation .btn-cart-buy .buy-now{
     border: 1px solid #F2AB1E;
     background: #F2AB1E;
+}
+
+/* Product describe */
+.product-describe{
+    display: grid;
+    grid-template-columns: 62% 33%;
+    column-gap: 5%;
+    font-family: Quicksand;
+    border-top: 1px solid #D9D9D9;
+    margin: 4% 5% 0;
+    padding-top: 3% ;
+
+}
+.product-describe .sub-title{
+    grid-column: span 2;
+    color: #F2AB1E;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 2%;
+}
+.product-describe .describe-content, .product-describe .promotion-benefit-content{
+    padding: 3% 5%;
+    border-radius: 20px;
+    font-size: 18px;
+    border: 1px solid #868686;
+}
+.product-describe .describe-content{
+    background: #EFBB3F;
+}
+.product-describe .promotion-benefit-content{
+    background: #FFF;
+}
+.product-describe .promotion-benefit-content .fa-check{
+    color: #EEBE62;
+    padding-right: 2%;
 }
