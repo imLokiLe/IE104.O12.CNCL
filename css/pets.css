@@ -2,6 +2,25 @@
 html, body {
     height: 100%;
 }
+a {
+    text-decoration: none;
+}
+
+/* Address */
+.address{
+    padding: 25px 4%;
+    text-align: left;
+    font-family: Quicksand;
+    font-size: 20px;
+}
+.product-link{
+    color: #000;
+    text-transform: uppercase;
+}
+.current-link{
+    font-weight: bold;
+}
+
 .page-container{
     display: flex;
     justify-content: space-between; 
