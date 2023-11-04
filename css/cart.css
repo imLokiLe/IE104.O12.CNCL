@@ -1,0 +1,90 @@
+p,body, ul{
+    margin: 0;
+    padding: 0;
+    font-family: Quicksand;
+}
+a {
+    text-decoration: none;
+}
+body{
+    background-color: #F5F5FA;
+}
+
+/* Address */
+.address{
+    padding: 25px 4%;
+    text-align: left;
+    font-family: Quicksand;
+    font-size: 20px;
+}
+.product-link{
+    color: #000;
+    text-transform: uppercase;
+}
+.current-link{
+    font-weight: bold;
+}
+
+
+/* Progress bar */
+.progress-bar{
+    margin: 0 4%;
+    padding: 1% 0;
+    background: #FFF;
+    
+}
+.bar{
+    display: flex;
+    column-gap: 5%;
+    justify-content: center;
+}
+.bar li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bar li .text{
+    font-size: 20px;
+    font-weight: bold;
+    color: #BBB;
+}
+.bar .current .text{
+    color: #000;
+}
+.bar li .progress{
+    width: 50px;
+    height: 50px;
+    border: 4px solid #bbb;
+    border-radius: 50%;
+    margin: 14px 0;
+    display: grid;
+    place-items: center;
+    color: #bbb;
+    font-size: 20px;
+    position: relative;
+    cursor: pointer;
+}
+.bar .current .progress{
+    color: #fff;
+    background-color: #EFBB3F;
+    border: 4px solid #EFBB3F;
+}
+.progress::after{
+    content: " ";
+    position: absolute;
+    width: 110px;
+    height: 5px;
+    background-color: #BBBBBB;
+    right: 50px;
+}
+.one::after{
+    width: 0;
+    height: 0;
+}
+.three::after{
+    width: 122px;
+}
+.fa-chevron-down:not(.current .fa-chevron-down){
+    color: #fff;
+}
