@@ -88,3 +88,188 @@ body{
 .fa-chevron-down:not(.current .fa-chevron-down){
     color: #fff;
 }
+
+/* Cart content */
+.cart-content{
+    display: grid;
+    grid-template-columns: 69% 29%;
+    margin: 2% 4%;
+    column-gap: 2%;
+}
+.cart-product-all .cart-all{
+    display: grid;
+    grid-template-columns: 5% 15% 25% 15% 20% 15% 5%;
+    text-align: center;
+    align-items: center;
+    font-weight: bold;
+    background-color: #fff;
+    padding: 2% 0;
+    margin-bottom: 2%;
+}
+.cart-product-all .cart-all label{
+    grid-column: span 2;
+    text-align: left;
+}
+.cart-product-all .cart-product{
+    background-color: #fff;
+}
+.cart-product-all .cart-product .product{
+    display: grid;
+    grid-template-columns:  5% 15% 25% 15% 20% 15% 5%;
+    text-align: center;
+    align-items: center;
+    padding: 2% 0;
+}
+.cart-product-all .cart-product .product:not(:last-child){
+    padding-bottom: 1%;
+}
+.product label{
+    text-align: left;
+}
+.product .image-product{
+    height: auto;
+    width: 80%;
+    border: 2px solid #bbb;
+    border-radius: 20px;
+}
+.product .quantity-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product .quantity-btn *:not(.quantity-num){
+    padding: 7px 5px;
+    background-color: #F2AB1E;
+    cursor: pointer;
+}
+.product .quantity-btn .quantity-num{
+    border: 1px solid #D9D9D9;
+    padding: 5px 15px;
+    cursor: text;
+}
+.product .quantity-btn .fa-minus{
+    border: 1px solid #F2AB1E;
+    border-right: none;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+.product .quantity-btn .fa-plus{
+    border: 1px solid #F2AB1E;
+    border-left: none;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+.product p:not(.quantity-num){
+    font-weight: bold;
+}
+input[type="checkbox"]{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #BBB;
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0 10px;
+}
+input[type="checkbox"]:after{
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f00c";
+    font-size: 13px;
+    display: none;
+}
+input[type="checkbox"]:hover {
+    background-color: #BBB;
+}
+input[type="checkbox"]:checked:after {
+    display: block;
+}
+
+/* Cart price */
+.cart-price :not(.btn-buy,p,:last-child,svg){
+    margin-bottom: 5%;
+}
+/* Promotional code */
+.promotional-code{
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 2% 10% 5% 5%;
+    background-color: #fff;
+    font-size: 15px;
+    border-radius: 10px;
+
+}
+.promotional-code .promotional-name{
+    font-size: 18px;
+    font-weight: bold
+}
+.promotional-code .promotional-select {
+    grid-column: span 2;
+    display: flex;
+    color: #EFBB3F;
+    column-gap: 5% ;
+    padding-top: 5%;
+    cursor: pointer;
+}
+.promotional-code .promotional-note{
+    color: #bbb;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    column-gap: 5%;
+    justify-content: flex-end;
+}
+.promotional-code .promotional-note span{
+    display: grid;
+    place-items: center;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #bbb;
+    border-radius: 50%;
+    font-size: 10px;
+}
+/* Total price */
+.total-price{
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 2% 10% 5% 5%;
+    background-color: #fff;
+    font-size: 15px;
+    border-radius: 10px;
+}
+.total-price .all{
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-top: 4%;
+    margin-top: 5%;
+    border-top: 1px solid #D7D7D7;
+}
+.total-price .price{
+    text-align: right;
+    font-weight: bold;
+}
+.total-price .price span{
+    text-decoration-line: underline;
+}
+.total-price .price p:not(.note){
+    color: #FF424E;
+}
+.total-price .price .note{
+    font-size: 10px;
+}
+/* Button buy */
+.btn-buy{
+    border-radius: 10px;
+    background: #FF424E;
+    color: #FFF;
+    text-align: center;
+    font-weight: bold;
+    padding: 3% 0;
+    font-size: 20px;
+}
