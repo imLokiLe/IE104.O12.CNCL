@@ -73,7 +73,7 @@ body{
 .progress::after{
     content: " ";
     position: absolute;
-    width: 110px;
+    width: 114px;
     height: 5px;
     background-color: #BBBBBB;
     right: 50px;
@@ -83,7 +83,7 @@ body{
     height: 0;
 }
 .three::after{
-    width: 122px;
+    width: 124px;
 }
 .fa-chevron-down:not(.current .fa-chevron-down){
     color: #fff;
