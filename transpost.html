@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/transpost.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Transpost</title>
+</head>
+<body>
+   <!-- Header-->
+
+
+    <!-- Address -->
+    <section class="address">
+        <a href="" class="product-link current-link">Địa chỉ giao hàng</a>
+    </section>
+
+    <!-- Container -->
+    <section class="page-container" id="cart">
+        <!-- Progress bar -->
+        <div class="progress-bar">
+            <ul class="bar">
+                <li class="pre">
+                    <i class="fa-solid fa-chevron-down"></i>
+                    <div class="progress one">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <p class="text">Lựa chọn</p>
+                </li>
+                <li class="current">
+                    <i class="fa-solid fa-chevron-down"></i>
+                    <div class="progress two">
+                        <p>2</p>
+                    </div>
+                    <p class="text">Vận chuyển</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-chevron-down"></i>
+                    <div class="progress three">
+                        <p>3</p>
+                    </div>
+                    <p class="text">Thanh toán</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-chevron-down"></i>
+                    <div class="progress four">
+                        <p>4</p>
+                    </div>
+                    <p class="text">Xác nhận</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Transpost content -->
+        <div class="transpost-content">
+            <form>
+                <table>
+                    <tr>
+                        <td class="transpost-name">Họ tên</td>
+                        <td class="transpost-text">
+                            <input type="text" placeholder="Nhập họ tên">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="transpost-name">Điện thoại di động</td>
+                        <td class="transpost-text">
+                            <input type="text" placeholder="Nhập số điện thoại">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="transpost-name">Tỉnh/Thành phố</td>
+                        <td class="transpost-text">
+                            <select>
+                                <option value="">Chọn Tỉnh/Thành phố</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="transpost-name">Quận/Huyện</td>
+                        <td class="transpost-text">
+                            <select>
+                                <option value="">Chọn Quận/Huyện</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="transpost-name">Phường/Xã</td>
+                        <td class="transpost-text">
+                            <select>
+                                <option value="">Chọn Phường/Xã</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="transpost-name">Địa chỉ</td>
+                        <td class="transpost-text">
+                            <textarea cols="auto" rows="5" placeholder="Ví dụ: 52, đường Trần Hưng Đạo"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="transpost-name">Loại địa chỉ</td>
+                        <td class="transpost-text">
+                            <p>Để nhận hàng thuận tiện hơn, bạn vui lòng cho Pet Line biết loại địa chỉ.</p>
+                            <div class="radio">
+                                <input type="radio" name="radio" id="home">
+                                <label for="home">
+                                    <span class="product-name">Nhà riêng / Chung cư</span>
+                                </label>
+                                <input type="radio" name="radio" id="company">
+                                <label for="company">
+                                    <span class="product-name">Cơ quan / Công ty</span>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" name="checkbox" id="use-address">
+                                <label for="use-address">
+                                    <span class="product-name">Sử dụng địa chỉ này làm mặc định.</span>
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="transpost-text button">
+                            <button type="button" class="btn-cancel">Hủy bỏ</button>
+                            <button type="button" class="btn-accept">Giao địa chỉ này</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

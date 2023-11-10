@@ -31,7 +31,7 @@ body{
     margin: 0 4%;
     padding: 1% 0;
     background: #FFF;
-    
+    border-radius: 5px;
 }
 .bar{
     display: flex;
