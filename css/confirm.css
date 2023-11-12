@@ -1,0 +1,205 @@
+p, body, ul, h3{
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+body{
+    background-color: #F5F5FA;
+    font-family: Quicksand;
+}
+
+/* Address */
+.address{
+    padding: 25px 4%;
+    text-align: left;
+    font-family: Quicksand;
+    font-size: 20px;
+}
+.product-link{
+    color: #000;
+    text-transform: uppercase;
+}
+.current-link{
+    font-weight: bold;
+}
+
+/* Progress bar */
+.progress-bar{
+    margin: 0 4%;
+    padding: 1% 0;
+    background: #FFF;
+    border-radius: 5px;
+}
+.bar{
+    display: flex;
+    column-gap: 5%;
+    justify-content: center;
+}
+.bar li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bar li .text{
+    font-size: 20px;
+    font-weight: bold;
+    color: #BBB;
+}
+.bar .current .text, .bar .pre .text{
+    color: #000;
+}
+.bar li .progress{
+    width: 50px;
+    height: 50px;
+    border: 4px solid #bbb;
+    border-radius: 50%;
+    margin: 14px 0;
+    display: grid;
+    place-items: center;
+    color: #bbb;
+    font-size: 20px;
+    position: relative;
+    cursor: pointer;
+}
+.bar .current .progress, .bar .pre .progress{
+    color: #fff;
+    background-color: #EFBB3F;
+    border: 4px solid #EFBB3F;
+}
+.progress::after{
+    content: " ";
+    position: absolute;
+    width: 114px;
+    height: 5px;
+    background-color: #BBBBBB;
+    right: 50px;
+}
+.current .progress::after, .pre .progress::after{
+    background-color: #EFBB3F;
+}
+.one::after{
+    width: 0;
+    height: 0;
+}
+.three::after{
+    width: 124px;
+}
+.fa-chevron-down:not(.current .fa-chevron-down){
+    color: #fff;
+}
+
+/* Confirm content */
+.confirm-content{
+    display: grid;
+    grid-template-columns: 69% 29%;
+    margin: 2% 4%;
+    column-gap: 2%;
+}
+.confirm-content .content{
+    position: relative;
+}
+.content .image{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url(../images/confirm/red-white-cat-i-white-studio-1.png);
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 2.5% 6%;
+}
+.confirm-content .sub-title{
+    background-color: #EFBB3F;
+    text-align: right;
+    padding:6% 15%;
+    color: #fff;
+    border-radius: 5px 5px 0 0;
+}
+.confirm-content .sub-title h3{
+    font-size: 26px;
+}
+.confirm-content .sub-title p{
+    font-size: 20px;
+}
+.confirm-content .sub-content{
+    background-color: #fff;
+    padding: 2% 10% 5% 35%;
+    text-align: right;
+    border-radius: 0 0 5px 5px ;
+
+}
+.sub-content .payment-methods, .sub-content .payment-amount {
+    display:  flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
+.sub-content .payment-name{
+    color: #7D7D7D;
+}
+.payment-amount .payment-number {
+    font-size: 16px;
+    color: #7D7D7D;
+}
+.payment-amount .payment-number p{
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;
+}
+.sub-content .payment-amount{
+    margin-top: 3%;
+    padding-top: 4.5%;
+    border-top: 1px solid #DFDFDF;
+}
+.sub-content button{
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #EFBB3F;
+    border-radius: 4px;
+    padding: 2% 0;
+    margin-top: 3%;
+    color: #EFBB3F;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+/* All order */
+.all-order{
+    background-color: #fff;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    height: fit-content;
+    padding: 5% 2%;
+    font-size: 18px;
+}
+.all-order .order-title{
+    font-weight: bold;
+}
+.view-order{
+    text-align: right;
+    font-weight: bold;
+    color: #F2AB1E;
+}
+.all-order .product-order{
+    grid-column: span 2;
+    margin-top: 5%;
+    padding-top: 3%;
+    border-top: 1px solid #DFDFDF;
+}
+.product-order .order{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    align-items: center;
+    color: #6B6B6B;
+    padding-bottom: 1%;
+}
+.product-order .order .image-order{
+    width: 80%;
+    height: auto;
+    padding-left: 2%;
+}
