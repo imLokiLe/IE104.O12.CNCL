@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="./css/blog.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Quicksand:wght@500&display=swap"
+        rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/font/fontawesome-free-6.4.2-web/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="./js/link_header_footer.js"></script>
+</head>
+
+<body>
+    <div id="header"></div>
+    <!-- Giới thiệu -->
+    <div class="container">
+        <div class="page-ruler">
+            <p>TRANG CHỦ > BÀI VIẾT</p>
+        </div>
+        <div class="intro">
+            <div class="left-intro">
+                <h3>CÓ THỂ BẠN CHƯA BIẾT</h3>
+                <h5>Chăm sóc | Nuôi dạy | Kiến thức</h5>
+                <p>Nơi chia sẻ, trao đổi một số tips, kinh nghiệm nuôi dạy, chăm sóc sức khoẻ của thú cưng, ...</p>
+            </div>
+            <div class="right-intro">
+                <div class="img">
+                    <img src="./assets/images/blog/cat-glasses-1.png" alt="" height="620px" width="1050px">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- CÁC BÀI VIẾT -->
+        <div class="news">
+            <div class="new">
+                <div class="title">
+                    <div class="hr-lines">
+                        <h4>TIN TỨC</h4>
+                    </div>
+                </div>
+                <div class="new-container">
+                    <div class="sub-nav">
+                        <div class="topic-filter">
+                            <div class="select-menu">
+                                <div class="select-btn">
+                                    <i class="bi bi-funnel" style="padding-left: 8px;"></i>
+                                    <p class="sBtn_text">Đề tài</p>
+                                    <i class="bx bx-chevron-down" id="chevron"></i>
+                                </div>
+                                <ul class="options">
+                                    <li class="option">
+                                        <input type="checkbox" id="topic-1">
+                                        <label for="topic-1">#meovat</label>
+                                    </li>
+                                    <li class="option">
+                                        <input type="checkbox" id="topic-2">
+                                        <label for="topic-2">#suckhoe</label>
+                                    </li>
+                                    <li class="option">
+                                        <input type="checkbox" id="topic-3">
+                                        <label for="topic-3">#doisong</label>
+                                    </li>
+                                    <li class="option">
+                                        <input type="checkbox" id="topic-4">
+                                        <label for="topic-4">#kienthuc</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="pet-filter">
+                            <div class="select-menu">
+                                <div class="select-btn">
+                                    <i class="bi bi-arrow-down-up"></i>
+                                    <p class="sBtn_text">Phân loại</p>
+                                    <i class="bx bx-chevron-down" id="chevron"></i>
+                                </div>
+                                <ul class="options">
+                                    <li class="option">
+                                        <input type="checkbox" id="filter-1">
+                                        <label for="filter-1">#meo</label>
+                                    </li>
+                                    <li class="option">
+                                        <input type="checkbox" id="filter-2">
+                                        <label for="filter-2">#cho</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Search -->
+                        <div class="search_wrap">
+                            <div class="search_box">
+                                <input type="text" class="input" placeholder="Tìm kiếm..."
+                                    style="background-color: black; color: #fff;  font-family: 'Quicksand', sans-serif; padding-left: 20px;">
+                                <div class="btn btn_common">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- BLOG -->
+                <div class="blog-items">
+                    <div class="blog-card" id="blog-1">
+                        <div class="blog-card-banner">
+                            <img src="./assets/images/blog/blog-card-1.png" alt="" width="380" height="300"
+                                class="blog-banner-img">
+                        </div>
+                        <div class="blog-content-wrapper">
+                            <div>
+                                <div class="hr-lines" style="margin-left: 0;">
+                                    <p class="doctor-name">Bác sĩ Lê Tấn Lộc</p>
+                                </div>
+                            </div>
+                            <h3>Hướng dẫn mèo đi vệ sinh cát</h3>
+                            <p class="blog-text">
+                                Nếu bạn ghét việc phải tốn nhiều thời gian làm sạch khay cát vệ sinh của mèo mỗi ngày,
+                                bạn
+                                có
+                                thể
+                                dạy mèo đi vệ sinh đúng chỗ. Huấn luyện vệ sinh cho mèo là một cách tuyệt vời để giữ cho
+                                ngôi
+                                nhà
+                                của bạn sạch sẽ hơn, và nhiều con mèo thực hiện nó khá tốt.
+                            </p>
+                            <button>Xem hết</button>
+                            <div class="hashtag">
+                                <p>#kienthuc #meo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-card" id="blog-2">
+                        <div class="blog-card-banner">
+                            <img src="./assets/images/blog/blog-card-2.png" alt="" width="380" height="300"
+                                class="blog-banner-img">
+                        </div>
+                        <div class="blog-content-wrapper">
+                            <div>
+                                <div class="hr-lines" style="margin-left: 0;">
+                                    <p class="doctor-name">Bác sĩ Truơng Thị Thanh Thanh</p>
+                                </div>
+                            </div>
+                            <h3>Các dòng chó Pom phổ biến nhất tại Việt Nam </h3>
+                            <p class="blog-text">
+                                Chó Pom hay còn gọi là chó Phốc Sóc là một trong những giống chó cảnh
+                                nhỏ
+                                được
+                                ưa chuộng nhất tại Việt Nam hiện nay. Giống chó Pom có nhiều dòng khác nhau. Điều này có
+                                thể
+                                khiến nhiều người băn khoăn, không biết mình phù hợp để nuôi dòng chó Pom nào.
+                            </p>
+                            <button>Xem hết</button>
+                            <div class="hashtag">
+                                <p>#kienthuc #cho</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-card" id="blog-3">
+                        <div class="blog-card-banner">
+                            <img src="./assets/images/blog/blog-card-3.png" alt="" width="380" height="300"
+                                class="blog-banner-img">
+                        </div>
+                        <div class="blog-content-wrapper">
+                            <div>
+                                <div class="hr-lines" style="margin-left: 0;">
+                                    <p class="doctor-name">Bác sĩ Nguyễn Đặng Bảo Ngọc</p>
+                                </div>
+                            </div>
+                            <h3>Nhu cầu dinh dưỡng của chó và mèo theo khoa học</h3>
+                            <p class="blog-text">
+                                Cũng như những động vật khác, chó và mèo cần có thức ăn để sống và duy trì sức khỏe.
+                                Những
+                                chất
+                                dinh dưỡng mà cơ thể động vật đòi hỏi nhưng cơ thể không tự tổng hợp được thì gọi là
+                                chất
+                                dinh
+                                dưỡng thiết yếu và phải được cung cấp từ thức ăn.
+                            </p>
+                            <button>Xem hết</button>
+                            <div class="hashtag">
+                                <p>#suckhoe #doisong</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- CÁC ƯU ĐÃI -->
+        <div class="deals">
+            <div class="title" style="margin-top: 2%;">
+                <div class="hr-lines">
+                    <h4>CÁC ƯU ĐÃI</h4>
+                </div>
+            </div>
+            <div class="deal-container">
+                <div class="left-deals">
+                    <h4 style="font-size: 35px; color: #FE5B2E;">THÔNG TIN KHUYẾN MÃI</h4>
+                    <p>Nhằm mục đích tri ân và hỗ trợ khách hàng, Petline cung cấp một số các ưu đãi, khuyến mãi dành
+                        riêng cho các Sen, nhanh tay nào!!! </p>
+                    <button class="booking-btn">
+                        <div class="icon"><i class="fa-solid fa-calendar-days"></i></div>
+                        <p>ĐẶT LỊCH</p>
+                    </button>
+                </div>
+                <div class="right-deals">
+                    <div class="deal-card">
+                        <div class="deal-content-wrapper">
+                            <div>
+                                <div class="hr-lines" style="margin-left: 30px;">
+                                    <p class="deal-name" style="padding-left:100px; font-size: 23px; margin-top: 7%;">
+                                        Ưu đãi thẻ tín
+                                        dụng</p>
+                                </div>
+                            </div>
+                            <h1>TRẢ GÓP <br> LÃI SUẤT 0%</h1>
+                        </div>
+                        <div class="deal-banner">
+                            <img src="./assets/images/blog/deal-1.png" alt="" width="350" height="350"
+                                class="deal-banner-img">
+                            <h3>Trả góp ngay, rước BOSS liền tay!</h3>
+                        </div>
+                    </div>
+
+                    <div class="deal-card">
+                        <div class="deal-banner">
+                            <img src="./assets/images/blog/deal-2.png" alt="" width="280" height="370"
+                                class="deal-banner-img2">
+                        </div>
+                        <div class="deal-content-wrapper-2">
+                            <div>
+                                <div class="hr-lines" style="margin-left: 5px;">
+                                    <p class="deal-name" style="padding-left:100px; font-size: 23px; margin-top: 7%;">
+                                        01.05.2023 - 01.08.2023</p>
+                                </div>
+                            </div>
+                            <h2>GIẢM GIÁ 50% DỊCH VỤ SPA</h2>
+                            <p>Giảm ngay 50% cho dịch vụ spa lần đầu cho các khách hàng đã tin tưởng mua thú cưng tại
+                                PetLine Shop.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div id="footer"></div>
+    <script src="./js/blog.js"></script>
+
+</body>
+
+
+</html>
