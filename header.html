@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="/css/header.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Quicksand:wght@500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Arima:wght@600&family=Comfortaa&family=Poppins:wght@300;400;500;600;700;800&family=Quicksand:wght@500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -18,24 +20,32 @@
 
 <body>
     <header>
-        <img class="logo" src="/images/logo/black_logo.png" alt="logo" width="100" height="100">
+        <img class="logo" src="/images/black_logo.png" alt="logo" width="100" height="100">
         <div class="group">
             <ul class="navigation">
-                <li><a href="#">Trang chủ</a></li>
-                <li><a href="#">Thú cưng</a></li>
-                <li><a href="#">Cửa hàng</a></li>
-                <li><a href="#">Dịch vụ</a><i class="fa-solid fa-chevron-down htmlcss-arrow arrow"
-                        id="service-icon"></i></i>
+                <li><a href="/contact.html" class="menu-item">Trang chủ</a></li>
+                <li><a href="#" class="menu-item">Cửa hàng</a></li>
+                <li><a href="#" class="menu-item">Thú cưng</a></li>
+                <li><a href="#" class="menu-item parent-item">Dịch vụ</a><i
+                        class="fa-solid fa-chevron-down htmlcss-arrow arrow" id="service-icon"></i>
                     <ul class="dropdown">
-                        <li>Thú y</li>
-                        <li>Khách sạn</li>
-                        <li>Tập thể dục</li>
-                        <li>Tắm gội - cắt tỉa lông</li>
+                        <a href="/blog-detail.html" class="service-child-link">
+                            <li>Thú y</li>
+                        </a>
+
+                        <a href="/contact.html" class="service-child-link">
+                            <li class="child-item">Khách sạn</li>
+                        </a>
+                        <a href="/contact.html" class="service-child-link">
+                            <li class="child-item">Tập thể dục</li>
+                        </a>
+                        <a href="/contact.html" class="service-child-link">
+                            <li class="child-item">Tắm gội-cắt tỉa lông</li>
+                        </a>
                     </ul>
                 </li>
-                <li><a href="#">Bài viết </a></li>
-                <li><a href="#">Liên hệ</a></li>
-
+                <li><a href="#" class="menu-item">Bài viết</a></li>
+                <li><a href="#" class="menu-item">Liên hệ</a></li>
             </ul>
             <div class="search">
                 <span class="icon-header">
