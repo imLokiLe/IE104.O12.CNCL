@@ -1,4 +1,4 @@
-window.addEventListener("load", function () {
+document.addEventListener("DOMContentLoaded", function () {
     const menuItems = document.querySelectorAll('.menu-item');
     const serviceChildLinks = document.querySelectorAll('.service-child-link');
     const serviceLink = document.querySelector('.parent-item');

@@ -1,0 +1,195 @@
+
+.container-body{
+    position: relative;
+    top: 150px;
+}
+
+.dog_img{
+    width: 800px;
+    position: absolute;
+    left: -50px;
+    top: 300px;
+}
+.cat_img{
+    width: 300px;
+    position: absolute;
+    left: 82vw;
+}
+
+@keyframes move-roll {
+    0% {
+        transform: rotate(0) translateY(0px);
+    }
+    50% {
+        transform: rotate(-50deg) translate3d(50px, -60px, 60px);
+    }
+    100% {
+        transform: rotate(0) translateY(0px);
+    }
+  }
+.roll_img{
+    position: absolute;
+    left: 85%;
+    top: 100vh;
+    width: 200px;
+    animation: move-roll 7s infinite linear;
+}
+
+@keyframes food-roll {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(-70deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+  }
+.bone_img{
+    position: absolute;
+    left: 10%;
+    top: 15vh;
+    width: 150px;
+    animation: food-roll 5s infinite linear;
+    z-index: 1;
+}
+/* intro */
+.location{
+    margin-left: 50px;
+}
+.status{
+    position: relative;
+    top: 40px;
+    left: 27%;
+    width: 50%;
+}
+.status span{
+    background-color: #FF6B35;
+    color: white;
+    padding: 8px 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+}
+.state2 span{
+    background-color: #fff;
+    color: black;
+    border: 1px solid gray;
+}
+.status p{
+    padding: 10px 0;
+    position: relative;
+    right: 10px;
+    font-weight: bold;
+}
+#state-icon{
+    position: relative;
+    top: -35px;
+    left: 30px;
+}
+.status hr{
+    width: 750px;
+    height: 3px;
+    position: absolute;
+    left: 55px;
+    top: 10px;
+    background-color: gray;
+}
+.state1{
+    position: absolute;
+    left: 0;
+}
+.state2{
+    position: absolute;
+    right: 0;
+    color: gray;
+}
+
+/* form */
+form{
+    position: relative;
+    top: 10vh;
+    left: 17%;
+    width: 60%;
+    padding: 20px 50px;
+    font-weight: bold;
+    border-radius: 40px;
+}
+form *{
+    background-color: #FF9933;
+    border-radius: 20px;
+}
+.service_type{
+    padding: 50px 10px;
+}
+.note{
+    padding: 30px 10px;
+}
+
+form>div{
+    margin: 20px;
+}
+.name_and_phone{
+    display: grid;
+    grid-template-columns: 150px 200px 150px 200px;
+    column-gap: 20px;
+    padding: 30px 10px;
+}
+.note{
+    display: grid;
+    grid-template-columns: 200px 700px;
+    column-gap: 20px;
+}
+.time, .date{
+    display: grid;
+    grid-template-columns: 200px 300px;
+    column-gap: 20px;
+    padding: 20px 10px;
+}
+.service_type>div{
+    width: 25%;
+    display: inline;
+    margin: 40px;
+    position: relative;
+    left: 10%;
+    top: 5px;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 30px;
+}
+input, select, textarea{
+    border-radius: 30px;
+    background-color: #fff;
+    border: none;
+    padding: 0 20px;
+}
+input, select{
+    height: 30px;
+}
+/* button */
+.continue_btn_field{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 110px;
+    left: 55%;
+    color: white;
+    width: 30%;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    background-color: #FF6B35;
+    width: 150px;
+    height: 60px;
+    border-radius: 40px;
+    text-align: center;
+    font-weight: bold;
+    margin: 50px 50px;
+    box-shadow: 2px 2px 2px grey;
+}
+.btn>p{
+    position: relative;
+    top: 15px;
+}

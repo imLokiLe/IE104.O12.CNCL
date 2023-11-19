@@ -1,0 +1,297 @@
+.container-body{
+    position: relative;
+    top: 150px;
+}
+
+/* intro */
+.location{
+    margin-left: 50px;
+}
+.intro_content{
+    width: 40%;
+    position: relative;
+    left: 50%;
+    top: 50px;
+    text-align: center;
+}
+.intro_content h1{
+    margin: 30px;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    background-color: #F2AB1E;
+    width: 130px;
+    height: 50px;
+    border-radius: 40px;
+    text-align: center;
+    font-weight: bold;
+    margin: 50px 50px;
+    color: black;
+}
+.btn i{
+    position: relative;
+    top: 18px;
+    margin: 5px;
+}
+.btn>p{
+    position: relative;
+    top: 15px;
+}
+.intro_btn_field{
+    display: flex;
+    justify-content: center;
+}
+
+.bg{
+    
+    width: 100%;
+}
+.img_intro_vet{
+    width: 40%;
+    position: absolute;
+    top: 40px;
+}
+
+/* service */
+.service_fr1{
+    height: 650px;
+}
+.service{
+    position: absolute;
+    width: 100%;
+    top: 555px;
+}
+.service_list{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 70px;
+}
+.service hr{
+    width: 70px;
+    height: 2px;
+    background-color: #fff;
+    position: relative;
+    top: 15px;
+    left: 5px;
+    margin-left: 10px;
+}
+.service_subheading{
+    color: white;
+    display: flex;
+    justify-content: end;
+    font-weight: bold;
+}
+.service_heading{
+    text-align: right;
+    position: relative;
+    right: 70px;
+}
+.service_section{
+    padding: 20px;
+    width: 25%;
+    text-align: center;
+}
+.service_section>p{
+    padding-top: 20px;
+    color: #EEBE62;
+}
+.service h1{
+    color: #EEBE62;
+    margin: 20px 0 30px 0;
+}
+.service_content{
+    position: absolute;
+    left: 900px;
+    top: 500px;
+    width: 30%;
+    font-weight: bold;
+}
+.service_img{
+    position: relative;
+    top: 100px;
+    left: 10px;
+    width: 55%;
+}
+.service_content li{
+    margin: 10px;
+    line-height: 20px;
+}
+
+
+/* menu */
+.menu_fr{
+    position: relative;
+    top: 200px;
+    z-index: -1;
+    height: 1200px;
+}
+.menu{
+    position: absolute;
+    top: 1600px;
+    width: 100%;
+}
+.btn_option{
+    color: #F2AB1E;
+    background-color: white;
+}
+.menu_option{
+    display: flex;
+    justify-content: end;
+    position: relative;
+    right: 350px;
+}
+.menu table{
+    position: relative;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 1px 1px 10px gray inset;
+    padding: 10px 50px;
+    z-index: 1;
+}
+.menu td{
+    padding: 10px 40px;
+}
+.menu_left{
+    width: 50%;
+    position: absolute;
+    text-align: center;
+    top: 200px;
+}
+.menu_right{
+    position: absolute;
+    left: 600px;
+}
+.menu_btn_booking{
+    position: relative;
+    left: 35%;
+    color: #F2AB1E;
+    background-color: black;
+}
+.menu_img{
+    position: absolute;
+    width: 1000px;
+    top: 230px;
+    right: 560px;
+}
+
+/* urgency */
+.urgency{
+    position: relative;
+    top: 300px;
+}
+.urgency_content{
+    width: 50%;
+    text-align: center;
+}
+.urgency_img{
+    position: absolute;
+    top: -150px;
+    right: 0;
+}
+.urgency_heading{
+    display: flex;
+    position: relative;
+    left: 50px;
+}
+.urgency_heading hr{
+    width: 70px;
+    height: 2px;
+    position: relative;
+    top: 15px;
+    background-color: black;
+    margin-right: 10px;
+}
+.urgency_content h1{
+    text-align: center;
+    position: relative;
+    top: 40px;
+    left: 70px;
+}
+.urgency_content>p{
+    position: relative;
+    top: 100px;
+    left: 80px;
+}
+.urgency_btn_contact{
+    position: relative;
+    left: 320px;
+    top: 100px;
+}
+
+/* comment */
+.comment_fr{
+    position: relative;
+    top: 550px;
+    height: 400px;
+}
+.comment{
+    position: relative;
+    top: 200px;
+    width: 100%;
+}
+.comment_img{
+    position: absolute;
+    left: 100px;
+    width: 200px;
+}
+.comment_box{
+    background-color: #fff;
+    border-radius: 30px;
+    width: 65%;
+    height: 250px;
+    margin: 50px;
+    position: relative;
+    left: 15%;
+    top: -20px;
+}
+.comment_content{
+    position: relative; 
+    left: 450px;
+    top: 50px;
+}
+.comment hr{
+    width: 70px;
+    height: 2px;
+    position: relative;
+    top: 15px;
+    background-color: black;
+    margin-right: 10px;
+}
+.comment_heading{
+    display: flex;
+    position: relative;
+    left: 50px;
+}
+.comment_author{
+    display: flex;
+}
+.comment_content h1{
+    padding: 20px 20px 10px 20px;
+}
+.comment_detail{
+    padding-top: 30px;
+}
+.next_left{
+    position: absolute;
+    left: 100px;
+    bottom: 120px;
+}
+.next_right{
+    position: absolute;
+    left: 90%;
+    bottom: 120px;
+}
+.num_pg_group{
+    display: flex;
+    position: absolute;
+    bottom: -20px;
+    left: 700px;
+}
+.num_pg{
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    background-color: #fff;
+    border-radius: 50px;
+}

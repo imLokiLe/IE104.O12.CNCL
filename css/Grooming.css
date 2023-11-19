@@ -1,0 +1,283 @@
+.container-body{
+    position: relative;
+    top: 150px;
+}
+
+/* intro */
+.location{
+    margin-left: 50px;
+}
+.intro_content{
+    width: 40%;
+    position: relative;
+    left: 50%;
+    top: 50px;
+    text-align: center;
+}
+.intro_content h1{
+    margin: 30px;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    background-color: #F2AB1E;
+    width: 130px;
+    height: 50px;
+    border-radius: 40px;
+    text-align: center;
+    font-weight: bold;
+    margin: 50px 50px;
+}
+.btn i{
+    position: relative;
+    top: 18px;
+    margin: 5px;
+}
+.btn>p{
+    position: relative;
+    top: 15px;
+}
+.intro_btn_field{
+    display: flex;
+    justify-content: center;
+}
+
+.bg{
+    
+    width: 100%;
+}
+.img_intro_grooming{
+    width: 35%;
+    position: absolute;
+    top: 40px;
+    left: 70px;
+}
+
+/* process */
+.process{
+    width: 95%;
+    position: relative;
+    top: 200px;
+    left: 40px;
+}
+
+/* service */
+.service{
+    position: absolute;
+    top: 215vh;
+    width: 100%;
+}
+.service h1{
+    color: #EFBB3F;
+    padding: 20px 100px;
+}
+.service_content{
+    position: absolute;
+    left: 200px;
+    top: 150px;
+    background-color: black;
+    color: white;
+    line-height: 25px;
+    padding: 20px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+.service_subcontent{
+    display: flex;
+}
+.service_subcontent i{
+    color: #EFBB3F;
+    padding: 5px 10px;
+}
+.service_img{
+    position: absolute;
+    width: 450px;
+    left: 65rem;
+    top: -30px;
+}
+
+/* menu */
+.menu_fr{
+    position: relative;
+    top: 420px;
+}
+.menu{
+    position: absolute;
+    top: 300vh;
+}
+.menu_detail{
+    position: absolute;
+    left: 520px;
+}
+.menu_content{
+    position: absolute;
+    width: 50%;
+    top: 200px;
+    left: 50px;
+}
+.menu_content h1{
+    color: white;
+    position: relative;
+    left: 150px;
+}
+.menu_option{
+    display: flex;
+    background-color: #fff;
+    height: 50px;
+    width: 140px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px gray inset;
+    position: relative;
+    left: 120px;
+    top: 50px;
+}
+.menu_option p{
+    padding: 15px 18px;
+}
+.selected_option{
+    background-color: #F2AB1E;
+    border-radius: 20px;
+    width: 75px;
+}
+.menu_btn_booking{
+    position: relative;
+    left: 80px;
+    top: 50px;
+    color: white;
+    background-color: black;
+}
+
+/* extra service */
+.extra{
+    position: relative;
+    top: 500px;
+}
+.extra_service{
+    position: absolute;
+    left: 50px;
+}
+.extra_content{
+    position: absolute;
+    width: 45%;
+    left: 800px;
+    top: 50px;
+}
+.extra_content h1{
+    color: #EFBB3F;
+    margin: 20px 10px;
+}
+.service_premium_title{
+    background-color: black;
+    color: #EFBB3F;
+    width: 170px;
+    height: 170px;
+    border-radius: 100px;
+    position: absolute;
+    top: 280px;
+    left: 33px;
+}
+.service_premium_title h2{
+    position: relative;
+    top: 70px;
+    left: 10px;
+}
+.service_premium_description{
+    background-color: #EEBE62;
+    width: 500px;
+    padding: 20px 20px 20px 60px;
+    position: relative;
+    top: 80px;
+    left: 150px;
+    border-radius: 0 20px 20px 0;
+}
+.extra_btn_booking{
+    position: relative;
+    top: 100px;
+    left: 200px;
+}
+.extra_note{
+    margin: 15px;
+}
+
+/* comment */
+.comment_fr{
+    position: relative;
+    top: 1300px;
+    height: 400px;
+}
+.comment{
+    position: relative;
+    top: 950px;
+    width: 100%;
+}
+.comment_img{
+    position: absolute;
+    left: 100px;
+    width: 200px;
+}
+.comment_box{
+    background-color: #fff;
+    border-radius: 30px;
+    width: 65%;
+    height: 250px;
+    margin: 50px;
+    position: relative;
+    left: 15%;
+    top: -20px;
+}
+.comment_content{
+    position: relative; 
+    left: 450px;
+    top: 50px;
+}
+.comment hr{
+    width: 70px;
+    height: 2px;
+    position: relative;
+    top: 15px;
+    background-color: black;
+    margin-right: 10px;
+}
+.comment_heading{
+    display: flex;
+    position: relative;
+    left: 50px;
+}
+.comment_author{
+    display: flex;
+}
+.comment_content h1{
+    padding: 20px 20px 10px 20px;
+}
+.comment_detail{
+    padding-top: 20px;
+}
+.next_left{
+    position: absolute;
+    left: 100px;
+    bottom: 120px;
+}
+.next_right{
+    position: absolute;
+    left: 90%;
+    bottom: 120px;
+}
+.num_pg_group{
+    display: flex;
+    position: absolute;
+    bottom: -20px;
+    left: 700px;
+}
+.num_pg{
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    background-color: #fff;
+    border-radius: 50px;
+}
+
+/* footer */
+.pg-footer{
+    position: relative;
+    top: 160vh;
+}

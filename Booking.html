@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Quicksand:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/Booking.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="/images/black_logo.png" alt="logo" width="100" height="100">
+        <div class="group">
+            <ul class="navigation">
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Thú cưng</a></li>
+                <li><a href="#">Cửa hàng</a></li>
+                <li><a href="#">Dịch vụ</a><i class="fa-solid fa-chevron-down htmlcss-arrow arrow"
+                        id="service-icon"></i></i>
+                    <ul class="dropdown">
+                        <a href="../Vet/Vet.html"><li>Thú y</li></a>
+                        <a href="../Hotel/Hotel.html"><li>Khách sạn</li></a>
+                        <a href="../Exercise/Exercise.html"><li>Tập thể dục</li></a>
+                        <a href="../Grooming/Grooming.html"><li>Tắm gội - cắt tỉa lông</li></a>
+                    </ul>
+                </li>
+                <li><a href="#">Bài viết </a></li>
+                <li><a href="#">Liên hệ</a></li>
+
+            </ul>
+            <div class="search">
+                <span class="icon">
+                    <span class="searchBtn"><i class="fa-solid fa-magnifying-glass" id="searchBtn"></i></span>
+                    <span class="closeBtn"><i class="fa-solid fa-x" id="closeBtn"></i></span>
+                </span>
+            </div>
+            <span class="cartBtn">
+                <i class="fa fa-shopping-bag"></i>
+            </span>
+            <div class="searchBox">
+                <input type="text" placeholder="Bạn cần tìm gì nhỉ?">
+            </div>
+        </div>
+        <script src="../js/header.js"></script>
+    </header>
+
+    <div class="container-body">
+        <div class="location">
+            TRANG CHỦ > <b>ĐẶT LỊCH</b>
+        </div>
+        <img src="./assets/images/Booking/bone.png" alt="bone" class="bone_img">
+        <img src="./assets/images/Booking/roll.png" alt="roll" class="roll_img">
+        <img src="./assets/images/Booking/catnphone.png" alt="catnphone" class="cat_img">
+        <img src="./assets/images/Booking/dognphone.png" alt="dognphone" class="dog_img">
+        <!-- status -->
+        <div class="status">
+            <div class="state1">
+                <i class="fa-solid fa-chevron-down htmlcss-arrow arrow"
+                        id="state-icon"></i>
+                <span>1</span>
+                <p>Điền thông tin</p>
+            </div>
+            <hr>
+            <div class="state2">
+                <span>2</span>
+                <p>Xác nhận</p>
+            </div>
+        </div>
+
+        <!-- form -->
+        <form>
+            <div class="name_and_phone">
+                <p>Khách hàng:</p>
+                <input type="text">
+                <p>Số điện thoại:</p>
+                <input type="tel">
+            </div>
+            <div class="service_type">
+                <p>Loại dịch vụ:</p>
+                <div class="vet">Thú Y</div>
+                <div class="grooming">Tắm Gội - Cắt Tỉa Lông</div>
+                <div class="hotel">Khách Sạn</div>
+                <div class="exercise">Tập Thể Dục</div>
+            </div>
+            <div class="date">
+                <p>Ngày hẹn:</p>
+                <input type="date">
+            </div>
+            <div class="time">
+                <p>Khung giờ:</p>
+                <select>
+                    <option selected>8:00 - 10:00</option>
+                    <option>10:00 - 12:00</option>
+                    <option>12:00 - 14:00</option>
+                    <option>14:00 - 16:00</option>
+                    <option>16:00 - 18:00</option>
+                    <option>18:00 - 20:00</option>
+                </select>
+            </div>
+            <div class="note">
+                <p>Ghi chú:</p>
+                <textarea cols="60" rows="7"></textarea>
+            </div>
+        </form>
+
+        <!-- btn -->
+        <div class="continue_btn_field">
+            <div class="btn btn_cancel">
+                <p>HỦY</p>
+            </div>
+            <div class="btn btn_continue">
+                <p>TIẾP TỤC</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

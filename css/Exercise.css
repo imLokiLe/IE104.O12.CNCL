@@ -1,0 +1,197 @@
+.container-body{
+    position: relative;
+    top: 150px;
+}
+
+/* intro */
+.location{
+    margin-left: 50px;
+}
+.intro_content{
+    width: 40%;
+    position: relative;
+    left: 50%;
+    top: 50px;
+    text-align: center;
+}
+.intro_content h1{
+    margin: 30px;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    background-color: #F2AB1E;
+    width: 130px;
+    height: 50px;
+    border-radius: 40px;
+    text-align: center;
+    font-weight: bold;
+    margin: 50px 50px;
+}
+.btn i{
+    position: relative;
+    top: 18px;
+    margin: 5px;
+}
+.btn>p{
+    position: relative;
+    top: 15px;
+}
+.intro_btn_field{
+    display: flex;
+    justify-content: center;
+}
+
+.bg{
+    
+    width: 100%;
+}
+.img_intro_exercise{
+    width: 35%;
+    position: absolute;
+    top: 50px;
+    left: 70px;
+}
+
+/* infor */
+.infor_fr{
+    position: absolute;
+    top: 520px;
+    height: 270vh;
+}
+.infor{
+    position: relative;
+    top:400px;
+}
+.infor_content{
+    width: 30%;
+    line-height: 30px;
+    font-weight: bold;
+    position: absolute;
+    left: 200px;
+}
+.infor_content h1{
+    margin-bottom: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+.doggym_img{
+    position: relative;
+    left: 50%;
+    top: 100px;
+    z-index: 1;
+}
+.dogstatus_img{
+    position: relative;
+    top: -50px;
+    left: 300px;
+    z-index: 0;
+}
+.arrow_img{
+    position: relative;
+    right: 40%;
+    top: 50px;
+}
+.infor>h1{
+    position: absolute;
+    left: 35%;
+    color: #EEBE62;
+}
+
+/* process */
+.process_fr{
+    position: absolute;
+    top: 200vh;
+    height: 150rem;
+}
+.process{
+    position: relative;
+    top: 500px;
+}
+.process_img1{
+    position: absolute;
+    left: 20px;
+    top: 80px;
+    z-index: 1;
+}
+.process h1{
+    position: relative;
+    left: 50%;
+    top: 5rem;
+}
+.process_content{
+    position: relative;
+    left: 50%;
+    top: 150px;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+.process_content span{
+    font-weight: bold;
+}
+.process_title{
+    text-align: right;
+}
+.process_run{
+    position: relative;
+    top: 50px;
+}
+.process_end{
+    position: relative;
+    top: 230px;
+}
+.process_run_description{
+    position: relative;
+    top: 50px;
+}
+.process_end_description{
+    position: relative;
+    top: 200px;
+}
+
+/* support */
+.support_process{
+    position: relative;
+    top: 70rem;
+}
+.support_content{
+    position: absolute;
+    left: 200px;
+    line-height: 30px;
+}
+.support_content h1{
+    margin: 20px;
+}
+.support_content span{
+    position: relative;
+    left: 30px;
+}
+.process_img2{
+    position: relative;
+    left: 50%;
+    top: 100px;
+    width: 600px;
+}
+
+/* menu */
+.menu_fr{
+    position: absolute;
+    top: 560vh;
+}
+.menu{
+    position: relative;
+    top: 90rem;
+}
+.menu_detail{
+    position: relative;
+    left: 200px;
+    width: 70%;
+}
+.menu_btn_field{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    left: 60%;
+    width: 30%;
+}

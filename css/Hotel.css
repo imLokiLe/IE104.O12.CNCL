@@ -1,0 +1,269 @@
+.container-body{
+    position: relative;
+    top: 150px;
+}
+
+/* intro */
+.location{
+    margin-left: 50px;
+}
+.intro_content{
+    width: 40%;
+    position: relative;
+    left: 70px;
+    top: 50px;
+    text-align: center;
+}
+.intro_content h1{
+    margin: 30px;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    background-color: #F2AB1E;
+    width: 130px;
+    height: 50px;
+    border-radius: 40px;
+    text-align: center;
+    font-weight: bold;
+    margin: 50px 50px;
+}
+.btn i{
+    position: relative;
+    top: 18px;
+    margin: 5px;
+}
+.btn>p{
+    position: relative;
+    top: 15px;
+}
+.intro_btn_field{
+    display: flex;
+    justify-content: center;
+}
+
+.bg{
+    
+    width: 100%;
+}
+.img_intro_hotel{
+    width: 35%;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+}
+
+/* special */
+.special_fr{
+    position: relative;
+    top: 250px;
+    height: 60rem;
+}
+.special{
+    position: absolute;
+    top: 700px;
+    width: 100%;
+}
+.phone_img{
+    position: absolute;
+    left: 50px;
+    width: 400px;
+}
+.special_content{
+    position: absolute;
+    left: 700px;
+    top: 100px;
+    color: white;
+}
+.special_content h1{
+    margin-bottom: 40px;
+}
+.special_content ul{
+    line-height: 30px;
+    font-weight: 200;
+}
+.special_btn_field{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 40px;
+    color: black;
+}
+.special_btn_booking, .special_btn_contact{
+    background-color: #fff;
+}
+
+/* facilities */
+.facilities{
+    position: relative;
+    width: 100%;
+    top: 300px;
+}
+.facilities_detail{
+    width: 600px;
+    position: relative;
+    left: 150px;
+    z-index: 1;
+}
+.facilities_img{
+    position: relative;
+    left: 450px;
+    top: 30px;
+}
+
+/* room */
+.room_fr{
+    position: relative;
+    top: 200px;
+    z-index: 0;
+    height: 50rem;
+}
+.room{
+    position: absolute;
+    top: 150rem;
+    width: 100%;
+}
+.room_option{
+    background-color: #fff;
+    width: 260px;
+    height: 50px;
+    display: flex;
+    position: relative;
+    left: 200px;
+    border-radius: 40px;
+    box-shadow: 1px 1px 10px gray inset;
+}
+.room_option p{
+    position: relative;
+    top: 15px;
+    font-weight: bold;
+    padding: 0 10px;
+}
+.selected_option{
+    background-color: #F2AB1E;
+    padding: 0 10px;
+    border-radius: 40px;
+}
+.room_btn_field{
+    display: flex;
+    justify-content: space-around;
+}
+.room_box{
+    position: relative;
+    top: 50px;
+    width: 70%;
+    left: 230px;
+    background-color: white;
+    height: 300px;
+    border-radius: 30px;
+    box-shadow: 1px 1px 10px gray inset;
+}
+.room_content{
+    width: 40%;
+    position: absolute;
+    left: 500px;
+    top: 50px;
+}
+.room_content h1{
+    margin-bottom: 20px;
+}
+.room_img{
+    position: absolute;
+    width: 300px;
+    top: 20px;
+    left: 50px;
+}
+
+/* menu */
+.menu{
+    position: relative;
+    top: 150px;
+    width: 100%;
+}
+.menu_detail{
+    position: absolute;
+    left: 100px;
+}
+.menu_content{
+    position: relative;
+    top: 300px;
+    left: 70rem;
+}
+.menu_btn_booking{
+    position: relative;
+    right: 70px;
+}
+
+/* note and rule */
+.rule_fr{
+    position: relative;
+    top: 40rem;
+    z-index: -1;
+    height: 57rem;
+}
+.rule{
+    position: relative;
+    top: -150px;
+}
+.rule_img{
+    position: relative;
+    top: 200px;
+    left: 100px;
+}
+.idea_box{
+    position: relative;
+    left: 100px;
+}
+.rule_content{
+    position: absolute;
+    width: 40%;
+    left: 40rem;
+    bottom: 250px;
+    line-height: 25px;
+    font-weight: bold;
+}
+.rule_content h1{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.rule_note{
+    background-color: #fff;
+    width: 260px;
+    height: 50px;
+    display: flex;
+    position: relative;
+    left: 200px;
+    border-radius: 40px;
+    box-shadow: 1px 1px 10px gray inset;
+    position: relative;
+    left: 50rem;
+    top: 50px;
+}
+.rule_note p{
+    position: relative;
+    top: 15px;
+    font-weight: bold;
+    padding: 0 20px;
+    left: 20px;
+}
+.rule_note>p{
+    position: relative;
+    left: -10px;
+}
+.rule_note_option{
+    background-color: #F2AB1E;
+    padding: 0 10px;
+    padding-right: 40px;
+    border-radius: 40px;
+}
+
+/* takecare */
+.takecare{
+    width: 100%;
+    position: absolute;
+}
+
+.pg-footer{
+    position: relative;
+    top: 130vh;
+}
