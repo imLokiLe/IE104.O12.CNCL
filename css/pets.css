@@ -119,8 +119,8 @@ a {
 }
 .range-price .slider .progress {
     height: 5px;
-    left: 30%;
-    right: 30%;
+    left: 0;
+    right: 0;
     position: absolute;
     border-radius: 5px;
     background: #eebe62;
