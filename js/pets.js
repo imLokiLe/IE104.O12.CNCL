@@ -27,9 +27,69 @@ function toggleDropdownCat() {
 const toggleCat = document.getElementById("toggleCat");
 toggleCat.addEventListener("click",toggleDropdownCat)
 
+//Pagination
+function renderPagination() {
+    const totalPages = Math.ceil(pets.length / prePage);
+    const paginationContainer = document.querySelector('.pagination-container');
+    paginationContainer.innerHTML = '';
+
+    // Button trở lại trang cũ
+    const btnPrev = document.createElement('button');
+    btnPrev.classList.add('btn-prep');
+    btnPrev.innerHTML = '<i class="fa-solid fa-caret-left"></i>';
+    btnPrev.addEventListener('click', () => {
+      if (currentPage > 1) {
+        currentPage--;
+        renderpetCategory(pets);
+        renderPagination();
+      }
+    });
+    paginationContainer.appendChild(btnPrev);
+
+    // Số trang
+    const pagination = document.createElement('ul');
+    pagination.classList.add('pagination');
+
+    for (let i = 1; i <= totalPages; i++) {
+        const pageItem = document.createElement('li');
+        pageItem.classList.add('page-product');
+        pageItem.textContent = i;
+        pageItem.setAttribute('value', i);
+        if (i === currentPage) {
+            pageItem.classList.add('current-page');
+        }
+        pageItem.addEventListener('click', () => {
+            currentPage = i;
+            renderpetCategory(pets);
+            renderPagination();
+        });
+        pagination.appendChild(pageItem);
+    }
+    paginationContainer.appendChild(pagination);
+
+    // Button đi tới trang mới 
+    const btnNext = document.createElement('button');
+    btnNext.classList.add('btn-next');
+    btnNext.innerHTML = '<i class="fa-solid fa-caret-right"></i>';
+    btnNext.addEventListener('click', () => {
+      if (currentPage < totalPages) {
+        currentPage++;
+        renderpetCategory(pets);
+        renderPagination();
+      }
+    });
+    paginationContainer.appendChild(btnNext);
+}
+
+let prePage = 12;
+let currentPage = 1;
 // Show pets category
 function renderpetCategory (pets) {
-    const list = [...new Set(pets.map((item) => item))];
+    const petsToRender = pets.slice((currentPage - 1) * prePage, currentPage * prePage);
+
+    // Create a unique list of pets
+    const list = [...new Set(petsToRender)];
+    //const list = [...new Set(pets.map((item) => item))];
     const productList = document.getElementById("product-list");
 
     productList.innerHTML = list.map((item) => {
@@ -67,7 +127,6 @@ function renderpetCategory (pets) {
         );
     }).join('');
 }
-renderpetCategory (pets)
 
 
 function displayFilteredPets(allCheckbox_dogs, allCheckbox_cats,  minPrice, maxPrice) {
@@ -218,6 +277,9 @@ function FilterOptions() {
         displayFilteredPets(allCheckbox_dogs, allCheckbox_cats, priceInput[0].value, priceInput[1].value);
     });
 }
+
+renderpetCategory (pets)
 renderFilterOptions(document.getElementById("filterOptionsDog"), 'dog');
 renderFilterOptions(document.getElementById("filterOptionsCat"), 'cat');
+renderPagination();
 FilterOptions()

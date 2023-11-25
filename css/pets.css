@@ -373,7 +373,7 @@ input[type="checkbox"]:checked:after {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #fff;
+    background: transparent;
     color: #383838;
     padding: 10px 40px;
     border-radius: 6px;
@@ -396,11 +396,21 @@ input[type="checkbox"]:checked:after {
     line-height: 45px;
     cursor: pointer;
 }
+.pagination li.current-page{
+    background-color: #eebe62;
+}
 .btn-prep,
 .btn-next {
     background: transparent;
     outline: none;
     border: none;
-    color: rgba(238, 190, 98, 0.5);
+    color: #eebe62;
+    opacity: 0.5;
     font-size: 2.625rem;
+    cursor: pointer;
+}
+.btn-prep:hover,
+.btn-next:hover{
+    opacity: 1;
+
 }
