@@ -28,7 +28,7 @@ const toggleCat = document.getElementById("toggleCat");
 toggleCat.addEventListener("click",toggleDropdownCat)
 
 //Pagination
-function renderPagination() {
+function renderPagination(pets) {
     const totalPages = Math.ceil(pets.length / prePage);
     const paginationContainer = document.querySelector('.pagination-container');
     paginationContainer.innerHTML = '';
@@ -41,7 +41,7 @@ function renderPagination() {
       if (currentPage > 1) {
         currentPage--;
         renderpetCategory(pets);
-        renderPagination();
+        renderPagination(pets);
       }
     });
     paginationContainer.appendChild(btnPrev);
@@ -61,7 +61,7 @@ function renderPagination() {
         pageItem.addEventListener('click', () => {
             currentPage = i;
             renderpetCategory(pets);
-            renderPagination();
+            renderPagination(pets);
         });
         pagination.appendChild(pageItem);
     }
@@ -75,7 +75,7 @@ function renderPagination() {
       if (currentPage < totalPages) {
         currentPage++;
         renderpetCategory(pets);
-        renderPagination();
+        renderPagination(pets);
       }
     });
     paginationContainer.appendChild(btnNext);
@@ -162,7 +162,16 @@ function displayFilteredPets(allCheckbox_dogs, allCheckbox_cats,  minPrice, maxP
         const petPrice = parseInt(pet.price.replaceAll(',',''));
         return petPrice >= minPrice && petPrice <= maxPrice;
     });
-    renderpetCategory (finalFilteredPets);
+    const result = document.querySelector(".result-count")
+    result.innerHTML = `<p>Hiển thị ${finalFilteredPets.length} trong số ${pets.length} thú cưng</p>`
+    
+    const sortSelect = document.querySelector('.sort-select');
+    let selectedSortOption = sortSelect.value; // Initialize selectedSortOption
+    const handleSort = handleSortChange(finalFilteredPets);
+    sortSelect.addEventListener('change', handleSort);
+
+    renderpetCategory(sortPetsByPrice(finalFilteredPets, selectedSortOption));
+    renderPagination(sortPetsByPrice(finalFilteredPets, selectedSortOption));
 }
 
 function renderFilterOptions(filterOptionsElement, genus) {
@@ -277,9 +286,40 @@ function FilterOptions() {
         displayFilteredPets(allCheckbox_dogs, allCheckbox_cats, priceInput[0].value, priceInput[1].value);
     });
 }
+function sortPetsByPrice(pets, sortOption) {
+    return pets.slice().sort((a, b) => {
+        const priceA = parseInt(a.price.replaceAll(',', ''));
+        const priceB = parseInt(b.price.replaceAll(',', ''));
 
-renderpetCategory (pets)
+        if (sortOption === 'low-to-high') {
+            return priceA - priceB;
+        } else if (sortOption === 'high-to-low') {
+            return priceB - priceA;
+        }
+
+        // Default case: no sorting
+        return 0;
+    });
+}
+
+function handleSortChange(pets) {
+    return function () {
+        const sortSelect = document.querySelector('.sort-select');
+        selectedSortOption = sortSelect.value; 
+
+        const sortedPets = sortPetsByPrice(pets, selectedSortOption);
+        renderpetCategory(sortedPets);
+        renderPagination(sortedPets);
+    }
+}
+const sortSelect = document.querySelector('.sort-select');
+let selectedSortOption = sortSelect.value; 
+const handleSort = handleSortChange(pets);
+sortSelect.addEventListener('change', handleSort);
+const result = document.querySelector(".result-count")
+result.innerHTML = `<p>Hiển thị ${pets.length} trong số ${pets.length} thú cưng</p>`
+renderpetCategory(sortPetsByPrice(pets, selectedSortOption));
+renderPagination(sortPetsByPrice(pets, selectedSortOption));
 renderFilterOptions(document.getElementById("filterOptionsDog"), 'dog');
 renderFilterOptions(document.getElementById("filterOptionsCat"), 'cat');
-renderPagination();
 FilterOptions()
