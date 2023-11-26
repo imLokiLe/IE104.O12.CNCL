@@ -5,14 +5,10 @@ body {
     box-sizing: border-box;
 }
 
-.container {
-    font-size: 1.5rem;
-}
 
 .page-ruler {
     margin-top: 9%;
-    padding-left: 40px;
-    font-size: 1rem;
+    padding-left: 40px
 }
 
 .intro {
@@ -26,8 +22,10 @@ body {
 }
 
 .left-intro {
+
     width: 25%;
     margin-left: 20%;
+    font-size: 28px;
 }
 
 .left-intro h3 {
@@ -41,7 +39,7 @@ body {
 }
 
 .left-intro p {
-    font-size: 0.7em;
+    font-size: 0.74em;
     width: 90%;
     margin-top: 8px;
 }
@@ -61,7 +59,7 @@ body {
     padding-top: 100px;
 }
 
-.title h4 {
+.title h3 {
     margin-left: 100px;
 }
 
@@ -71,6 +69,11 @@ body {
     margin-left: 10px;
     text-align: left;
 }
+
+.hr-lines h3 {
+    font-size: 1.5em;
+}
+
 
 
 .hr-lines:before {
@@ -90,32 +93,38 @@ body {
     margin-left: 10%;
     margin-right: 10%;
     position: relative;
+    /* Thêm thuộc tính position */
 
 }
 
 .pet-filter {
-    margin-left: auto;
+    margin-left: 20%;
+    position: absolute;
+    z-index: 1;
 }
 
 .topic-filter {
     position: absolute;
     z-index: 1;
+    /* Đặt z-index lớn hơn so với các blog card */
 }
 
 
 /* FILTER */
-.select-menu {
+.select-menu1,
+.select-menu2 {
     width: 200px;
     margin: 0 0;
     font-family: 'Quicksand', sans-serif;
 }
 
-.select-menu .select-btn {
+.select-menu1 .select-btn1,
+.select-menu2 .select-btn2 {
     display: flex;
     height: 55px;
     background: #121111;
     padding: 15px;
-    font-size: 1.1rem;
+    font-size: 23px;
     border-radius: 35px;
     align-items: center;
     cursor: pointer;
@@ -128,11 +137,13 @@ body {
     transition: 0.3s;
 } */
 
-.select-menu.active .select-btn #chevron {
+.select-menu1.active .select-btn1 #chevron,
+.select-menu2.active .select-btn2 #chevron {
     transform: rotate(-180deg);
 }
 
-.select-menu .options {
+.select-menu1 .options,
+.select-menu2 .options {
     position: relative;
     padding: 10px;
     margin-top: 10px;
@@ -141,15 +152,22 @@ body {
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
     display: none;
     width: 200px;
-    font-size: 1rem;
 }
 
-.select-menu.active .options {
+
+.select-menu1.active .options,
+.select-menu2.active .options {
     display: block;
     width: 200px;
 }
 
-.options .option {
+.options .option1 label,
+.options .option2 label {
+    margin-left: 5px;
+}
+
+.options .option1,
+.options .option2 {
     display: flex;
     height: 55px;
     cursor: pointer;
@@ -159,13 +177,16 @@ body {
     background: #fffaf0;
 }
 
-.options .option:hover {
+.options .option1:hover {
     position: relative;
     background: #F2F2F2;
     width: 200px;
     right: 5.5%;
-    font-size: 1.1rem;
 
+}
+
+.options li {
+    list-style-type: none;
 }
 
 /* SEARCH */
@@ -175,7 +196,7 @@ body {
     box-sizing: border-box;
     font-family: 'Quicksand', sans-serif;
     border-color: #1b1616;
-    margin-left: 40%;
+    margin-left: 75%;
 }
 
 .search_wrap .search_box {
@@ -193,7 +214,7 @@ body {
     padding: 0px 10px;
     border-radius: 3px;
     border-color: #1b1616;
-    font-size: 1.1rem;
+    font-size: 23px;
 }
 
 .search_wrap .search_box .btn:hover {
@@ -206,7 +227,7 @@ body {
     left: 90%;
     transform: translate(-50%, -50%);
     color: #fffaf0;
-    font-size: 1.1rem;
+    font-size: 20px;
 
 }
 
@@ -217,6 +238,10 @@ body {
 .search_wrap .search_box .input {
     border-radius: 50px;
 
+}
+
+.search_wrap .search_box .input:focus {
+    outline: none;
 }
 
 .search_wrap .search_box .btn {
@@ -241,7 +266,7 @@ body {
     display: flex;
     justify-content: space-between;
     font-size: 17px;
-    border: 1px solid #FF8C4D;
+    border: 1px solid #FE5B2E;
     border-radius: 20px;
     /* box-shadow: 2px 5px 1px #fffaf0; */
     position: relative;
@@ -293,7 +318,7 @@ body {
 }
 
 .blog-card button:hover {
-    background-color: #FF6B35;
+    background-color: #FF6B34;
     cursor: pointer;
 }
 
@@ -302,15 +327,112 @@ body {
     margin-left: 76%;
 }
 
+/* paginate */
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    color: #383838;
+    padding: 10px 40px;
+    border-radius: 6px;
+}
+
+.pagination {
+    margin: 20px 30px;
+    padding: 0;
+}
+
+
+.pagination li {
+    display: inline-block;
+    margin: 0 10px;
+    width: 45px;
+    height: 45px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px #ccc inset;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 45px;
+    cursor: pointer;
+    background-color: #fffaf0;
+}
+
+.pagination li:hover {
+    background-color: #724a3561;
+    border: 1px solid #724a3561;
+    box-shadow: 0 0 5px #724a3561 inset;
+}
+
+.pagination li:first-child {
+    background-color: #804626;
+    border: 1px solid #C87044;
+    box-shadow: 0 0 5px #C87044 inset;
+    color: #fffaf0;
+}
+
+/* .pagination li.current-page {
+    background-color: #eebe62;
+} */
+
+.btn-prep {
+    background: transparent;
+    outline: none;
+    border: none;
+    color: #C87044;
+    opacity: 0.5;
+    font-size: 2.8rem;
+    cursor: pointer;
+}
+
+.btn-next {
+    background: transparent;
+    outline: none;
+    border: none;
+    color: #804626;
+    opacity: 0.5;
+    font-size: 2.8rem;
+    cursor: pointer;
+
+}
+
+.btn-prep:hover,
+.btn-next:hover {
+    opacity: 1;
+
+}
+
+.pagination {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination a {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+}
+
+.pagination a:hover {
+    background-color: #ff9900;
+}
+
 /* DEALS */
 
 .deals {
     position: relative;
-    background-image: url(../assets/backgrounds/bg-home-overlay.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
     height: 1200px;
+    background-image: url(/images/overlay-bg\ 1.png);
+    background-repeat: repeat-x;
+    background-size: 80% 110%;
 
 }
 
@@ -323,10 +445,11 @@ body {
 .left-deals {
     width: 20%;
     margin-left: 10%;
+    font-size: 28px;
 }
 
 .left-deals p {
-    font-size: 1rem;
+    font-size: 20px;
     line-height: 1.5;
 }
 
@@ -338,7 +461,7 @@ body {
 .right-deals h5 {
     font-weight: normal;
     margin-top: 1px;
-    font-size: 0.85rem;
+    font-size: 0.85em;
 }
 
 .booking-btn {
@@ -368,13 +491,13 @@ body {
 
 .booking-btn:hover {
     cursor: pointer;
-    background-color: #000;
+    background-color: #FF9933;
 }
 
 .right-deals {
     position: relative;
     justify-content: space-between;
-    font-size: 0.85rem;
+    font-size: 17px;
     width: 60%;
     margin: 3% 10%;
 
@@ -398,7 +521,7 @@ body {
 }
 
 .deal-content-wrapper h1 {
-    font-size: 2rem;
+    font-size: 40px;
     padding-top: 10%;
     line-height: 1.5;
     padding-left: 10%;
@@ -422,7 +545,6 @@ body {
     bottom: 43%;
     left: 15%;
     color: #FE5B2E;
-    font-size: 1rem;
 }
 
 .deal-content-wrapper-2 {
@@ -431,8 +553,7 @@ body {
 
 .deal-content-wrapper-2 h2 {
     padding-top: 5%;
-    font-size: 1.5rem;
-    color: #FF6B35;
+    font-size: 32px;
 }
 
 .deal-content-wrapper-2 p {
