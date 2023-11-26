@@ -163,14 +163,27 @@ header ul li a:hover::before {
     margin-left: 35px;
     /* Add spacing between search and cart icons */
     cursor: pointer;
+    position: relative;
 }
 
-
-.cartbtn i {
+.cartBtn i {
     color: #333;
 }
 
-
+.cartBtn span{
+    display: flex;
+    width: 15px;
+    height: 15px;
+    background: #eebe62;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 60%;
+    right: -6px;
+    font-size: 10px;
+}
 .searchBox.active {
     left: 0;
 

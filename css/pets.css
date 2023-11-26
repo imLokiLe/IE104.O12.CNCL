@@ -329,6 +329,8 @@ input[type="checkbox"]:checked:after {
     width: 100%;
     height: 100%;
     margin-right: 3%;
+    background: transparent;
+    border: none;
 }
 .product .product-image .star-and-bag_plus .bag-shopping > svg {
     height: 95%;
@@ -397,7 +399,7 @@ input[type="checkbox"]:checked:after {
     cursor: pointer;
 }
 .pagination li.current-page{
-    background-color: #eebe62;
+    background: #eebe62;
 }
 .btn-prep,
 .btn-next {

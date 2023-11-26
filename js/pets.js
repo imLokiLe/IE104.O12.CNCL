@@ -93,7 +93,7 @@ function renderpetCategory (pets) {
     const productList = document.getElementById("product-list");
 
     productList.innerHTML = list.map((item) => {
-        const { image, name, price, unit, rating } = item;
+        const { id, image, name, price, unit, rating } = item;
 
         const starIcons = Array.from({ length: 5 }, (_, index) => {
             if (index < rating) {
@@ -104,14 +104,14 @@ function renderpetCategory (pets) {
         }).join('');
 
         return (
-            `<div class="product">
-                <a href="" class="product-link">
+            `<div class="product" data-id="${id}">
+                <a href="../" class="product-link">
                     <div class="product-image">
                         <div class="star-and-bag_plus">
                             <div class="star">${starIcons}</div>
-                            <div class="bag-shopping">
+                            <button class="bag-shopping btn-add-cart" type="button">
                                 <svg height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg"><g id="Line"><path d="m22.29 6.06a3 3 0 0 0 -2.29-1.06h-14v-1a3 3 0 0 0 -3-3h-1a1 1 0 0 0 0 2h1a1 1 0 0 1 1 1v10a5 5 0 0 0 2.9 4.52 3 3 0 1 0 5.42.48h2.36a3 3 0 1 0 5.46-.39 3 3 0 0 0 1.49-2.12l1.33-8a3 3 0 0 0 -.67-2.43zm-11.79 13.94a1 1 0 1 1 -1-1 1 1 0 0 1 1 1zm7 1a1 1 0 1 1 1-1 1 1 0 0 1 -1 1zm2.15-4.84a1 1 0 0 1 -1 .84h-9.65a3 3 0 0 1 -3-3v-7h14a1 1 0 0 1 .76.35 1 1 0 0 1 .23.82z"/><path d="m16.08 11h-1.5v-1.5a1 1 0 0 0 -2 0v1.5h-1.5a1 1 0 1 0 0 2h1.5v1.5a1 1 0 0 0 2 0v-1.5h1.5a1 1 0 0 0 0-2z"/></g></svg>
-                            </div>
+                            </button>
                         </div>
                         <img src=${image} alt=${name} class="image-product">
                     </div>
@@ -323,3 +323,59 @@ renderPagination(sortPetsByPrice(pets, selectedSortOption));
 renderFilterOptions(document.getElementById("filterOptionsDog"), 'dog');
 renderFilterOptions(document.getElementById("filterOptionsCat"), 'cat');
 FilterOptions()
+
+import { arrCart, updateLocalStorage, getArrCart } from '../js/data_cart.js';
+let arrCartnumber = getArrCart();
+let cart = document.querySelector(".cart-number");
+let numberCart = 0;
+for (let i = 0; i < arrCartnumber.length; i++){
+    numberCart += arrCartnumber[i].quantity;
+}
+cart.innerHTML = numberCart;
+function addToCartHandler(product) {
+    let flag = false;
+    let value = 0;
+    numberCart++;
+    cart.innerHTML = numberCart;
+
+    for (let i = 0; i < arrCart.length; i++) {
+        if (product.id == arrCart[i].id) {
+        flag = true;
+        value = i;
+        }
+    }
+
+    if (flag == false) {
+        arrCart.push(product);
+    } else {
+        arrCart[value].quantity++;
+    }
+
+    console.log(arrCart);
+    updateLocalStorage();
+}
+
+let addCartButtons = document.querySelectorAll(".btn-add-cart");
+
+addCartButtons.forEach(function (addCartButton) {
+  addCartButton.addEventListener("click", function (event) {
+    event.preventDefault();
+    let productContainer = event.target.closest(".product");
+    let productId = productContainer.dataset.id;
+    let productName = productContainer.querySelector(".name-product").textContent;
+    let productPrice = productContainer.querySelector(".price-product span:first-child").textContent;
+    let productUnit = productContainer.querySelector(".price-product span:last-child").textContent;
+    let productImage = productContainer.querySelector(".image-product").getAttribute("src");
+    let productQuantity = 1;
+
+    let product = {
+      id: productId,
+      name: productName,
+      price: productPrice,
+      unit: productUnit,
+      image: productImage,
+      quantity: productQuantity,
+    };
+    addToCartHandler(product);
+  });
+});
