@@ -104,8 +104,8 @@ function renderpetCategory (pets) {
         }).join('');
 
         return (
-            `<div class="product" data-id="${id}">
-                <div class="product-link">
+            `<div class="product" data-id="pet${id}">
+                <a href="" class="product-link">
                     <div class="product-image">
                         <div class="star-and-bag_plus">
                             <div class="star">${starIcons}</div>
@@ -122,7 +122,7 @@ function renderpetCategory (pets) {
                         </div>
                         <div class="name-product">${name}</div>
                     </div>
-                </div>
+                </a>
             </div>`
         );
     }).join('');
