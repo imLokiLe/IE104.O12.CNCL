@@ -331,6 +331,7 @@ input[type="checkbox"]:checked:after {
     margin-right: 3%;
     background: transparent;
     border: none;
+    cursor: pointer;
 }
 .product .product-image .star-and-bag_plus .bag-shopping > svg {
     height: 95%;

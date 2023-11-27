@@ -105,7 +105,7 @@ function renderpetCategory (pets) {
 
         return (
             `<div class="product" data-id="${id}">
-                <a href="../" class="product-link">
+                <div class="product-link">
                     <div class="product-image">
                         <div class="star-and-bag_plus">
                             <div class="star">${starIcons}</div>
@@ -122,7 +122,7 @@ function renderpetCategory (pets) {
                         </div>
                         <div class="name-product">${name}</div>
                     </div>
-                </a>
+                </div>
             </div>`
         );
     }).join('');
@@ -172,6 +172,7 @@ function displayFilteredPets(allCheckbox_dogs, allCheckbox_cats,  minPrice, maxP
 
     renderpetCategory(sortPetsByPrice(finalFilteredPets, selectedSortOption));
     renderPagination(sortPetsByPrice(finalFilteredPets, selectedSortOption));
+    attachAddToCart();
 }
 
 function renderFilterOptions(filterOptionsElement, genus) {
@@ -310,6 +311,7 @@ function handleSortChange(pets) {
         const sortedPets = sortPetsByPrice(pets, selectedSortOption);
         renderpetCategory(sortedPets);
         renderPagination(sortedPets);
+        attachAddToCart();
     }
 }
 const sortSelect = document.querySelector('.sort-select');
@@ -322,9 +324,9 @@ renderpetCategory(sortPetsByPrice(pets, selectedSortOption));
 renderPagination(sortPetsByPrice(pets, selectedSortOption));
 renderFilterOptions(document.getElementById("filterOptionsDog"), 'dog');
 renderFilterOptions(document.getElementById("filterOptionsCat"), 'cat');
-FilterOptions()
+FilterOptions();
 
-import { arrCart, updateLocalStorage, getArrCart } from '../js/data_cart.js';
+import { arrCart, updateCartLocalStorage, getArrCart } from '../js/data_cart.js';
 let arrCartnumber = getArrCart();
 let cart = document.querySelector(".cart-number");
 let numberCart = 0;
@@ -352,30 +354,33 @@ function addToCartHandler(product) {
     }
 
     console.log(arrCart);
-    updateLocalStorage();
+    updateCartLocalStorage();
+}
+function attachAddToCart(){
+    let addCartButtons = document.querySelectorAll(".btn-add-cart");
+
+    addCartButtons.forEach(function (addCartButton) {
+        addCartButton.addEventListener("click", function (event) {
+            event.preventDefault();
+            let productContainer = event.target.closest(".product");
+            let productId = productContainer.dataset.id;
+            let productName = productContainer.querySelector(".name-product").textContent;
+            let productPrice = productContainer.querySelector(".price-product span:first-child").textContent;
+            let productUnit = productContainer.querySelector(".price-product span:last-child").textContent;
+            let productImage = productContainer.querySelector(".image-product").getAttribute("src");
+            let productQuantity = 1;
+
+            let product = {
+            id: productId,
+            name: productName,
+            price: productPrice,
+            unit: productUnit,
+            image: productImage,
+            quantity: productQuantity,
+            };
+            addToCartHandler(product);
+        });
+    });
 }
 
-let addCartButtons = document.querySelectorAll(".btn-add-cart");
-
-addCartButtons.forEach(function (addCartButton) {
-  addCartButton.addEventListener("click", function (event) {
-    event.preventDefault();
-    let productContainer = event.target.closest(".product");
-    let productId = productContainer.dataset.id;
-    let productName = productContainer.querySelector(".name-product").textContent;
-    let productPrice = productContainer.querySelector(".price-product span:first-child").textContent;
-    let productUnit = productContainer.querySelector(".price-product span:last-child").textContent;
-    let productImage = productContainer.querySelector(".image-product").getAttribute("src");
-    let productQuantity = 1;
-
-    let product = {
-      id: productId,
-      name: productName,
-      price: productPrice,
-      unit: productUnit,
-      image: productImage,
-      quantity: productQuantity,
-    };
-    addToCartHandler(product);
-  });
-});
+attachAddToCart();
