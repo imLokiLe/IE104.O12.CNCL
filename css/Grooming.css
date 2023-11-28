@@ -1,17 +1,33 @@
 .container-body{
     position: relative;
-    top: 150px;
+    top: 120px;
+    font-size: 1.5rem;
+    background-color: #fffaf0;
 }
 
 /* intro */
-.location{
+.address{
+    position: absolute;
+    top: 5px;
     margin-left: 50px;
+    padding: 20px 0;
+    font-size: 1.2rem;
+}
+.bg_overlay{
+    background-image: url(../assets/backgrounds/bg-home-overlay.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    opacity: 1;
+    height: 78vh;
+    position: relative;
+    z-index: 0;
 }
 .intro_content{
     width: 40%;
-    position: relative;
+    position: absolute;
     left: 50%;
-    top: 50px;
+    top: 100px;
     text-align: center;
 }
 .intro_content h1{
@@ -20,13 +36,16 @@
 .btn{
     display: flex;
     justify-content: center;
-    background-color: #F2AB1E;
-    width: 130px;
+    background-color: #FF6B35;
+    width: 150px;
     height: 50px;
     border-radius: 40px;
     text-align: center;
     font-weight: bold;
     margin: 50px 50px;
+    color: white;
+    box-shadow: 2px 2px 2px grey;
+    font-size: 1.2rem;
 }
 .btn i{
     position: relative;
@@ -49,57 +68,60 @@
 .img_intro_grooming{
     width: 35%;
     position: absolute;
-    top: 40px;
-    left: 70px;
+    top: 70px;
+    left: 80px;
 }
 
 /* process */
 .process{
     width: 95%;
     position: relative;
-    top: 200px;
+    /* top: 50px; */
     left: 40px;
 }
 
 /* service */
 .service{
-    position: absolute;
-    top: 215vh;
+    position: relative;
+    top: 10vh;
     width: 100%;
 }
 .service h1{
-    color: #EFBB3F;
+    color: #FF6B35;
     padding: 20px 100px;
 }
 .service_content{
     position: absolute;
-    left: 200px;
-    top: 150px;
+    left: 7vw;
+    top: 120px;
     background-color: black;
     color: white;
     line-height: 25px;
     padding: 20px;
     border-radius: 30px;
     font-weight: bold;
+    line-height: 50px;
+    font-size: 1.3rem;
+    z-index: 1;
 }
 .service_subcontent{
     display: flex;
 }
 .service_subcontent i{
-    color: #EFBB3F;
-    padding: 5px 10px;
+    color: #FF6B35;
+    padding: 13px 10px;
 }
 .service_img{
     position: absolute;
-    width: 450px;
-    left: 65rem;
-    top: -30px;
+    width: 400px;
+    left: 67%;
+    top: 1vh;
 }
 
 /* menu */
 .menu_fr{
     position: relative;
-    top: 420px;
+    top: 15vh;
 }
 .menu{
     position: absolute;
@@ -108,6 +130,7 @@
 .menu_detail{
     position: absolute;
     left: 520px;
+    top: 10vh;
 }
 .menu_content{
     position: absolute;
