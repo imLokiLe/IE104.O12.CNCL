@@ -3,6 +3,7 @@ body {
     margin: 0 0;
     background-color: #fffaf0;
     box-sizing: border-box;
+    font-size: 1.4rem;
 }
 
 
@@ -226,7 +227,7 @@ textarea.input {
 .text {
     color: #333;
     margin: 1.5rem 0 2rem 0;
-    font-size: 0.85rem;
+    font-size: 1.2rem;
 }
 
 .information {

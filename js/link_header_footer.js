@@ -15,12 +15,12 @@ function loadHTML(url, elementId) {
   }
   
   function loadJS(url){
-    var srcipt = document.createElement("script");
-    srcipt.src = url;
-    document.head.appendChild(script);
+    var record = document.createElement("script");
+    record.src = url;
+    document.head.appendChild(record);
   }
-  loadHTML("./header.html", "header");
-  loadHTML("./footer.html", "footer");
-  loadCSS("./css/header.css");
-  loadCSS("./css/footer.css");
+  loadHTML("../header.html", "header");
+  loadHTML("../footer.html", "footer");
+  loadCSS("../css/header.css");
+  loadCSS("../css/footer.css");
   loadJS("./js/header.js");
