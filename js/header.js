@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("load", function () {
     const menuItems = document.querySelectorAll('.menu-item');
     const serviceChildLinks = document.querySelectorAll('.service-child-link');
     const serviceLink = document.querySelector('.parent-item');
@@ -50,11 +50,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const searchBtn = document.querySelector('.searchBtn');
     const closeBtn = document.querySelector('.closeBtn');
-    const searchBox = document.querySelector('.searchBox');
+    const searchWrapper = document.querySelector('.searchBox');
+    const inputBox = searchWrapper.querySelector('.input');
+    const suggestBox = searchWrapper.querySelector('.autocom-box');
     const cartIcon = document.querySelector('.cartBtn');
     
+    // inputBox.onkeyup = (e) => {
+    //     console.log(e.target.value);
+    // }
+
+
     searchBtn.onclick = function () {
-        searchBox.classList.add('active');
+        searchWrapper.classList.add('active');
         closeBtn.classList.add('active');
         searchBtn.classList.add('active');
         cartIcon.style.display = 'none';
@@ -62,9 +69,68 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     closeBtn.onclick = function () {
-        searchBox.classList.remove('active');
+        searchWrapper.classList.remove('active');
         closeBtn.classList.remove('active');
         searchBtn.classList.remove('active');
         cartIcon.style.display = 'flex';
         closeBtn.style.marginLeft = '0';
     };
+
+const searchInput = document.getElementById('searchInput');
+const autocomBox = document.querySelector('.autocom-box');
+
+// Một mảng giả định các đề xuất tìm kiếm
+const suggestions = [
+    'Đồ ăn cho chó',
+    'Đồ ăn cho mèo',
+    'Phụ kiện thú cưng',
+    'Dụng cụ huấn luyện',
+    'Đồ chơi cho thú cưng',
+    'Chó Alaska',
+    'Chó Pom',
+    'Chó Phốc sóc',
+    'Chó Corgi',
+];
+
+// Sự kiện khi người dùng nhập vào ô tìm kiếm
+searchInput.addEventListener('input', function () {
+    const searchTerm = this.value.toLowerCase();
+    let matches = suggestions.filter(suggestion =>
+        suggestion.toLowerCase().startsWith(searchTerm)
+    );
+
+    if (searchTerm.length === 0) {
+        matches = [];
+        autocomBox.style.display = 'none';
+    }
+
+    showSuggestions(matches);
+});
+
+// Hiển thị các đề xuất trong hộp đề xuất
+function showSuggestions(matches) {
+    if (matches.length === 0) {
+        autocomBox.style.display = 'none';
+        return;
+    }
+
+    autocomBox.innerHTML = '';
+    matches.forEach(match => {
+        const listItem = document.createElement('li');
+        listItem.innerText = match + ' '; // Thêm khoảng trắng vào cuối từ khóa
+        listItem.addEventListener('click', function () {
+            searchInput.value = match;
+            autocomBox.style.display = 'none';
+        });
+        autocomBox.appendChild(listItem);
+    });
+
+    autocomBox.style.display = 'block';
+}
+
+// Ẩn hộp đề xuất khi click bất kỳ đâu trên trang
+document.addEventListener('click', function (e) {
+    if (!e.target.closest('.searchBox')) {
+        autocomBox.style.display = 'none';
+    }
+});
