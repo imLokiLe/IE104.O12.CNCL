@@ -1,3 +1,16 @@
+import {getArrCart} from '../js/data_cart.js';
+
+let arrCart = getArrCart();
+function updateNumberCart(){
+    let numberCart = 0;
+    let cart = document.querySelector(".cart-number");
+    for (let i = 0; i < arrCart.length; i++){
+        numberCart += arrCart[i].quantity;
+    }
+    return cart.innerHTML = numberCart;
+}
+updateNumberCart();
+
 window.addEventListener("load", function () {
     const menuItems = document.querySelectorAll('.menu-item');
     const serviceChildLinks = document.querySelectorAll('.service-child-link');

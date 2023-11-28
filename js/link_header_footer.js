@@ -16,6 +16,7 @@ function loadHTML(url, elementId) {
   
   function loadJS(url){
     var record = document.createElement("script");
+    record.type = "module";
     record.src = url;
     document.head.appendChild(record);
   }
