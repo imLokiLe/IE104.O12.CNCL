@@ -154,6 +154,11 @@ body {
     width: 200px;
 }
 
+.select-menu1 .options a:visited,
+.select-menu2 .options a:visited {
+    color: black;
+    /* giữ màu đen cho thẻ a */
+}
 
 .select-menu1.active .options,
 .select-menu2.active .options {
@@ -491,7 +496,7 @@ body {
 
 .booking-btn:hover {
     cursor: pointer;
-    background-color: #FF9933;
+    background-color: #1b1616;
 }
 
 .right-deals {
