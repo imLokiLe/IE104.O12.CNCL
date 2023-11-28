@@ -18,7 +18,7 @@
     <section class="address">
         <a href="" class="address-link">Trang chủ</a>
         <span class="icon_more_than">></span>
-        <a href="" class="address-link current-link">Thú cưng</a>
+        <a href="./pets.html" class="address-link current-link">Thú cưng</a>
     </section>
 
     <!-- Content -->
@@ -36,11 +36,11 @@
                 <div class="range-price">
                     <div class="price-input">
                         <div class="field" >
-                            <input type="number" value="300" class="min-input" placeholder="min-price">
+                            <input type="number" value="0" class="min-input" placeholder="min-price">
                         </div>
                         <div class="seperator">-</div>
                         <div class="field">
-                            <input type="number" value="700" class="max-input" placeholder="max-price">
+                            <input type="number" value="30000000" class="max-input" placeholder="max-price">
                         </div>
                     </div>
     
@@ -49,8 +49,8 @@
                     </div>
     
                     <div class="range-input">
-                        <input type="range" min="0" max="1000" value="300" class="min-range" step="50">
-                        <input type="range" min="0" max="1000" value="700" class="max-range" step="50">
+                        <input type="range" min="0" max="30000000" value="0" class="min-range" step="50000">
+                        <input type="range" min="0" max="30000000" value="30000000" class="max-range" step="50000">
                     </div>
                 </div>
             </div>
@@ -67,64 +67,7 @@
                     </div>
                 </div> 
                 
-                <ul class="pets-checkbox">
-                    <li>
-                        <input type="checkbox" name="checkbox" id="akita">
-                        <label for="akita">
-                            <span class="pets-name">Akita</span>
-                        </label> 
-                        <span class="pets-count">(2)</span>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="checkbox" id="alaska">
-                        <label for="alaska">
-                            <span class="pets-name">Alaska </span>
-                        </label> 
-                        <span class="pets-count">(15)</span>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="checkbox" id="chihuahua">
-                        <label for="chihuahua">
-                            <span class="pets-name">Chihuahua</span>
-                        </label>
-                        <span class="pets-count">(5)</span>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="checkbox" id="corgi">
-                        <label for="corgi">
-                            <span class="pets-name">Corgi </span>
-                        </label>
-                        <span class="pets-count">(7)</span>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="checkbox" id="golden-retriever">
-                        <label for="golden-retriever">
-                            <span class="pets-name">Golden Retriever </span>
-                        </label>
-                        <span class="pets-count">(4)</span>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="checkbox" id="pomeranian">
-                        <label for="pomeranian">
-                            <span class="pets-name">Pomeranian</span>
-                        </label>
-                        <span class="pets-count">(5)</span>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="checkbox" id="poodle">
-                        <label for="poodle">
-                            <span class="pets-name">Poodle </span>
-                        </label>
-                        <span class="pets-count">(2)</span>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="checkbox" id="shiba">
-                        <label for="shiba">
-                            <span class="pets-name">Shiba</span>
-                        </label>
-                        <span class="pets-count">(9)</span>
-                    </li>
-                </ul>
+                <ul class="pets-checkbox" id="filterOptionsDog"></ul>
             </div>
 
             <!-- Filter Cat -->
@@ -139,57 +82,7 @@
                     </div>
                 </div> 
                 
-                <ul class="pets-checkbox">
-                    <li>
-                        <input type="checkbox" name="checkbox" id="british-shorthair">
-                        <label for="british-shorthair">
-                            <span class="pets-name">Anh lông ngắn </span>
-                        </label>
-                        <span class="pets-count">(2)</span>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="checkbox" id="scottish-fold">
-                        <label for="scottish-fold">
-                            <span class="pets-name">Anh tai cụp </span>
-                        </label>
-                        <span class="pets-count">(15)</span>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="checkbox" id="persian">
-                        <label for="persian">
-                            <span class="pets-name">Ba tư </span>
-                        </label>
-                        <span class="pets-count">(5)</span>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="checkbox" id="munchkin">
-                        <label for="munchkin">
-                            <span class="pets-name">Chân ngắn Munchkin </span>
-                        </label>
-                        <span class="pets-count">(7)</span>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="checkbox" id="ragdoll">
-                        <label for="ragdoll">
-                            <span class="pets-name">Ragdoll </span>
-                        </label>
-                        <span class="pets-count">(4)</span>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="checkbox" id="sphynx">
-                        <label for="sphynx">
-                            <span class="pets-name">Sphynx </span>
-                        </label>
-                        <span class="pets-count">(5)</span>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="checkbox" id="siamese">
-                        <label for="siamese">
-                            <span class="pets-name">Xiêm </span>
-                        </label>
-                        <span class="pets-count">(2)</span>
-                    </li>
-                </ul>
+                <ul class="pets-checkbox" id="filterOptionsCat"></ul>
             </div>
         </div>
 
@@ -198,15 +91,14 @@
             <div class="results-header">
                 <!-- Showing num product available -->
                 <div class="result-count">
-                    <p>Hiển thị 1 - 16 trong số 238 kết quả</p>
+                    
                 </div>
         
                 <!-- Sort options -->
                 <div class="sort-options">
                     <p>Sắp xếp theo:</p>
                     <select class="sort-select">
-                        <option value="newest">Mới nhất</option>
-                        <option value="best-sellers">Bán chạy nhất</option>
+                        <option selected>Sắp xếp theo</option>
                         <option value="low-to-high">Giá: Thấp đến cao</option>
                         <option value="high-to-low">Giá: Cao đến thấp</option>
                     </select>
@@ -217,19 +109,8 @@
             <div id="product-list"></div>
             <!-- Pagination -->
             <div class="pagination-container">
-                <button class="btn-prep">
-                    <i class="fa-solid fa-caret-left"></i>
-                </button>
-                <ul class="pagination">
-                    <li class="page-product" value="1">1</li>
-                    <li class="page-product" value="2">2</li>
-                    <li class="page-product" value="3">3</li>
-                    <li class="page-product" value="4">...</li>
-                    <li class="page-product" value="5">16</li>
-                </ul>
-                <button class="btn-next">
-                    <i class="fa-solid fa-caret-right"></i>
-                </button>
+                <!-- <div class="pagination"> -->
+                </div>
             </div>
         </div>
     </section>
