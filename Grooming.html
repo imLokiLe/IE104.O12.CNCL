@@ -72,10 +72,9 @@
             <div class="menu_content">
                 <h1>MENU</h1>
                 <div class="menu_option">
-                    <div class="selected_option">
-                        <p><b>Chó</b></p>
-                    </div>
-                    <p><b>Mèo</b></p>
+                    <div id="selected_option"></div>
+                    <button class="toggle_btn" onclick="leftClick()">Chó</button>
+                    <button class="toggle_btn" onclick="rightClick()">Mèo</button>
                 </div>
                 <div class="btn btn_booking menu_btn_booking">
                     <i class="fa-solid fa-calendar-days fa-lg"></i>
@@ -90,7 +89,7 @@
             <img src="../assets/images/Grooming/extra.png" alt="extra" class="extra_service">
             <div class="extra_content">
                 <h1>DỊCH VỤ THÊM</h1>
-                <p><b>Các dịch vụ thêm để chăm sóc cho bé yêu với các sản phẩm chăm sóc và tẩy ố, chúng tôi dùng sản phẩm của Tropiclean đạt chứng nhận hữu cơ 100% sản xuất tại USA</b></p>
+                <p>Các dịch vụ thêm để chăm sóc cho bé yêu với các sản phẩm chăm sóc và tẩy ố, chúng tôi dùng sản phẩm của Tropiclean đạt chứng nhận hữu cơ 100% sản xuất tại USA</p>
                 <p class="extra_note">*Lưu Ý: <br>
                     - Nếu hình/rối khó tạo kiểu giá sẽ tăng 10 đến 50% giá ban đầu <br>
                     - Giá trên là lông nhiều, nếu lông ít giảm 10 đến 50%</p>
@@ -147,5 +146,6 @@
     </div>
 
     <div id="footer"></div>
+    <script src="./js/grooming.js"></script>
 </body>
 </html>
