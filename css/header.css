@@ -33,14 +33,8 @@ header {
     padding: 20px 40px;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.085);
-    font-size: 1.5rem;
-    background: #FFFAF0;
-    z-index: 1;
-}
-.logo{
-    position: relative;
-    left: 1%;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.05);
+    font-size: 1.25em;
 }
 
 .group {
@@ -64,13 +58,13 @@ ul.dropdown li {
     line-height: 50px;
     border-radius: 5px;
     padding-left: 5px;
-    font-size: 1.2rem;
+    font-size: 0.85em;
 }
 
 
 ul.dropdown {
     margin-top: 4px;
-    width: 27%;
+    width: 28%;
     height: 200px;
     position: absolute;
     z-index: 999;
@@ -91,7 +85,7 @@ ul.dropdown a:hover {
 .dropdown li:hover {
     position: relative;
     background: #F2F2F2;
-    width: 242px;
+    width: 260px;
     left: -4.2%;
     border-left: 5px solid #FF6B35;
     padding-left: 15px;
@@ -106,6 +100,7 @@ ul li:hover ul.dropdown {
 
 }
 
+
 .navigation li:hover .htmlcss-arrow {
     transform: rotate(180deg);
 
@@ -115,6 +110,10 @@ ul li:hover ul.dropdown {
     font-size: 20px;
     padding-left: 5px;
 }
+
+/* #service-icon:hover {
+    padding-left: 50px;
+} */
 
 header ul li a {
     position: relative;
@@ -164,32 +163,20 @@ header ul li a:hover::before {
 }
 
 
+
 .cartBtn {
     font-size: 1.25em;
     margin-left: 35px;
     /* Add spacing between search and cart icons */
     cursor: pointer;
-    position: relative;
 }
 
-.cartBtn i {
+
+.cartbtn i {
     color: #333;
 }
 
-.cartBtn span{
-    display: flex;
-    width: 15px;
-    height: 15px;
-    background: #eebe62;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    border-radius: 50%;
-    position: absolute;
-    top: 60%;
-    right: -6px;
-    font-size: 10px;
-}
+
 .searchBox.active {
     left: 0;
 
@@ -206,19 +193,55 @@ header ul li a:hover::before {
     align-items: center;
     padding: 0 30px;
     transition: 0.5s ease-in-out;
+    padding-left: 3%;
+
 }
 
 .searchBox input {
     width: 100%;
     border: none;
     outline: none;
-    height: 50px;
-    font-size: 0.85em;
+    height: 30px;
+    font-size: 1.25rem;
     background: #FFFAF0;
     color: #333;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 200px;
 
 }
+
+/* Các thuộc tính CSS cho hộp đề xuất */
+.autocom-box {
+    position: absolute;
+    width: 100%;
+    background: #fffaf0;
+    border: 1px solid #ccc;
+    display: none;
+    z-index: 1;
+    left: 0;
+    top: calc(100% + 2px);
+    /* Đặt vị trí top dưới input và thêm một khoảng cách */
+}
+
+/* Các thuộc tính CSS cho mỗi suggestion */
+.autocom-box li {
+    list-style: none;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    margin: 0;
+    width: 100%;
+    padding-left: 3%;
+    font-size: 1.25rem;
+    box-sizing: border-box;
+}
+
+
+
+.autocom-box li:hover {
+    background: #f9f9f9;
+}
+
 
 .searchBtn {
     position: relative;

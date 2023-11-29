@@ -24,8 +24,8 @@
         <div class="group">
             <ul class="navigation">
                 <li><a href="/contact.html" class="menu-item">Trang chủ</a></li>
-                <li><a href="" class="menu-item">Cửa hàng</a></li>
-                <li><a href="./pet-category.html" class="menu-item">Thú cưng</a></li>
+                <li><a href="#" class="menu-item">Cửa hàng</a></li>
+                <li><a href="#" class="menu-item">Thú cưng</a></li>
                 <li><a href="#" class="menu-item parent-item">Dịch vụ</a><i
                         class="fa-solid fa-chevron-down htmlcss-arrow arrow" id="service-icon"></i>
                     <ul class="dropdown">
@@ -53,15 +53,17 @@
                     <span class="closeBtn"><i class="fa-solid fa-x" id="closeBtn"></i></span>
                 </span>
             </div>
-            <a href="./cart.html" class="cartBtn">
+            <span class="cartBtn">
                 <i class="fa fa-shopping-bag"></i>
-                <span class="cart-number"></span>
-            </a>
+            </span>
         </div>
         <div class="searchBox">
-            <input type="text" placeholder="Bạn cần tìm gì nhỉ?">
+            <input type="text" id="searchInput" placeholder="Bạn cần tìm gì nhỉ?">
+            <div class="autocom-box">
+            </div>
         </div>
-        <script src="./js/header.js"></script>
+
+        <script type="module" src="./js/header.js"></script>
     </header>
 
 </body>
