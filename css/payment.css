@@ -13,6 +13,140 @@ body{
     font-size: 20px;
     font-weight: bold;
 }
+/* Popup Styles */
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2; 
+    justify-content: center;
+    align-items: center;
+}
+.popup-container.show {
+    display: flex;
+    animation: fadeIn 0.3s ease-in-out;
+}
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 13.5% 25%;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+.popup-content .payment-methods{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 30px 10px 10px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid #C2C2C2;
+}
+.popup-content .payment-methods  .method{
+    display: flex;
+    align-items: center;
+}
+.popup-content .payment-methods .popup-close{
+    font-weight: lighter;
+    cursor: pointer;
+    color: #EFBB3F;
+    font-size: 15px;
+}
+.popup-content .payment-infomation{
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 39% 59%;
+    column-gap: 3%;
+    padding: 10px 5%;
+    align-items: center;
+}
+.popup-content .payment-infomation .qr{
+    display: grid;
+    grid-template-columns: 42% 42%;
+    row-gap: 5%;
+    background: #EFEFF4;
+    border-radius: 5px;
+    padding: 30px 0;
+    justify-content: center;
+}
+.popup-content .payment-infomation .qr .img-payment{
+    grid-column: span 2;
+}
+.popup-content .payment-infomation .qr .total-price{
+    font-weight: bold;
+}
+.popup-content .payment-infomation .infomation p.payment-title {
+    text-align: left;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 5%;
+}
+.popup-content .payment-infomation .infomation .instruct{
+    margin-bottom: 10%;
+}
+.popup-content .payment-infomation .infomation .instruct .step{
+    display: flex;
+    column-gap: 3%;
+    align-items: center;
+    margin-bottom: 2%;
+}
+.popup-content .payment-infomation .infomation .instruct .step .step-number{
+    height: 20px;
+    width: 20px;
+    background: #F2AB1E;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+}
+.popup-content .payment-infomation .infomation .instruct .step .step-text{
+    color: #AEAEB4;
+    display: flex;
+    width: 100%;
+    column-gap: 1%;
+}
+.popup-content .payment-infomation .infomation .instruct .step span{
+    font-weight: bold;
+}
+.popup-content .payment-infomation .infomation .clock-countdown{
+    background: #FFFDF0;
+    width: 100%;
+    border-radius: 5px;
+    padding: 3% 0;
+}
+.popup-content .payment-infomation .infomation .clock-countdown .clock{
+    display:  flex;
+    column-gap: 3%;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+.popup-content .payment-infomation .infomation .clock-countdown .clock .minute,
+.popup-content .payment-infomation .infomation .clock-countdown .clock .second{
+    height: 30px;
+    width: 30px;
+    display: flex;
+    background: #F2AB1E;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: #fff;
+}
 /* input radio */
 input[type="radio"]{
     appearance: none;
@@ -48,6 +182,7 @@ input[type="radio"]:checked:after  {
 
 /* Address */
 .address{
+    margin-top: 110px;
     padding: 25px 4%;
     text-align: left;
     font-family: Quicksand;
@@ -67,6 +202,8 @@ input[type="radio"]:checked:after  {
     padding: 1% 0;
     background: #FFF;
     border-radius: 5px;
+    position: relative;
+    z-index: 1; 
 }
 .bar{
     display: flex;
@@ -151,6 +288,8 @@ input[type="radio"]:checked:after  {
     width: 40%;
     align-items: center;
     margin-bottom: 4%;
+    position: relative;
+    z-index: 1; 
 }
 
 /* Select */
@@ -190,48 +329,56 @@ input[type="radio"]:checked:after  {
 .delivery .all-order-delivery .time-delivery{
     transform: translateX(10px) translateY(-50%);
     background-color: #fff;
-    width: 36%;
+    width: 42%;
     padding: 0 1.5%;
     display: flex;
     align-items: center;
     color: #090;
     font-size: 18px;
     column-gap: 2%;
+    position: relative;
+    z-index: 1; 
 }
 /* All order */
-.delivery .all-order-delivery .all-order{
+.delivery .all-order-delivery .all-order-address{
     display: grid;
     grid-template-columns: 65% 30%;
     column-gap: 5%;
     padding: 0 3%
 }
-.delivery .all-order-delivery .all-order .order{
+.delivery .all-order-delivery .all-order-address .all-order .transport,
+.delivery .all-order-delivery .all-order-address .all-order .order-product{
     display: grid;
     grid-template-columns: 10% 55% 30%;
     align-items: center;
     column-gap: 1%;
 }
-.delivery .all-order-delivery .all-order .order .transport-name{
+.delivery .all-order-delivery .all-order-address .all-order .transport-name{
     grid-column: span 2;
 }
-.delivery .all-order-delivery .all-order .order .image-product{
+.delivery .all-order-delivery .all-order-address .all-order .image-product{
     width: 90%;
     height: auto;
 }
-.delivery .all-order-delivery .all-order .order .transport.fee{
+.delivery .all-order-delivery .all-order-address .all-order .transport-fee,
+.delivery .all-order-delivery .all-order-address .all-order .product-fee{
+    font-weight: bold;
     display: flex;
-    column-gap: 2%;
-    justify-content: space-between;
+    justify-content: end;
+} 
+.delivery .all-order-delivery .all-order-address .all-order .transport-fee{
+    column-gap: 4%;
+    justify-content: flex-end;
 }
-.delivery .all-order-delivery .all-order .order .transport.fee .fee-pre{
+.delivery .all-order-delivery .all-order-address .all-order .transport-fee .fee-pre{
     text-decoration-line: line-through;
     font-weight: 400;
     color: #BBB;
 }
-.delivery .all-order-delivery .all-order .order .transport.fee .fee-current{
+.delivery .all-order-delivery .all-order-address .all-order .transport-fee .fee-current{
     color: #20A520;
 }
-.delivery .all-order-delivery .all-order .order .transport.fee span{
+.delivery .all-order-delivery .all-order-address .all-order .transport-fee span{
     display: grid;
     place-items: center;
     width: 15px;
@@ -240,16 +387,11 @@ input[type="radio"]:checked:after  {
     border-radius: 50%;
     font-size: 10px;
 }
-.delivery .all-order-delivery .all-order .order p{
+.delivery .all-order-delivery .all-order-address .all-order p{
     font-size: 16px;
 }
-
-.delivery .all-order-delivery .all-order .order .fee{
-    font-weight: bold;
-    text-align: right;
-}
 /* Seller address */
-.delivery .all-order-delivery .all-order .seller-address{
+.delivery .all-order-delivery .all-order-address .seller-address{
     display: grid;
     grid-template-columns: auto auto;
     padding: 3% 5%;
@@ -407,7 +549,8 @@ input[type="radio"]:checked:after  {
 .order-price .total-price-order .price.promotional-delivery{
     color: #20A520;
 }
-.order-price .total-price-order .price span{
+.order-price .total-price-order .price span:last-child,
+.popup-content .payment-infomation .qr .total-price span:last-child{
     text-decoration-line: underline;
 }
 .order-price .total-price-order .price p:not(.note){
@@ -427,12 +570,14 @@ input[type="radio"]:checked:after  {
     padding: 3% 0;
     font-size: 20px;
     margin-top: 3%;
+    border: none;
+    cursor: pointer;
 }
 
-.order-price .total-price-order .order-title span{
+.order-price .total-price-order .order-title span:not(.quantity){
     color: #F2AB1E;
 }
-.order-price .total-price-order .order-title span::after{
+.order-price .total-price-order .order-title span:not(.quantity)::after{
     font-family: "Font Awesome 6 Free";
     font-weight: bold;
     content: "\f078";

@@ -6,11 +6,185 @@
     <link rel="stylesheet" href="./css/payment.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="./js/link_header_footer.js"></script> 
     <title>Cart</title>
 </head>
 <body>
    <!-- Header-->
+   <div id="header"></div>
 
+    <!-- Popup Container -->
+    <div id="momo-popup" class="popup-container">
+        <div class="popup-content">
+            <div class="payment-methods">
+                <div class="method">
+                    <img src="./assets/images/payment/momo.png" alt="momo">
+                    <p class="name">Thanh toán bằng ví MoMo</p>
+                </div>
+                <p class="popup-close">Đổi phương thức khác</p>
+            </div>
+            <div class="payment-infomation">
+                <div class="qr">
+                    <img src="./assets/images/payment/momo-qr.png" alt="img-momo" class="img-payment">
+                    <p>Tổng tiền</p>
+                    <p class="total-price"><span>0</span><span>đ</span></p>
+                </div>
+                <div class="infomation">
+                    <p class="payment-title">Quét mã QR để thanh toán</p>
+                    <div class="instruct">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-text">
+                                Mở <span>ứng dụng MoMo</span> trên điện thoại
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-text">
+                                Trên MoMo, chọn biểu tượng
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 21 21" fill="none">
+                                    <g clip-rule="evenodd" fill="#AEAEB4" fill-rule="evenodd">
+                                        <path d="m18.1538 19.4571c.7081 0 1.2821-.5756 1.2821-1.2857v-2.0571c0-.4261.3444-.7714.7692-.7714.4249 0 .7693.3453.7693.7714v2.0571c0 1.5622-1.2628 2.8286-2.8206 2.8286h-2.0512c-.4249 0-.7693-.3454-.7693-.7714 0-.4261.3444-.7715.7693-.7715z"/><path d="m18.1538 4.54286c.7081 0 1.2821.57563 1.2821 1.28571v2.05714c0 .42605.3444.77143.7692.77143.4249 0 .7693-.34538.7693-.77143v-2.05714c0-1.56218-1.2628-2.82857-2.8206-2.82857h-2.0512c-.4249 0-.7693.34538-.7693.77143s.3444.77143.7693.77143z"/><path d="m5.84615 19.4571c-.70805 0-1.28205-.5756-1.28205-1.2857v-2.0571c0-.4261-.34439-.7714-.76923-.7714-.42483 0-.76923.3453-.76923.7714v2.0571c0 1.5622 1.26279 2.8286 2.82051 2.8286h2.05129c.42483 0 .76923-.3454.76923-.7714 0-.4261-.3444-.7715-.76923-.7715z"/><path d="m5.84615 4.54286c-.70805 0-1.28205.57563-1.28205 1.28571v2.05715c0 .42604-.34439.77142-.76923.77142-.42483 0-.76923-.34538-.76923-.77142v-2.05715c0-1.56217 1.26279-2.82857 2.82051-2.82857h2.05129c.42483 0 .76923.34538.76923.77143s-.3444.77143-.76923.77143z"/><path d="m22 12c0 .426-.3444.7714-.7692.7714h-18.46157c-.42483 0-.76923-.3454-.76923-.7714s.3444-.7714.76923-.7714h18.46157c.4248 0 .7692.3454.7692.7714z"/>
+                                    </g>
+                                </svg>
+                                <span>Quét mã QR</span>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-text">
+                                Quét mã QR ở trang này và thanh toán
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clock-countdown">
+                        <p>Giao dịch kết thúc sau:</p>
+                        <div class="clock">
+                            <div class="minute">00</div>
+                            <span>:</span>
+                            <div class="second">00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="zalo-popup" class="popup-container">
+        <div class="popup-content">
+            <div class="payment-methods">
+                <div class="method">
+                    <img src="./assets/images/payment/zalo.png" alt="zalo">
+                    <p class="name">Thanh toán bằng ví ZaloPay</p>
+                </div>
+                <p class="popup-close">Đổi phương thức khác</p>
+            </div>
+            <div class="payment-infomation">
+                <div class="qr">
+                    <img src="./assets/images/payment/momo-qr.png" alt="img-zalo" class="img-payment">
+                    <p>Tổng tiền</p>
+                    <p class="total-price"><span>0</span><span>đ</span></p>
+                </div>
+                <div class="infomation">
+                    <p class="payment-title">Quét mã QR để thanh toán</p>
+                    <div class="instruct">
+                        <div class="step">
+                            <div class="step-number"><p>1</p></div>
+                            <div class="step-text">
+                                Mở <span>ứng dụng ZaloPay</span> trên điện thoại
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number"><p>2</p></div>
+                            <div class="step-text">
+                                Trên ZaloPay, chọn biểu tượng
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 21 21" fill="none">
+                                    <g clip-rule="evenodd" fill="#AEAEB4" fill-rule="evenodd">
+                                        <path d="m18.1538 19.4571c.7081 0 1.2821-.5756 1.2821-1.2857v-2.0571c0-.4261.3444-.7714.7692-.7714.4249 0 .7693.3453.7693.7714v2.0571c0 1.5622-1.2628 2.8286-2.8206 2.8286h-2.0512c-.4249 0-.7693-.3454-.7693-.7714 0-.4261.3444-.7715.7693-.7715z"/><path d="m18.1538 4.54286c.7081 0 1.2821.57563 1.2821 1.28571v2.05714c0 .42605.3444.77143.7692.77143.4249 0 .7693-.34538.7693-.77143v-2.05714c0-1.56218-1.2628-2.82857-2.8206-2.82857h-2.0512c-.4249 0-.7693.34538-.7693.77143s.3444.77143.7693.77143z"/><path d="m5.84615 19.4571c-.70805 0-1.28205-.5756-1.28205-1.2857v-2.0571c0-.4261-.34439-.7714-.76923-.7714-.42483 0-.76923.3453-.76923.7714v2.0571c0 1.5622 1.26279 2.8286 2.82051 2.8286h2.05129c.42483 0 .76923-.3454.76923-.7714 0-.4261-.3444-.7715-.76923-.7715z"/><path d="m5.84615 4.54286c-.70805 0-1.28205.57563-1.28205 1.28571v2.05715c0 .42604-.34439.77142-.76923.77142-.42483 0-.76923-.34538-.76923-.77142v-2.05715c0-1.56217 1.26279-2.82857 2.82051-2.82857h2.05129c.42483 0 .76923.34538.76923.77143s-.3444.77143-.76923.77143z"/><path d="m22 12c0 .426-.3444.7714-.7692.7714h-18.46157c-.42483 0-.76923-.3454-.76923-.7714s.3444-.7714.76923-.7714h18.46157c.4248 0 .7692.3454.7692.7714z"/>
+                                    </g>
+                                </svg>
+                                <span>Quét mã QR</span>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number"><p>3</p></div>
+                            <div class="step-text">
+                                Quét mã QR ở trang này và thanh toán
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clock-countdown">
+                        <p>Giao dịch kết thúc sau:</p>
+                        <div class="clock">
+                            <div class="minute">00</div>
+                            <span>:</span>
+                            <div class="second">00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+    </div>
+    <div id="debit-card-popup" class="popup-container">
+        <div class="popup-content">
+            <div class="payment-methods">
+                <div class="method">
+                    <img src="./assets/images/payment/debit-card.png" alt="momo">
+                    <p class="name">Thanh toán bằng Internet Banking</p>
+                </div>
+                <p class="popup-close">Đổi phương thức khác</p>
+            </div>
+            <div class="payment-infomation">
+                <div class="qr">
+                    <img src="./assets/images/payment/momo-qr.png" alt="img-momo" class="img-payment">
+                    <p>Tổng tiền</p>
+                    <p class="total-price"><span>0</span><span>đ</span></p>
+                </div>
+                <div class="infomation">
+                    <p class="payment-title">Quét mã QR để thanh toán</p>
+                    <div class="instruct">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-text">
+                                Mở <span>ứng dụng Internet Banking</span> trên điện thoại
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-text">
+                                Trên Banking, chọn biểu tượng
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 21 21" fill="none">
+                                    <g clip-rule="evenodd" fill="#AEAEB4" fill-rule="evenodd">
+                                        <path d="m18.1538 19.4571c.7081 0 1.2821-.5756 1.2821-1.2857v-2.0571c0-.4261.3444-.7714.7692-.7714.4249 0 .7693.3453.7693.7714v2.0571c0 1.5622-1.2628 2.8286-2.8206 2.8286h-2.0512c-.4249 0-.7693-.3454-.7693-.7714 0-.4261.3444-.7715.7693-.7715z"/><path d="m18.1538 4.54286c.7081 0 1.2821.57563 1.2821 1.28571v2.05714c0 .42605.3444.77143.7692.77143.4249 0 .7693-.34538.7693-.77143v-2.05714c0-1.56218-1.2628-2.82857-2.8206-2.82857h-2.0512c-.4249 0-.7693.34538-.7693.77143s.3444.77143.7693.77143z"/><path d="m5.84615 19.4571c-.70805 0-1.28205-.5756-1.28205-1.2857v-2.0571c0-.4261-.34439-.7714-.76923-.7714-.42483 0-.76923.3453-.76923.7714v2.0571c0 1.5622 1.26279 2.8286 2.82051 2.8286h2.05129c.42483 0 .76923-.3454.76923-.7714 0-.4261-.3444-.7715-.76923-.7715z"/><path d="m5.84615 4.54286c-.70805 0-1.28205.57563-1.28205 1.28571v2.05715c0 .42604-.34439.77142-.76923.77142-.42483 0-.76923-.34538-.76923-.77142v-2.05715c0-1.56217 1.26279-2.82857 2.82051-2.82857h2.05129c.42483 0 .76923.34538.76923.77143s-.3444.77143-.76923.77143z"/><path d="m22 12c0 .426-.3444.7714-.7692.7714h-18.46157c-.42483 0-.76923-.3454-.76923-.7714s.3444-.7714.76923-.7714h18.46157c.4248 0 .7692.3454.7692.7714z"/>
+                                    </g>
+                                </svg>
+                                <span>Quét mã QR</span>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-text">
+                                Quét mã QR ở trang này và thanh toán
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clock-countdown">
+                        <p>Giao dịch kết thúc sau:</p>
+                        <div class="clock">
+                            <div class="minute">00</div>
+                            <span>:</span>
+                            <div class="second">00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div id="credit-card-popup" class="popup-container">
+        <div class="popup-content">
+            <span class="popup-close">Đổi phương thức khác</span>
+            <p>Credit card Content</p>
+        </div>
+    </div> -->
 
     <!-- Address -->
     <section class="address">
@@ -22,19 +196,19 @@
         <!-- Progress bar -->
         <div class="progress-bar">
             <ul class="bar">
-                <li class="pre">
+                <li class="pre cart-page">
                     <i class="fa-solid fa-chevron-down"></i>
                     <div class="progress one">
                         <i class="fa-solid fa-check"></i>
                     </div>
-                    <p class="text">Lựa chọn</p>
+                    <a href="./cart.html" class="text">Lựa chọn</a>
                 </li>
-                <li class="pre">
+                <li class="pre transport-page">
                     <i class="fa-solid fa-chevron-down"></i>
                     <div class="progress two">
                         <i class="fa-solid fa-check"></i>
                     </div>
-                    <p class="text">Vận chuyển</p>
+                    <a href="./transpost.html" class="text">Vận chuyển</a>
                 </li>
                 <li class="current">
                     <i class="fa-solid fa-chevron-down"></i>
@@ -62,18 +236,17 @@
                     <!-- Select delivery -->
                     <div class="select-delivery">
                         <div class="select">
-                            <input type="radio" name="radio" id="save">
+                            <input type="radio" name="delivery" id="save">
                             <label for="save">
                                 <p class="delivery-name">Giao tiết kiệm</p>
-                                <p class="delivery-price">+20K</p>
+                                <p class="delivery-price">+<span>20</span>K</p>
                             </label>
-                            <input type="radio" name="radio" id="express">
+                            <input type="radio" name="delivery" id="express">
                             <label for="express">
                                 <p class="delivery-name">Giao siêu tốc</p>
-                                <p class="delivery-price">+27K</p>
+                                <p class="delivery-price">+<span>27</span>K</p>
                             </label>
                         </div>
-
                     </div>
                     <!-- All product order -->
                     <div class="all-order-delivery">
@@ -84,32 +257,17 @@
                             <p>Đơn hàng: Giao vào Thứ Năm, 15/06 </p>
                         </div>
                         <!-- All order -->
-                        <div class="all-order">
-                            <div class="order">
-                                <p class="transport-name">GIAO TIẾT KIỆM</p>
-                                <div class="transport fee">
-                                    <p class="fee-pre">20,000đ</p>
-                                    <p class="fee-current">MIỄN PHÍ</p>
-                                    <span>i</span>
+                        <div class="all-order-address">
+                            <div class="all-order">
+                                <div class="transport">
+                                    <p class="transport-name">GIAO TIẾT KIỆM</p>
+                                    <div class="transport-fee">
+                                        <p class="fee-pre">0đ</p>
+                                        <p class="fee-current">MIỄN PHÍ</p>
+                                        <span>i</span>
+                                    </div>
                                 </div>
-                                <img src="./images/products/image-1.jpg" alt="image-1" class="image-product">
-                                <p class="product-name">
-                                    Thức ăn hạt cho mèo Me-O 350g<br>
-                                    SL: x1
-                                </p>
-                                <p class="product fee">30,000đ</p>
-                                <img src="./images/products/rectangle-38.png" alt="rectangle-38" class="image-product">
-                                <p class="product-name">
-                                    Sữa tắm cho chó mèo Dorrikey 510ml<br>
-                                    SL: x2
-                                </p>
-                                <p class="product fee">94,400đ</p>
-                                <img src="./images/pets/alaska.jpg" alt="" class="image-product">
-                                <p class="product-name">
-                                    Alaska Malamute trắng xám<br>
-                                    SL: x1
-                                </p>
-                                <p class="product fee">17,000,000đ</p>
+                                <div id="all-order-product"></div>
                             </div>
                             <!-- Seller address -->
                             <div class="seller-address">
@@ -127,34 +285,34 @@
                 <div class="payment">
                     <div class="sub-title">Chọn hình thức thanh toán</div>
                     <div class="radio">
-                        <input type="radio" name="radio" id="cod">
-                        <img src="./images/payment/cod.png" class="image-cod" alt="cod">
+                        <input type="radio" name="payment" id="cod">
+                        <img src="./assets/images/payment/cod.png" class="image-cod" alt="cod">
                         <label for="cod">
                             <p class="product-name">Thanh toán tiền mặt khi nhận hàng</p>
                         </label>
-                        <input type="radio" name="radio" id="momo">
-                        <img src="./images/payment/momo.png" alt="momo">
+                        <input type="radio" name="payment" id="momo">
+                        <img src="./assets/images/payment/momo.png" alt="momo">
                         <label for="momo">
                             <p class="product-name">Thanh toán bằng ví MoMo</p>
                         </label>
-                        <input type="radio" name="radio" id="zalo">
-                        <img src="./images/payment/zalo.png" class="image-zalo" alt="zalo">
+                        <input type="radio" name="payment" id="zalo">
+                        <img src="./assets/images/payment/zalo.png" class="image-zalo" alt="zalo">
                         <label for="zalo">
                             <p>Thanh toán bằng ví ZaloPay</p>
                         </label>
-                        <input type="radio" name="radio" id="debit-card">
-                        <img src="./images/payment/debit-card.png" class="image-debit-card" alt="debit-card" >
+                        <input type="radio" name="payment" id="debit-card">
+                        <img src="./assets/images/payment/debit-card.png" class="image-debit-card" alt="debit-card" >
                         <label for="debit-card">
                             <p class="product-name">Thanh toán bằng thẻ ATM nội địa/Internet Banking</p>
                         </label>
-                        <input type="radio" name="radio" id="credit-card">
-                        <img src="./images/payment/credit-card.png" class="image-credit-card" alt="credit-card">
+                        <!-- <input type="radio" name="payment" id="credit-card">
+                        <img src="./assets/images/payment/credit-card.png" class="image-credit-card" alt="credit-card">
                         <label for="credit-card">
                             <p class="product-name">Thanh toán bằng thẻ quốc tế Visa, Master, JCB</p>
-                            <img src="./images/payment/visa.png" class="image-visa" alt="visa">
-                            <img src="./images/payment/master.png" class="image-master" alt="master"></img>
-                            <img src="./images/payment/jcb.png" class="image-jcb" alt="jcb"></img>
-                        </label>
+                            <img src="./assets/images/payment/visa.png" class="image-visa" alt="visa">
+                            <img src="./assets/images/payment/master.png" class="image-master" alt="master"></img>
+                            <img src="./assets/images/payment/jcb.png" class="image-jcb" alt="jcb"></img>
+                        </label> -->
                     </div>
                 </div>
             </div>
@@ -195,33 +353,46 @@
                         <p class="order-title-name">Đơn hàng</p>
                         <p class="change-delivery">Thay đổi</p>
                         <p>
-                            4 sản phẩm.
-                            <span>Xem thông tiền</span>
+                            <span class="quantity">4 sản phẩm.</span>
+                            <span>Xem thông tin</span>
                         </p>
                     </div>
                     <!-- Total price -->
                     <p class="name-price">Tạm tính</p>
-                    <p class="price">0<span>đ</span></p>
+                    <p class="provisional price">
+                        <span>0</span><span>đ</span>
+                    </p>
                     <p class="name-price">Phí vận chuyển</p>
-                    <p class="price">0<span>đ</span></p>
+                    <p class="transport price">
+                        <span>0</span><span>đ</span>
+                    </p>
                     <p class="name-price">Khuyến mãi vận chuyển</p>
-                    <p class="price promotional-delivery">0<span>đ</span></p>
+                    <p class="promotional-delivery price">
+                        <span>0</span><span>đ</span>
+                    </p>
                     <p class="name-price">Giảm giá</p>
-                    <p class="price">0<span>đ</span></p>
+                    <p class="discount price">
+                        <span>0</span><span>đ</span>
+                    </p>
                     <div class="all">
                         <p class="name-price">Tổng tiền</p>
-                        <div class="price">
-                            <p>Vui lòng chọn sản phẩm</p>
+                        <div class="total price">
+                            <p><span>0</span><span>đ</span></p>
                             <p class="note">(Đã bao gồm VAT nếu có)</p>
                         </div>
                         <!-- Button buy -->
-                        <div class="btn-buy">
+                        <button type="button" class="btn-buy">
                             <p>Đặt hàng</p>
-                        </div>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script type="module" src="./js/payment.js"></script>
 </body>
 </html>

@@ -195,7 +195,7 @@ const pets = [
         }
     },
     {
-        id: 14,
+        id:  14,
         image: '../assets/images/Pets/alaska.png',
         name: 'Alaska Malamute trắng xám 5', 
         price: '14,000,000',
