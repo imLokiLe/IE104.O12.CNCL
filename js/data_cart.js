@@ -12,3 +12,14 @@ export const resetCart = () => {
     arrCart = [];
     updateCartLocalStorage();
 };
+
+// Xóa phần tử trùng lặp giữa arrCart và arrPayment dựa trên id
+export const removeDuplicatesBetweenArrays = (arr1, arr2) => {
+  arr1.forEach(item1 => {
+    const isDuplicate = arr2.some(item2 => item2.id === item1.id);
+    if (isDuplicate) {
+      arrCart = arrCart.filter(item => item.id !== item1.id);
+      updateCartLocalStorage();
+    }
+  });
+};

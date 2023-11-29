@@ -5,7 +5,7 @@ export const updatePaymentLocalStorage = () => {
   localStorage.setItem('payment', JSON.stringify(arrPayment));
 };
 //trả về mảng arrPayment
-export const getarrPayment = () => arrPayment;
+export const getArrPayment = () => arrPayment;
 
 //Xóa data arrPayment
 export const resetPayment = () => {
