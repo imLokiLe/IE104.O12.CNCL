@@ -203,6 +203,7 @@ selectAll.addEventListener('change', function () {
 });
 
 import { arrPayment, updatePaymentLocalStorage, resetPayment} from '../js/data_payment.js';
+resetPayment();
 function addToPayment(product){
     let flag = false;
     for (let i = 0; i < arrPayment.length; i++) {
@@ -237,7 +238,7 @@ function attackPayment(){
                 };
                 addToPayment(productPayment);
             }
-            // resetPayment();
+            
             // Thay đổi đường dẫn URL đến trang mới
             window.location.href = '../transpost.html';
         } else {
