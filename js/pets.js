@@ -326,12 +326,12 @@ renderFilterOptions(document.getElementById("filterOptionsDog"), 'dog');
 renderFilterOptions(document.getElementById("filterOptionsCat"), 'cat');
 FilterOptions();
 
-import { arrCart, updateCartLocalStorage, getArrCart } from '../js/data_cart.js';
-let arrCartnumber = getArrCart();
+import { updateCartLocalStorage, getArrCart } from '../js/data_cart.js';
+let arrCart = getArrCart();
 let cart = document.querySelector(".cart-number");
 let numberCart = 0;
-for (let i = 0; i < arrCartnumber.length; i++){
-    numberCart += arrCartnumber[i].quantity;
+for (let i = 0; i < arrCart.length; i++){
+    numberCart += arrCart[i].quantity;
 }
 cart.innerHTML = numberCart;
 function addToCartHandler(product) {

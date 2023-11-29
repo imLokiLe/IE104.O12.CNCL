@@ -12,6 +12,7 @@ body{
 
 /* Address */
 .address{
+    margin-top: 110px;
     padding: 25px 4%;
     text-align: left;
     font-family: Quicksand;
@@ -105,7 +106,7 @@ body{
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background-image: url(../images/confirm/red-white-cat-i-white-studio-1.png);
+    background-image: url(../assets/images/confirm/red-white-cat-i-white-studio-1.png);
     position: absolute;
     background-size: cover;
     background-position: center;

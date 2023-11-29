@@ -1,16 +1,7 @@
-import { resetCart, getArrCart, updateCartLocalStorage} from '../js/data_cart.js';
-import { arrPayment, updatePaymentLocalStorage, resetPayment} from '../js/data_payment.js';
+import { arrPayment } from '../js/data_payment.js';
+import { dataDelivery, updateDeliveryLocalStorage } from '../js/data_delivery.js';
 
-let arrCart = getArrCart();
-// function updateNumberCart(){
-//     let numberCart = 0;
-//     let cart = document.querySelector(".cart-number");
-//     for (let i = 0; i < arrCart.length; i++){
-//         numberCart += arrCart[i].quantity;
-//     }
-//     return cart.innerHTML = numberCart;
-// }
-// updateNumberCart()
+
 document.querySelector('.pre.cart-page').addEventListener('click', function() {
     window.location.href = '../cart.html';
 });
@@ -137,11 +128,18 @@ radioSelectPayment.forEach(input => {
 });
 const buyButton = document.querySelector('.btn-buy');
 buyButton.addEventListener('click', function() {
+    
     if (selectedDeliveryInput == null){
         alert('Vui lòng chọn hình thức giao hàng');
     } else if (selectedPaymentInput == null) {
         alert('Vui lòng chọn hình thức thanh toán');
     } else {
+        let Delivery = {
+            delivery: selectedPaymentInput.id,
+            totalPayment: totalPayment,
+        };
+        dataDelivery.push(Delivery);
+        updateDeliveryLocalStorage();
         if (selectedPaymentInput.id == 'cod'){
             window.location.href = '../confirm.html';
         } else {
