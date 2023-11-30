@@ -38,7 +38,7 @@
     justify-content: center;
     background-color: #FF6B35;
     width: 150px;
-    height: 60px;
+    height: 50px;
     border-radius: 40px;
     text-align: center;
     font-weight: bold;
@@ -46,15 +46,20 @@
     color: white;
     box-shadow: 2px 2px 2px grey;
     font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #000;
 }
 .btn i{
     position: relative;
-    top: 23.5px;
+    top: 18px;
     margin: 5px;
 }
 .btn>p{
     position: relative;
-    top: 18px;
+    top: 13px;
 }
 .intro_btn_field{
     display: flex;
@@ -206,24 +211,23 @@
     top: 640vh;
     height: 100vh;
 }
-.menu{
+#menu{
     position: absolute;
     top: 580vh;
     left: 5vw;
-    width: 100%;
 }
 .menu_detail{
     position: absolute;
     /* top: -500vh; */
-    width: 70%;
+    left: 10vw;
+    width: 70vw;
 }
 .menu_btn_field{
     display: flex;
     justify-content: space-around;
     position: relative;
-    left: 45%;
-    top: 100vh;
-    width: 50%;
+    left: 50vw;
+    top: 105vh;
 }
 /* partner */
 .partner{

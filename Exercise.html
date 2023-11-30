@@ -20,20 +20,22 @@
         </div>
 
         <!-- Intro -->
-        <img src="../assets/images/Exercise/intro_img.png" alt="img_intro" class="img_intro_exercise">
+        <img src="./assets/images/Exercise/intro_img.png" alt="img_intro" class="img_intro_exercise">
         <div class="intro">
             <div class="intro_content">
                 <h1>Dịch Vụ Tập Thể Dục</h1>
                 <p>Chào mừng bạn đến với dịch vụ tập thể dục cho chó mèo! Chúng tôi sẽ thay bạn huấn luyện sức khỏe cho những thú cưng thân yêu!</p>
                 <div class="intro_btn_field">
-                    <div class="btn btn_booking">
-                        <i class="fa-solid fa-calendar-days fa-lg"></i>
-                        <p>ĐẶT LỊCH</p>
-                    </div>
-                    <div class="btn btn_menu">
+                    <a href="./Booking.html">
+                        <div class="btn btn_booking">
+                            <i class="fa-solid fa-calendar-days fa-lg"></i>
+                            <p>ĐẶT LỊCH</p>
+                        </div>
+                    </a>
+                    <button class="btn btn_menu" onclick="scrollToSection('menu')">
                         <i class="fa-regular fa-clipboard fa-xl"></i>
                         <p>MENU</p>
-                    </div>
+                    </button>
                 </div>
             </div>
         </div>
@@ -142,17 +144,21 @@
 
         <!-- menu -->
         <img src="../assets/backgrounds/bg-exercise-menu.png" alt="bg-exercise-menu" class="bg menu_fr">
-        <div class="menu">
+        <div id="menu">
             <img src="../assets/images/Exercise/Menu.png" alt="menu" class="menu_detail">
             <div class="menu_btn_field">
-                <div class="btn btn_booking menu_btn_booking">
-                    <i class="fa-solid fa-calendar-days fa-lg"></i>
-                    <p>ĐẶT LỊCH</p>
-                </div>
-                <div class="btn btn_contact menu_btn_contact">
-                    <i class="fa-solid fa-phone fa-lg"></i>
-                    <p>LIÊN HỆ</p>
-                </div>
+                <a href="./Booking.html">
+                    <div class="btn btn_booking menu_btn_booking">
+                        <i class="fa-solid fa-calendar-days fa-lg"></i>
+                        <p>ĐẶT LỊCH</p>
+                    </div>
+                </a>
+                <a href="./contact.html">
+                    <div class="btn btn_contact menu_btn_contact">
+                        <i class="fa-solid fa-phone fa-lg"></i>
+                        <p>LIÊN HỆ</p>
+                    </div>
+                </a>
             </div>
         </div>
 
@@ -176,6 +182,6 @@
     </div>
 
     <div id="footer"></div>
-
+    <script src="./js/exercise.js"></script>
 </body>
 </html>
