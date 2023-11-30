@@ -25,23 +25,25 @@
                 <h1>Dịch Vụ Khách Sạn</h1>
                 <p>Chào mừng bạn đến với dịch vụ khách sạn chó mèo của chúng tôi! Chúng tôi sẽ là ngôi nhà thứ hai, nơi an toàn và chăm sóc tốt nhất cho thú cưng của bạn!</p>
                 <div class="intro_btn_field">
-                    <div class="btn btn_booking">
-                        <i class="fa-solid fa-calendar-days fa-lg"></i>
-                        <p>ĐẶT LỊCH</p>
-                    </div>
-                    <div class="btn btn_menu">
+                    <a href="./Booking.html">
+                        <div class="btn btn_booking">
+                            <i class="fa-solid fa-calendar-days fa-lg"></i>
+                            <p>ĐẶT LỊCH</p>
+                        </div>
+                    </a>
+                    <button class="btn btn_menu" onclick="scrollToSection('menu')">
                         <i class="fa-regular fa-clipboard fa-xl"></i>
                         <p>MENU</p>
-                    </div>
+                    </button>
                 </div>
             </div>
         </div>
-        <img src="../assets/images/Hotel/intro_img.png" alt="img_intro" class="img_intro_hotel">
+        <img src="./assets/images/Hotel/intro_img.png" alt="img_intro" class="img_intro_hotel">
         
         <!-- special -->
-        <img src="../assets/backgrounds/bg-hotel-special.png" alt="bg-hotel-special" class="bg special_fr">
+        <img src="./assets/backgrounds/bg-hotel-special.png" alt="bg-hotel-special" class="bg special_fr">
         <div class="special">
-            <img src="../assets/images/Hotel/phone_img.png" alt="phone_img" class="phone_img">
+            <img src="./assets/images/Hotel/phone_img.png" alt="phone_img" class="phone_img">
             <div class="special_content">
                 <h2>DỊCH VỤ KHÁCH SẠN CÓ GÌ ĐẶC BIỆT</h2>
                 <ul>
@@ -53,14 +55,18 @@
                     <li>Chơi cùng bạn, nhân viên hotel và trải nghiệm các dịch vụ khác như Spa - Grooming, Gym...</li>
                 </ul>
                 <div class="special_btn_field">
-                    <div class="btn btn_booking special_btn_booking">
-                        <i class="fa-solid fa-calendar-days fa-lg"></i>
-                        <p>ĐẶT LỊCH</p>
-                    </div>
-                    <div class="btn btn_contact special_btn_contact">
-                        <i class="fa-solid fa-phone fa-lg"></i>
-                        <p>LIÊN HỆ</p>
-                    </div>
+                    <a href="./Booking.html">
+                        <div class="btn btn_booking special_btn_booking">
+                            <i class="fa-solid fa-calendar-days fa-lg"></i>
+                            <p>ĐẶT LỊCH</p>
+                        </div>
+                    </a>
+                    <a href="./contact.html">
+                        <div class="btn btn_contact special_btn_contact">
+                            <i class="fa-solid fa-phone fa-lg"></i>
+                            <p>LIÊN HỆ</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -79,36 +85,61 @@
                 <button class="room_toggle_btn" id="selecting" onclick="room_leftClick()">Phòng thường</button>
                 <button class="room_toggle_btn" onclick="room_rightClick()">Phòng VIP</button>
             </div>
-            <div class="room_box">
-                <img src="../assets/images/Hotel/room_img.png" alt="room_img" class="room_img">
+            <div class="room_box" id="normal">
+                <img src="./assets/images/Hotel/room_img.png" alt="room_img" class="room_img">
                 <div class="room_content">
                     <h1>Phòng thường</h1>
                     <p>Diện tích: 25m2 <br>
                         Đồ ăn: Ngon
                     </p>
                     <div class="room_btn_field">
-                        <div class="btn btn_booking">
-                            <i class="fa-solid fa-calendar-days fa-lg"></i>
-                            <p>ĐẶT LỊCH</p>
-                        </div>
-                        <div class="btn btn_menu">
+                        <a href="./Booking.html">
+                            <div class="btn btn_booking">
+                                <i class="fa-solid fa-calendar-days fa-lg"></i>
+                                <p>ĐẶT LỊCH</p>
+                            </div>
+                        </a>
+                        <button class="btn btn_menu" onclick="scrollToSection('menu')">
                             <i class="fa-regular fa-clipboard fa-xl"></i>
                             <p>MENU</p>
-                        </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="room_box" id="vip">
+                <img src="./assets/images/Hotel/room_img_VIP.png" alt="room_img" class="room_img">
+                <div class="room_content">
+                    <h1>Phòng VIP</h1>
+                    <p>Diện tích: 40m2 <br>
+                        Đồ ăn: Siêu Ngon
+                    </p>
+                    <div class="room_btn_field">
+                        <a href="./Booking.html">
+                            <div class="btn btn_booking">
+                                <i class="fa-solid fa-calendar-days fa-lg"></i>
+                                <p>ĐẶT LỊCH</p>
+                            </div>
+                        </a>
+                        <button class="btn btn_menu" onclick="scrollToSection('menu')">
+                            <i class="fa-regular fa-clipboard fa-xl"></i>
+                            <p>MENU</p>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- menu -->
-        <div class="menu">
+        <div id="menu">
             <img src="../assets/images/Hotel/menu_detail.png" alt="menu_detail" class="menu_detail">
             <div class="menu_content">
                 <h1>MENU</h1>
-                <div class="btn btn_booking menu_btn_booking">
-                    <i class="fa-solid fa-calendar-days fa-lg"></i>
-                    <p>ĐẶT LỊCH</p>
-                </div>
+                <a href="./Booking.html">
+                    <div class="btn btn_booking menu_btn_booking">
+                        <i class="fa-solid fa-calendar-days fa-lg"></i>
+                        <p>ĐẶT LỊCH</p>
+                    </div>
+                </a>
             </div>
         </div>
 
@@ -117,12 +148,20 @@
         <div class="rule">
             <img src="../assets/images/Hotel/rule_img.png" alt="rule_img" class="rule_img">
             <img src="../assets/images/Hotel/idea_box.png" alt="idea_box" class="idea_box">
-            <div class="rule_content">
+            <div class="rule_note_content" id="note_content">
                 <h1>LƯU Ý</h1>
                 <ul>
                     <li>Khách không được đưa đồ ăn cho bé khi ở khách sạn (nếu khách vẫn muốn mang vào bé có vấn đề gì phòng khách sạn sẽ không chịu trách nhiệm)</li>
                     <li>Khi khách gửi bé tại khách sạn các bé phải được tiêm ít nhất 1 mũi vaccin và kiểm tra tổng quát trước khi đến</li>
                     <li>Đồ ăn của các bé nhân viên sẽ cho ăn theo nhu cầu của khách (còn khách không có nhu cầu nhân viên sẽ tự cho ăn theo khẩu phần ở shop)</li>
+                </ul>
+            </div>
+            <div class="rule_note_content" id="rule_content">
+                <h1>QUY ĐỊNH</h1>
+                <ul>
+                    <li>Khi chó/ mèo gửi khách sạn trên 7 ngày sử dụng spa khách sẽ được giảm giá dịch vụ spa 30% giá tắm</li>
+                    <li>Khi chó /mèo gửi khách sạn 1 tháng trở lên sẽ miên phí 1 ngày khách sạn cho bé có giá thấp nhất</li>
+                    <li>Khi chó mèo gửi khách sạn 2 tháng trở lên sẽ miễn phí 1 ngày khách sạn cho 1 bé có giá cao nhất</li>
                 </ul>
             </div>
             <div class="rule_note_option">

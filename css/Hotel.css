@@ -46,6 +46,11 @@
     color: white;
     box-shadow: 2px 2px 2px grey;
     font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #000;
 }
 .btn i{
     position: relative;
@@ -111,6 +116,10 @@
 .special_btn_booking, .special_btn_contact{
     background-color: #fff;
     color: #fc591e;
+}
+.special_btn_booking:hover, .special_btn_contact:hover{
+    background-color: black;
+    color: #fff;
 }
 
 /* facilities */
@@ -197,6 +206,12 @@
     border-radius: 30px;
     box-shadow: 1px 1px 10px gray inset;
 }
+#normal{
+    display: block;
+}
+#vip{
+    display: none;
+}
 .room_content{
     width: 40%;
     position: absolute;
@@ -214,7 +229,7 @@
 }
 
 /* menu */
-.menu{
+#menu{
     position: relative;
     width: 100%;
 }
@@ -253,7 +268,7 @@
     position: relative;
     left: 100px;
 }
-.rule_content{
+.rule_note_content{
     position: absolute;
     width: 40%;
     left: 43vw;
@@ -262,9 +277,16 @@
     font-weight: bold;
     font-size: 1.3rem;
 }
-.rule_content h1{
+.rule_note_content h1{
     text-align: center;
     margin-bottom: 50px;
+}
+#rule_content{
+    display: none;
+    bottom: 250px;
+}
+#note_content{
+    display: block;
 }
 
 .rule_note_option{

@@ -80,4 +80,3 @@ function scrollToSection(sectionId) {
     }
   }
 
-// toggle menu
