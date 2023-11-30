@@ -33,10 +33,10 @@
                             <p>ĐẶT LỊCH</p>
                         </div>
                     </a>
-                    <div class="btn btn_menu">
+                    <button class="btn btn_menu" onclick="scrollToSection('menu')">
                         <i class="fa-regular fa-clipboard fa-xl"></i>
                         <p>MENU</p>
-                    </div>
+                    </button>
                 </div>
             </div>
         </div>
@@ -82,15 +82,15 @@
         </div>
 
         <!-- Menu -->
-        <div class="menu">
+        <div id="menu">
             <div class="menu_option">
-                <div class="btn btn_option opt_service">
+                <div class="btn btn_option btn_selecting" id="opt_service">
                     <p>DỊCH VỤ</p>
                 </div>
-                <div class="btn btn_option opt_surgery">
+                <div class="btn btn_option" id="opt_surgery">
                     <p>PHẪU THUẬT</p>
                 </div>
-                <div class="btn btn_option opt_treatment">
+                <div class="btn btn_option" id="opt_treatment">
                     <p>ĐIỀU TRỊ</p>
                 </div>
             </div>
@@ -103,78 +103,82 @@
                     </div>
                 </a>
             </div>
+            <img src="./assets/images/Vet/menu_img.png" alt="menu_img" class="menu_img">
             <div class="menu_right">
-                <img src="./assets/images/Vet/menu_img.png" alt="menu_img" class="menu_img">
-                <table>
-                    <tr>
-                        <td style="color: #fc591e">Khám tư vấn</td>
-                        <td colspan="2" style="text-align: right;">/lần</td>
-                        <td>250,000đ</td>
-                    </tr>
-                    <tr>
-                        <td rowspan="4" style="color: #fc591e">Vaccine</td>
-                        <td>Vaccine chó 5 bệnh</td>
-                        <td>/lần</td>
-                        <td>200,000đ</td>
-                    </tr>
-                    <tr>
-                        <td>Vaccine chó 7 bệnh</td>
-                        <td>/lần</td>
-                        <td>250,000đ</td>
-                    </tr>
-                    <tr>
-                        <td>Vaccine mèo</td>
-                        <td>/lần</td>
-                        <td>300,000đ</td>
-                    </tr>
-                    <tr>
-                        <td>Vaccine chó & mèo dại</td>
-                        <td>/lần</td>
-                        <td>100,000đ</td>
-                    </tr>
-                    <tr>
-                        <td rowspan="2" style="color: #fc591e">Siêu âm</td>
-                        <td>Siêu âm thai</td>
-                        <td>/lần</td>
-                        <td>200,000đ</td>
-                    </tr>
-                    <tr>
-                        <td>Siêu âm bụng tổng quát</td>
-                        <td>/lần</td>
-                        <td>300,000đ</td>
-                    </tr>
-                    <tr>
-                        <td rowspan="6" style="color: #fc591e">Xét nghiệm</td>
-                        <td>Chức năng gan/thận</td>
-                        <td>/lần</td>
-                        <td>800,000đ</td>
-                    </tr>
-                    <tr>
-                        <td>Điện giải</td>
-                        <td>/lần</td>
-                        <td>400,000đ</td>
-                    </tr>
-                    <tr>
-                        <td>Tiền phẫu thuật</td>
-                        <td>/lần</td>
-                        <td>600,000đ</td>
-                    </tr>
-                    <tr>
-                        <td>Da/phân/tai</td>
-                        <td>/lần</td>
-                        <td>150,000đ</td>
-                    </tr>
-                    <tr>
-                        <td>Nước tiểu</td>
-                        <td>/lần</td>
-                        <td>150,000đ</td>
-                    </tr>
-                    <tr>
-                        <td>Ký sinh trùng máu</td>
-                        <td>/lần</td>
-                        <td>250,000đ</td>
-                    </tr>
-                </table>
+                <div id="menu_content">
+                    <table id="table_menu">
+                        <tr>
+                            <td style="color: #fc591e">Khám tư vấn</td>
+                            <td colspan="2" style="text-align: right;">/lần</td>
+                            <td>250,000đ</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4" style="color: #fc591e">Vaccine</td>
+                            <td>Vaccine chó 5 bệnh</td>
+                            <td>/lần</td>
+                            <td>200,000đ</td>
+                        </tr>
+                        <tr>
+                            <td>Vaccine chó 7 bệnh</td>
+                            <td>/lần</td>
+                            <td>250,000đ</td>
+                        </tr>
+                        <tr>
+                            <td>Vaccine mèo</td>
+                            <td>/lần</td>
+                            <td>300,000đ</td>
+                        </tr>
+                        <tr>
+                            <td>Vaccine chó & mèo dại</td>
+                            <td>/lần</td>
+                            <td>100,000đ</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" style="color: #fc591e">Siêu âm</td>
+                            <td>Siêu âm thai</td>
+                            <td>/lần</td>
+                            <td>200,000đ</td>
+                        </tr>
+                        <tr>
+                            <td>Siêu âm bụng tổng quát</td>
+                            <td>/lần</td>
+                            <td>300,000đ</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="6" style="color: #fc591e">Xét nghiệm</td>
+                            <td>Chức năng gan/thận</td>
+                            <td>/lần</td>
+                            <td>800,000đ</td>
+                        </tr>
+                        <tr>
+                            <td>Điện giải</td>
+                            <td>/lần</td>
+                            <td>400,000đ</td>
+                        </tr>
+                        <tr>
+                            <td>Tiền phẫu thuật</td>
+                            <td>/lần</td>
+                            <td>600,000đ</td>
+                        </tr>
+                        <tr>
+                            <td>Da/phân/tai</td>
+                            <td>/lần</td>
+                            <td>150,000đ</td>
+                        </tr>
+                        <tr>
+                            <td>Nước tiểu</td>
+                            <td>/lần</td>
+                            <td>150,000đ</td>
+                        </tr>
+                        <tr>
+                            <td>Ký sinh trùng máu</td>
+                            <td>/lần</td>
+                            <td>250,000đ</td>
+                        </tr>
+                    </table>
+                    <img src="./assets/images/Vet/surgery_menu.png" alt="surgery_menu" id="surgery_menu">
+                    <img src="./assets/images/Vet/cure_menu.png" alt="cure_menu" id="cure_menu">
+                </div>
             </div>
         </div>
 
@@ -189,10 +193,12 @@
                 </div>
                 <h1>HỖ TRỢ KHẨN CẤP</h1>
                 <p>Nếu thú cưng của bạn có vấn đề y tế khẩn cấp, chúng tôi có hệ thống để hỗ trợ bạn ngay lúc bạn cần nhất. Chúng tôi cũng là những người nuôi và yêu động vật, chúng tôi sẽ làm hết sức vì bạn!</p>
-                <div class="btn btn_contact urgency_btn_contact">
-                    <i class="fa-solid fa-phone fa-lg"></i>
-                    <p>LIÊN HỆ</p>
-                </div>
+                <a href="./contact.html">
+                    <div class="btn btn_contact urgency_btn_contact">
+                        <i class="fa-solid fa-phone fa-lg"></i>
+                        <p>LIÊN HỆ</p>
+                    </div>
+                </a>
             </div>
             <img src="./assets/images/Vet/urgency_img.png" alt="urgency_img" class="urgency_img">
         </div>
@@ -204,32 +210,73 @@
                 <hr>
                 <p><b>TRẢI NGHIỆM CHĂM SÓC SỨC KHỎE CHO THÚ CƯNG</b></p>
             </div>
-            <img src="./assets/images/Vet/next_left.png" alt="next_left" class="next_left">
-            <img src="./assets/images/Vet/next_right.png" alt="next_right" class="next_right">
-            <div class="comment_box">
-                <img src="./assets/images/Vet/comment_img.png" alt="comment_img" class="comment_img">
-                <div class="comment_content">
-                    <div class="comment_author">
-                        <hr>
-                        <p>Nguyễn Thị Anh Thư</p>
+            <div class="comment_slider">
+                <div class="comment_list">
+                    <div class="comment_box">
+                        <img src="./assets/images/Vet/comment_img.png" alt="comment_img" class="comment_img">
+                        <div class="comment_content">
+                            <div class="comment_author">
+                                <hr>
+                                <p>Nguyễn Thị Anh Thư</p>
+                            </div>
+                            <h1>Thật tuyệt vời!!!</h1>
+                            <p><b>Triệt sản | Mổ tuyến lệ</b></p>
+                            <p class="comment_detail">
+                                Bác sĩ Phúc Phạm tay nghề rất cao.<br>
+                                Dịch vụ hỗ trợ nhanh chóng, chi phí hợp lý.
+                            </p>
+                        </div>
                     </div>
-                    <h1>Thật tuyệt vời!!!</h1>
-                    <p><b>Triệt sản | Mổ tuyến lệ</b></p>
-                    <p class="comment_detail">
-                        Bác sĩ Phúc Phạm tay nghề rất cao.<br>
-                        Dịch vụ hỗ trợ nhanh chóng, chi phí hợp lý.
-                    </p>
+                    <div class="comment_box">
+                        <img src="./assets/images/Vet/comment_img1.png" alt="comment_img" class="comment_img1">
+                        <div class="comment_content">
+                            <div class="comment_author">
+                                <hr>
+                                <p>Sơn Tùng M-TP</p>
+                            </div>
+                            <h1>Oh Yeah! Quá tuyệt!!</h1>
+                            <p><b>Bó bột</b></p>
+                            <p class="comment_detail">
+                                Bác sĩ Thư điều trị tận tâm.<br>
+                                Nhân viên chăm sóc thú cưng chu đáo.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="comment_box">
+                        <img src="./assets/images/Vet/comment_img2.png" alt="comment_img" class="comment_img2">
+                        <div class="comment_content">
+                            <div class="comment_author">
+                                <hr>
+                                <p>Binz</p>
+                            </div>
+                            <h1>Amazing!!!</h1>
+                            <p><b>Soi bàng quang</b></p>
+                            <p class="comment_detail">
+                                Bác sĩ Phúc Phạm tay nghề rất cao.<br>
+                                Dịch vụ hỗ trợ nhanh chóng, chi phí hợp lý.
+                            </p>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- button next and prev -->
+                <div class="buttons">
+                    <button id="prev"><img src="./assets/images/Vet/next_left.png" class="next_left"></button>
+                    <button id="next"><img src="./assets/images/Vet/next_right.png" class="next_right"></button>
+                </div>
+
+                <!-- dots -->
+                <ul class="dots">
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                </ul>
             </div>
-            <div class="num_pg_group">
-                <div class="num_pg 1"></div>
-                <div class="num_pg 2"></div>
-                <div class="num_pg 3"></div>
-            </div>
+            
         </div>
     </div>
 
     <div id="footer"></div>
-    
+    <script src="./js/vet.js"></script>
 </body>
 </html>

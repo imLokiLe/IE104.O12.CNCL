@@ -46,6 +46,11 @@
     color: white;
     box-shadow: 2px 2px 2px grey;
     font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #000;
 }
 .btn i{
     position: relative;
@@ -123,14 +128,21 @@
     position: relative;
     top: 15vh;
 }
-.menu{
+#menu{
     position: absolute;
     top: 300vh;
 }
-.menu_detail{
+#menu_detail{
     position: absolute;
     left: 520px;
     top: 10vh;
+    display: block;
+}
+#menu_cat{
+    position: absolute;
+    left: 520px;
+    top: 20vh;
+    display: none;
 }
 .menu_content{
     position: absolute;
@@ -183,6 +195,9 @@
     top: 100px;
     color: white;
     background-color: black;
+}
+.menu_btn_booking:hover{
+    background-color: #fc591e;
 }
 
 /* extra service */
@@ -261,6 +276,18 @@
     left: 100px;
     width: 200px;
 }
+.comment_img1{
+    position: absolute;
+    left: 100px;
+    top: 20px;
+    width: 200px;
+}
+.comment_img2{
+    position: absolute;
+    left: 100px;
+    top: 25px;
+    width: 230px;
+}
 .comment_box{
     background-color: #fff;
     border-radius: 30px;
@@ -270,6 +297,7 @@
     position: relative;
     left: 15%;
     top: -20px;
+    box-shadow: inset 5px 5px 10px gainsboro;
 }
 .comment_content{
     position: relative; 
@@ -298,28 +326,57 @@
 .comment_detail{
     padding-top: 20px;
 }
-.next_left{
+.comment_slider .dots{
     position: absolute;
-    left: 100px;
-    bottom: 120px;
-}
-.next_right{
-    position: absolute;
-    left: 90%;
-    bottom: 120px;
-}
-.num_pg_group{
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     display: flex;
-    position: absolute;
-    bottom: -20px;
-    left: 700px;
+    justify-content: center;
 }
-.num_pg{
-    width: 20px;
-    height: 20px;
-    margin: 5px;
-    background-color: #fff;
-    border-radius: 50px;
+.comment_slider .dots li{
+    list-style: none;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+    z-index: 1;
+}
+.comment_slider .dots li.active{
+    width: 30px;
+    background-color: #fc591e;
+}
+.comment_slider{
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+.comment_box:nth-child(1){
+    display: block;
+}
+.comment_box:nth-child(2), .comment_box:nth-child(3){
+    display: none;
+}
+.comment_slider .buttons{
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.comment_slider .buttons button{
+    background: none;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 /* footer */

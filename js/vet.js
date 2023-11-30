@@ -1,19 +1,3 @@
-let btn = document.getElementById('selected_option');
-let cat = document.getElementById('menu_cat');
-let dog = document.getElementById('menu_detail');
-
-function leftClick() {
-	btn.style.left = '0';
-	cat.style.display = 'none';
-	dog.style.display = 'block';
-}
-
-function rightClick() {
-	btn.style.left = '110px';
-	cat.style.display = 'block';
-	dog.style.display = 'none';
-}
-
 // slider
 let slider = document.querySelector('.comment_slider .comment_list');
 let items = document.querySelectorAll('.comment_slider .comment_list .comment_box');
@@ -81,3 +65,43 @@ function scrollToSection(sectionId) {
   }
 
 // toggle menu
+
+let opt_service = document.getElementById('opt_service');
+let opt_surgery = document.getElementById('opt_surgery');
+let opt_treatment = document.getElementById('opt_treatment');
+let menu_service = document.getElementById('table_menu');
+let menu_surgery = document.getElementById('surgery_menu');
+let menu_cure = document.getElementById('cure_menu');
+opt_service.addEventListener('click', function(){
+        menu_service.style.display = 'block';
+        menu_surgery.style.display = 'none';
+        menu_cure.style.display = 'none';
+        opt_service.style.backgroundColor = '#fc591e';
+        opt_service.style.color = 'white';
+        opt_surgery.style.backgroundColor = '#fff';
+        opt_surgery.style.color = '#fc591e';
+        opt_treatment.style.backgroundColor = '#fff';
+        opt_treatment.style.color = '#fc591e';
+});
+opt_surgery.addEventListener('click', function(){
+        menu_service.style.display = 'none';
+        menu_surgery.style.display = 'block';
+        menu_cure.style.display = 'none';
+        opt_service.style.backgroundColor = '#fff';
+        opt_service.style.color = '#fc591e';
+        opt_surgery.style.backgroundColor = '#fc591e';
+        opt_surgery.style.color = 'white';
+        opt_treatment.style.backgroundColor = '#fff';
+        opt_treatment.style.color = '#fc591e';
+});
+opt_treatment.addEventListener('click', function(){
+        menu_service.style.display = 'none';
+        menu_surgery.style.display = 'none';
+        menu_cure.style.display = 'block';
+        opt_service.style.backgroundColor = '#fff';
+        opt_service.style.color = '#fc591e';
+        opt_surgery.style.backgroundColor = '#fff';
+        opt_surgery.style.color = '#fc591e';
+        opt_treatment.style.backgroundColor = '#fc591e';
+        opt_treatment.style.color = 'white';
+});

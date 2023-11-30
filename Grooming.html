@@ -27,14 +27,16 @@
                 <h1>Tắm Gội - Cắt Tỉa Lông</h1>
                 <p>Chào mừng bạn đến với dịch vụ tắm gội - cắt tỉa lông chuyên nghiệp của chúng tôi! Chúng tôi tự hào là một địa điểm tuyệt vời để thú cưng thư giản và làm đẹp!</p>
                 <div class="intro_btn_field">
-                    <div class="btn btn_booking">
-                        <i class="fa-solid fa-calendar-days fa-lg"></i>
-                        <p>ĐẶT LỊCH</p>
-                    </div>
-                    <div class="btn btn_menu">
+                    <a href="./Booking.html">
+                        <div class="btn btn_booking">
+                            <i class="fa-solid fa-calendar-days fa-lg"></i>
+                            <p>ĐẶT LỊCH</p>
+                        </div>
+                    </a>
+                    <button class="btn btn_menu" onclick="scrollToSection('menu')">
                         <i class="fa-regular fa-clipboard fa-xl"></i>
                         <p>MENU</p>
-                    </div>
+                    </button>
                 </div>
             </div>
         </div>
@@ -68,7 +70,7 @@
 
         <!-- menu -->
         <img src="../assets/backgrounds/bg-grooming-menu.png" alt="bg-grooming-menu" class="bg menu_fr">
-        <div class="menu">
+        <div id="menu">
             <div class="menu_content">
                 <h1>MENU</h1>
                 <div class="menu_option">
@@ -76,12 +78,15 @@
                     <button class="toggle_btn" onclick="leftClick()">Chó</button>
                     <button class="toggle_btn" onclick="rightClick()">Mèo</button>
                 </div>
-                <div class="btn btn_booking menu_btn_booking">
-                    <i class="fa-solid fa-calendar-days fa-lg"></i>
-                    <p>ĐẶT LỊCH</p>
-                </div>
+                <a href="./Booking.html">
+                    <div class="btn btn_booking menu_btn_booking">
+                        <i class="fa-solid fa-calendar-days fa-lg"></i>
+                        <p>ĐẶT LỊCH</p>
+                    </div>
+                </a>
             </div>
-            <img src="../assets/images/Grooming/menu.png" alt="menu" class="menu_detail">
+            <img src="./assets/images/Grooming/menu.png" alt="menu" id="menu_detail">
+            <img src="./assets/images/Grooming/menu_cat.png" alt="menu" id="menu_cat">
         </div>
 
         <!-- extra service -->
@@ -104,10 +109,12 @@
                         <h2><b>Spa Cao Cấp</b></h2>
                     </div>
                 </div>
-                <div class="btn btn_booking extra_btn_booking">
-                    <i class="fa-solid fa-calendar-days fa-lg"></i>
-                    <p>ĐẶT LỊCH</p>
-                </div>
+                <a href="./Booking.html">
+                    <div class="btn btn_booking extra_btn_booking">
+                        <i class="fa-solid fa-calendar-days fa-lg"></i>
+                        <p>ĐẶT LỊCH</p>
+                    </div>
+                </a>
             </div>
         </div>
 
@@ -118,30 +125,76 @@
                  <hr>
                  <p><b>TRẢI NGHIỆM CHĂM SÓC SỨC KHỎE CHO THÚ CƯNG</b></p>
              </div>
-             <img src="../assets/images/Vet/next_left.png" alt="next_left" class="next_left">
-             <img src="../assets/images/Vet/next_right.png" alt="next_right" class="next_right">
-             <div class="comment_box">
-                 <img src="../assets/images/Vet/comment_img.png" alt="comment_img" class="comment_img">
-                 <div class="comment_content">
-                     <div class="comment_author">
-                         <hr>
-                         <p>Những “người mẫu” trước</p>
-                     </div>
-                     <h1>PINKY</h1>
-                     <p class="comment_detail">
-                        <ul>
-                            <li>Giống: Golden</li>
-                            <li>Cắt tạo kiểu: Tròn tròn</li>
-                            <li>Ngày cắt: 20.3.2023</li>
-                        </ul>
-                     </p>
+             <div class="comment_slider">
+                 <div class="comment_list">
+                    <div class="comment_box">
+                         <img src="./assets/images/Vet/comment_img.png" alt="comment_img" class="comment_img">
+                         <div class="comment_content">
+                             <div class="comment_author">
+                                 <hr>
+                                 <p>Những “người mẫu” trước</p>
+                             </div>
+                             <h1>PINKY</h1>
+                             <p class="comment_detail">
+                                <ul>
+                                    <li>Giống: Golden</li>
+                                    <li>Cắt tạo kiểu: Tròn tròn</li>
+                                    <li>Ngày cắt: 20.3.2023</li>
+                                </ul>
+                             </p>
+                         </div>
+                    </div>
+                    <div class="comment_box">
+                        <img src="./assets/images/Vet/comment_img1.png" alt="comment_img" class="comment_img1">
+                        <div class="comment_content">
+                            <div class="comment_author">
+                                <hr>
+                                <p>Những “người mẫu” trước</p>
+                            </div>
+                            <h1>PINKY</h1>
+                            <p class="comment_detail">
+                               <ul>
+                                   <li>Giống: Golden</li>
+                                   <li>Cắt tạo kiểu: Tròn tròn</li>
+                                   <li>Ngày cắt: 20.3.2023</li>
+                               </ul>
+                            </p>
+                        </div>
+                   </div>
+                   <div class="comment_box">
+                    <img src="./assets/images/Vet/comment_img2.png" alt="comment_img" class="comment_img2">
+                    <div class="comment_content">
+                        <div class="comment_author">
+                            <hr>
+                            <p>Những “người mẫu” trước</p>
+                        </div>
+                        <h1>PINKY</h1>
+                        <p class="comment_detail">
+                           <ul>
+                               <li>Giống: Golden</li>
+                               <li>Cắt tạo kiểu: Tròn tròn</li>
+                               <li>Ngày cắt: 20.3.2023</li>
+                           </ul>
+                        </p>
+                    </div>
+               </div>
+                    
                  </div>
+
+                 <!-- button next and prev -->
+                <div class="buttons">
+                    <button id="prev"><img src="./assets/images/Vet/next_left.png" class="next_left"></button>
+                    <button id="next"><img src="./assets/images/Vet/next_right.png" class="next_right"></button>
+                </div>
+
+                <!-- dots -->
+                <ul class="dots">
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                </ul>
              </div>
-             <div class="num_pg_group">
-                 <div class="num_pg 1"></div>
-                 <div class="num_pg 2"></div>
-                 <div class="num_pg 3"></div>
-             </div>
+             
          </div>
     </div>
 
