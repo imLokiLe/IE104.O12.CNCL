@@ -76,10 +76,8 @@ function updateQuantity(product, change){
 
     const total_price = price * newQuantity;
 
-    const unitElement = product.querySelector(".price-product p:last-child");
-    const unit = unitElement.textContent;
-    const total_priceElement = product.querySelector(".total_price");
-    total_priceElement.textContent = total_price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + unit;
+    const total_priceElement = product.querySelector(".total_price p:first-child");
+    total_priceElement.textContent = total_price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
     // Lấy thông tin sản phẩm
     const productId = product.dataset.id;
