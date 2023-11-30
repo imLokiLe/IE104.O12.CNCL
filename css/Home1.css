@@ -104,7 +104,12 @@
     position: absolute;
     top: 30vh;
     left: 7%;
-    color: white;
+}
+.intro_btn_field a{
+    color: white;   
+}
+.intro_btn_field a:visited{
+    color: white;   
 }
 .content_left>p{
     text-align: center;
@@ -261,7 +266,7 @@
     left: 22vw;
     width: 13%;
     font-size: 2.5rem;
-    cursor: pointer;
+    cursor: default;
 }
 .form_title_left>h2:hover{
     color: #FF6B35;
