@@ -213,7 +213,7 @@ function FilterOptions() {
             let minValue = parseInt(priceInput[0].value),
                 maxValue = parseInt(priceInput[1].value);
     
-            if (maxValue - minValue >= priceGap && maxValue <= 30000000) {
+            if (maxValue - minValue >= priceGap && maxValue <= 50000000) {
                 if (range.target.className === "min-input") {
                     rangeInput[0].value = minValue;
                     progress.style.left = (minValue / rangeInput[0].max) * 100 + "%";
