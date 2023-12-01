@@ -1,5 +1,5 @@
 //Lấy data
-import { pets } from '../js/data_shops.js';
+import { shops } from '../js/data_shops.js';
 // console.log(pets)
 
 // Filter 
@@ -28,8 +28,8 @@ const toggleCat = document.getElementById("toggleCat");
 toggleCat.addEventListener("click",toggleDropdownCat)
 
 //Pagination
-function renderPagination(pets) {
-    const totalPages = Math.ceil(pets.length / prePage);
+function renderPagination(shops) {
+    const totalPages = Math.ceil(shops.length / prePage);
     const paginationContainer = document.querySelector('.pagination-container');
     paginationContainer.innerHTML = '';
 
@@ -40,8 +40,8 @@ function renderPagination(pets) {
     btnPrev.addEventListener('click', () => {
       if (currentPage > 1) {
         currentPage--;
-        renderpetCategory(pets);
-        renderPagination(pets);
+        renderpetCategory(shops);
+        renderPagination(shops);
       }
     });
     paginationContainer.appendChild(btnPrev);
@@ -60,8 +60,8 @@ function renderPagination(pets) {
         }
         pageItem.addEventListener('click', () => {
             currentPage = i;
-            renderpetCategory(pets);
-            renderPagination(pets);
+            renderpetCategory(shops);
+            renderPagination(shops);
         });
         pagination.appendChild(pageItem);
     }
@@ -74,8 +74,8 @@ function renderPagination(pets) {
     btnNext.addEventListener('click', () => {
       if (currentPage < totalPages) {
         currentPage++;
-        renderpetCategory(pets);
-        renderPagination(pets);
+        renderpetCategory(shops);
+        renderPagination(shops);
       }
     });
     paginationContainer.appendChild(btnNext);
@@ -84,8 +84,8 @@ function renderPagination(pets) {
 let prePage = 12;
 let currentPage = 1;
 // Show pets category
-function renderpetCategory (pets) {
-    const petsToRender = pets.slice((currentPage - 1) * prePage, currentPage * prePage);
+function renderpetCategory (shops) {
+    const petsToRender = shops.slice((currentPage - 1) * prePage, currentPage * prePage);
 
     // Create a unique list of pets
     const list = [...new Set(petsToRender)];
@@ -105,7 +105,7 @@ function renderpetCategory (pets) {
 
         return (
             `<div class="product" data-id="shop${id}">
-                <a href="" class="product-link">
+                <a href="details.html?id=shop${id}" class="product-link">
                     <div class="product-image">
                         <div class="star-and-bag_plus">
                             <div class="star">${starIcons}</div>
@@ -139,23 +139,23 @@ function displayFilteredPets(allCheckbox_dogs, allCheckbox_cats,  minPrice, maxP
 
     // Filter dog pets based on selected breeds
     const filteredDogPets = selectedDogBreeds.length === 0
-        ? pets
-        : pets.filter(pet => pet.featured.genus === 'dog' && selectedDogBreeds.includes(pet.featured.type.id));
+        ? shops
+        : shops.filter(pet => pet.featured.genus === 'dog' && selectedDogBreeds.includes(pet.featured.type.id));
 
     const filteredCatPets = selectedCatBreeds.length === 0
-        ? pets 
-        : pets.filter(pet => pet.featured.genus === 'cat' && selectedCatBreeds.includes(pet.featured.type.id));
+        ? shops
+        : shops.filter(pet => pet.featured.genus === 'cat' && selectedCatBreeds.includes(pet.featured.type.id));
 
     let combinedFilteredPets;
     // Display filtered dog pets
-    if(((filteredDogPets.length + filteredCatPets.length) == pets.length) || ((filteredDogPets.length == pets.length) && (filteredCatPets.length == pets.length))){
-        combinedFilteredPets = pets;
+    if(((filteredDogPets.length + filteredCatPets.length) == shops.length) || ((filteredDogPets.length == shops.length) && (filteredCatPets.length == shops.length))){
+        combinedFilteredPets = shops;
         // renderpetCategory (pets);
-    } else if(((filteredDogPets.length <= pets.length) && (filteredCatPets.length == pets.length))){
+    } else if(((filteredDogPets.length <= shops.length) && (filteredCatPets.length == shops.length))){
         combinedFilteredPets = filteredDogPets;
-    } else if(((filteredDogPets.length == pets.length) && (filteredCatPets.length <= pets.length))){
+    } else if(((filteredDogPets.length == shops.length) && (filteredCatPets.length <= shops.length))){
         combinedFilteredPets = filteredCatPets;
-    } else if(((filteredDogPets.length <= pets.length) && (filteredCatPets.length <= pets.length))){
+    } else if(((filteredDogPets.length <= shops.length) && (filteredCatPets.length <= shops.length))){
         combinedFilteredPets = [...filteredDogPets, ...filteredCatPets];
     }
     const finalFilteredPets = combinedFilteredPets.filter(pet => {
@@ -163,25 +163,25 @@ function displayFilteredPets(allCheckbox_dogs, allCheckbox_cats,  minPrice, maxP
         return petPrice >= minPrice && petPrice <= maxPrice;
     });
     const result = document.querySelector(".result-count")
-    result.innerHTML = `<p>Hiển thị ${finalFilteredPets.length} trong số ${pets.length} thú cưng</p>`
+    result.innerHTML = `<p>Hiển thị ${finalFilteredPets.length} trong số ${shops.length} thú cưng</p>`
     
     const sortSelect = document.querySelector('.sort-select');
     let selectedSortOption = sortSelect.value; // Initialize selectedSortOption
     const handleSort = handleSortChange(finalFilteredPets);
     sortSelect.addEventListener('change', handleSort);
 
-    renderpetCategory(sortPetsByPrice(finalFilteredPets, selectedSortOption));
-    renderPagination(sortPetsByPrice(finalFilteredPets, selectedSortOption));
+    renderpetCategory(sortShopsByPrice(finalFilteredPets, selectedSortOption));
+    renderPagination(sortShopsByPrice(finalFilteredPets, selectedSortOption));
     attachAddToCart();
 }
 
 function renderFilterOptions(filterOptionsElement, genus) {
-    const uniqueBreeds = [...new Set(pets.filter(pet => pet.featured.genus === genus).map(pet => pet.featured.type.id))];
+    const uniqueBreeds = [...new Set(shops.filter(pet => pet.featured.genus === genus).map(pet => pet.featured.type.id))];
     
     filterOptionsElement.innerHTML = '';
     uniqueBreeds.forEach(breedId => {
-        const breed = pets.find(pet => pet.featured.genus === genus && pet.featured.type.id === breedId).featured.type;
-        const count = pets.filter(pet => pet.featured.genus === genus && pet.featured.type.id === breedId).length;
+        const breed = shops.find(pet => pet.featured.genus === genus && pet.featured.type.id === breedId).featured.type;
+        const count = shops.filter(pet => pet.featured.genus === genus && pet.featured.type.id === breedId).length;
 
         const checkbox = document.createElement("li");
         checkbox.innerHTML = `
@@ -287,8 +287,8 @@ function FilterOptions() {
         displayFilteredPets(allCheckbox_dogs, allCheckbox_cats, priceInput[0].value, priceInput[1].value);
     });
 }
-function sortPetsByPrice(pets, sortOption) {
-    return pets.slice().sort((a, b) => {
+function sortShopsByPrice(shops, sortOption) {
+    return shops.slice().sort((a, b) => {
         const priceA = parseInt(a.price.replaceAll(',', ''));
         const priceB = parseInt(b.price.replaceAll(',', ''));
 
@@ -303,12 +303,12 @@ function sortPetsByPrice(pets, sortOption) {
     });
 }
 
-function handleSortChange(pets) {
+function handleSortChange(shops) {
     return function () {
         const sortSelect = document.querySelector('.sort-select');
         selectedSortOption = sortSelect.value; 
 
-        const sortedPets = sortPetsByPrice(pets, selectedSortOption);
+        const sortedPets = sortShopsByPrice(shops, selectedSortOption);
         renderpetCategory(sortedPets);
         renderPagination(sortedPets);
         attachAddToCart();
@@ -316,12 +316,12 @@ function handleSortChange(pets) {
 }
 const sortSelect = document.querySelector('.sort-select');
 let selectedSortOption = sortSelect.value; 
-const handleSort = handleSortChange(pets);
+const handleSort = handleSortChange(shops);
 sortSelect.addEventListener('change', handleSort);
 const result = document.querySelector(".result-count")
-result.innerHTML = `<p>Hiển thị ${pets.length} trong số ${pets.length} thú cưng</p>`
-renderpetCategory(sortPetsByPrice(pets, selectedSortOption));
-renderPagination(sortPetsByPrice(pets, selectedSortOption));
+result.innerHTML = `<p>Hiển thị ${shops.length} trong số ${shops.length} sản phẩm</p>`
+renderpetCategory(sortShopsByPrice(shops, selectedSortOption));
+renderPagination(sortShopsByPrice(shops, selectedSortOption));
 renderFilterOptions(document.getElementById("filterOptionsDog"), 'dog');
 renderFilterOptions(document.getElementById("filterOptionsCat"), 'cat');
 FilterOptions();
@@ -342,8 +342,8 @@ function addToCartHandler(product) {
 
     for (let i = 0; i < arrCart.length; i++) {
         if (product.id == arrCart[i].id) {
-        flag = true;
-        value = i;
+            flag = true;
+            value = i;
         }
     }
 
@@ -371,12 +371,12 @@ function attachAddToCart(){
             let productQuantity = 1;
 
             let product = {
-            id: productId,
-            name: productName,
-            price: productPrice,
-            unit: productUnit,
-            image: productImage,
-            quantity: productQuantity,
+                id: productId,
+                name: productName,
+                price: productPrice,
+                unit: productUnit,
+                image: productImage,
+                quantity: productQuantity,
             };
             addToCartHandler(product);
         });
