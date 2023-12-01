@@ -34,8 +34,9 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.05);
-    font-size: 1.25em;
+    font-size: 1.5rem;
     background-color: #fffaf0;
+    z-index: 1;
 }
 
 .group {
@@ -86,7 +87,7 @@ ul.dropdown a:hover {
 .dropdown li:hover {
     position: relative;
     background: #F2F2F2;
-    width: 260px;
+    width: 250px;
     left: -4.2%;
     border-left: 5px solid #FF6B35;
     padding-left: 15px;
