@@ -1,19 +1,20 @@
-
 .container-body{
     position: relative;
-    top: 150px;
+    top: 120px;
+    font-size: 1.3rem;
+    background-color: #fffaf0;
 }
 
 .dog_img{
-    width: 800px;
+    width: 420px;
     position: absolute;
-    left: -50px;
-    top: 300px;
+    left: 50px;
+    top: 280px;
 }
 .cat_img{
-    width: 300px;
+    width: 200px;
     position: absolute;
-    left: 82vw;
+    left: 87vw;
 }
 
 @keyframes move-roll {
@@ -30,8 +31,8 @@
 .roll_img{
     position: absolute;
     left: 85%;
-    top: 100vh;
-    width: 200px;
+    top: 70vh;
+    width: 150px;
     animation: move-roll 7s infinite linear;
 }
 
@@ -48,70 +49,48 @@
   }
 .bone_img{
     position: absolute;
-    left: 10%;
+    left: 6%;
     top: 15vh;
-    width: 150px;
+    width: 120px;
     animation: food-roll 5s infinite linear;
     z-index: 1;
 }
+.ball_img{
+    position: absolute;
+    left: 88vw;
+    top: 12vh;
+    width: 80px;
+    animation: play-state 10s infinite linear;
+}
+@keyframes play-state {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(359deg);
+    }
+}
 /* intro */
-.location{
+.address{ 
+    position: absolute;
+    top: 5px;
     margin-left: 50px;
+    padding: 20px 0;
+    font-size: 1.2rem;
 }
-.status{
-    position: relative;
-    top: 40px;
-    left: 27%;
-    width: 50%;
+.address a{
+    color: #000;
 }
-.status span{
-    background-color: #FF6B35;
-    color: white;
-    padding: 8px 15px;
-    width: 50px;
-    height: 50px;
-    border-radius: 100px;
-}
-.state2 span{
-    background-color: #fff;
-    color: black;
-    border: 1px solid gray;
-}
-.status p{
-    padding: 10px 0;
-    position: relative;
-    right: 10px;
-    font-weight: bold;
-}
-#state-icon{
-    position: relative;
-    top: -35px;
-    left: 30px;
-}
-.status hr{
-    width: 750px;
-    height: 3px;
-    position: absolute;
-    left: 55px;
-    top: 10px;
-    background-color: gray;
-}
-.state1{
-    position: absolute;
-    left: 0;
-}
-.state2{
-    position: absolute;
-    right: 0;
-    color: gray;
+.address a:visited{
+    color: #000;
 }
 
 /* form */
 form{
     position: relative;
     top: 10vh;
-    left: 17%;
-    width: 60%;
+    left: 14%;
+    width: 75%;
     padding: 20px 50px;
     font-weight: bold;
     border-radius: 40px;
@@ -121,58 +100,81 @@ form *{
     border-radius: 20px;
 }
 .service_type{
-    padding: 50px 10px;
+    padding: 30px 10px 50px 20px;
 }
 .note{
-    padding: 30px 10px;
+    padding: 30px 20px;
 }
 
 form>div{
-    margin: 20px;
+    margin: 10px;
 }
 .name_and_phone{
     display: grid;
-    grid-template-columns: 150px 200px 150px 200px;
-    column-gap: 20px;
-    padding: 30px 10px;
+    grid-template-columns: 50% 50%;
+    padding: 30px 20px;
+}
+.name_and_phone p , .date_time p{
+    padding-top: 5px;
 }
 .note{
     display: grid;
-    grid-template-columns: 200px 700px;
+    grid-template-columns: 150px 800px;
     column-gap: 20px;
 }
-.time, .date{
+.date_time{
     display: grid;
-    grid-template-columns: 200px 300px;
-    column-gap: 20px;
-    padding: 20px 10px;
+    grid-template-columns: 50% 50%;
+    padding: 20px 20px;
 }
-.service_type>div{
-    width: 25%;
+.name, .phone, .date, .time{
+    display: grid;
+    grid-template-columns: 30% 60%;
+}
+.service_type>label{
     display: inline;
-    margin: 40px;
+    margin: 30px;
     position: relative;
-    left: 10%;
-    top: 5px;
+    left: 2vw;
+    top: 15px;
     background-color: #fff;
-    padding: 5px;
+    padding: 10px 20px;
     border-radius: 30px;
+    cursor: pointer;
+}
+.service_type>label:hover{
+    color: white;
+    background-color: #fc591e;
+}
+.service_type input[type="checkbox"]{
+    display: none;
+}
+.service_type>p{
+    position: relative;
+    top: -5px;
 }
 input, select, textarea{
     border-radius: 30px;
     background-color: #fff;
     border: none;
     padding: 0 20px;
+    font-size: 1.3rem;
+}
+option{
+    background-color: #fffaf0;
+}
+input:focus, select:focus, textarea:focus{
+    outline: none;
 }
 input, select{
-    height: 30px;
+    height: 40px;
 }
 /* button */
 .continue_btn_field{
     display: flex;
     justify-content: space-around;
     position: relative;
-    top: 110px;
+    top: 20px;
     left: 55%;
     color: white;
     width: 30%;
@@ -188,8 +190,167 @@ input, select{
     font-weight: bold;
     margin: 50px 50px;
     box-shadow: 2px 2px 2px grey;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #000;
 }
 .btn>p{
     position: relative;
-    top: 15px;
+    top: 17px;
+}
+/* partner */
+.partner{
+    position: relative;
+    /* top: 50vh; */
+    background: #FF8C4E;
+    height: 65vh;
+    background-image: url(../assets/backgrounds/bg-partner-overlay.png);
+}
+.partner>h1{
+    position: relative;
+    text-align: center;
+    padding-top: 50px;
+}
+.partner>svg{
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    fill: white;
+    left: 47%;
+    top: 30px;
+}
+.partner_list{
+    display: flex;
+    width: 100%;
+    animation: slide 40s infinite linear;
+}
+.partner_wrapper{
+    width: 85%;
+    overflow: hidden;
+    position: relative;
+    top: 10vh;
+    left: 7%;
+}
+@keyframes slide {
+    0%{
+        transform: translateX(0);
+    }
+    10%{
+        transform: translateX(-15%);
+    }
+    20%{
+        transform: translateX(-30%);
+    }
+    30%{
+        transform: translateX(-40%);
+    }
+    40%{
+        transform: translateX(-50%);
+    }
+    50%{
+        transform: translateX(-60%);
+    }
+    60%{
+        transform: translateX(-50%);
+    }
+    70%{
+        transform: translateX(-40%);
+    }
+    80%{
+        transform: translateX(-30%);
+    }
+    90%{
+        transform: translateX(-15%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+/* popup confirm */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 99;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+#popupContent{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 50%;
+    height: 60vh;
+    padding: 20px 0 50px 100px;
+    font-weight: bold;
+    line-height: 45px;
+    border-radius: 40px;
+}
+#popupContent>p>span{
+    position: absolute;
+    left: 20vw;
+}
+#popupContent button{
+    position: relative;
+    left: 19%;
+    top: 5vh;
+    width: 300px;
+    height: 50px;
+    border-radius: 40px;
+    font-size: 1.2rem;
+    border: none;
+    background-color: #fc591e;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* popup cancel */
+#popup_cancel {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 99;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+#popupContent_cancel{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 35%;
+    height: 30vh;
+    padding: 30px 0 0 40px;
+    font-weight: bold;
+    line-height: 45px;
+    border-radius: 40px;
+}
+#popupContent_cancel button{
+    position: relative;
+    margin: 0 25px;
+    left: 20px;
+    top: 5vh;
+    width: 150px;
+    height: 50px;
+    border-radius: 40px;
+    font-size: 1.2rem;
+    border: none;
+    background-color: #fc591e;
+    color: #fff;
+    cursor: pointer;
 }
