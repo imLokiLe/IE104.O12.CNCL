@@ -88,7 +88,6 @@ document.querySelector(".quantity-btn").addEventListener("click", function (even
 import { updateCartLocalStorage, getArrCart } from '../js/data_cart.js';
 let arrCart = getArrCart();
 let cart = document.querySelector(".cart-number");
-console.log(cart);
 function addToCartHandler(product) {
     let flag = false;
     let value = 0;
@@ -108,25 +107,17 @@ function addToCartHandler(product) {
         arrCart[value].quantity += product.quantity;
     }
 
-    console.log(arrCart);
     updateCartLocalStorage();
 }
 let addCartButton = document.querySelector(".btn-cart-buy .add-cart");
-console.log(addCartButton);
 addCartButton.addEventListener("click", function (event) {
     event.preventDefault();
     let productId = productInfo.type + productInfo.id;
-    console.log(productId);
     let productName = productDetails.name;
-    console.log(productName);
     let productPrice = document.querySelector('.page-container .product-infomation .infomation .price span:first-child').textContent;
-    console.log(productPrice);
     let productUnit = document.querySelector('.page-container .product-infomation .infomation .price span:last-child').textContent;
-    console.log(productUnit);
     let productImage = productDetails.image;
-    console.log(productImage);
     let productQuantity = parseInt(document.querySelector(".quantity-num").textContent);
-    console.log(productQuantity);
 
     let product = {
         id: productId,
@@ -136,7 +127,6 @@ addCartButton.addEventListener("click", function (event) {
         image: productImage,
         quantity: productQuantity,
     };
-    console.log(product);
     addToCartHandler(product);
 });
 
@@ -157,7 +147,6 @@ function addToPayment(product){
     updatePaymentLocalStorage();
 }
 let paymentButton = document.querySelector(".btn-cart-buy .buy-now");
-console.log(paymentButton);
 paymentButton.addEventListener('click', function (event) {
     event.preventDefault();
     let productId = productInfo.type + productInfo.id;
@@ -180,7 +169,6 @@ paymentButton.addEventListener('click', function (event) {
         image: productImage,
         quantity: productQuantity,
     };
-    console.log(productPayment);
     addToPayment(productPayment);
     
     // Thay đổi đường dẫn URL đến trang mới
