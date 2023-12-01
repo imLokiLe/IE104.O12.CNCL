@@ -124,6 +124,9 @@ body{
 .cart-product-all #cart-product .product:not(:last-child){
     padding-bottom: 1%;
 }
+.cart-product-all .cart-all .fa-trash{
+    color: #FF424E;
+}
 .product label{
     text-align: left;
 }

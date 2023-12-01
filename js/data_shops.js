@@ -1,7 +1,7 @@
-const pets = [
+const shops = [
     {
         id: 1,
-        image: '../assets/images/Pets/alaska.png',
+        image: '../assets/images/products/image-1.jpg',
         name: 'Xúc xích cho chó 150gr', 
         price: '11,000,000',
         unit: 'đ',
@@ -241,4 +241,4 @@ const pets = [
     },
 ];
 
-export { pets };
+export { shops };

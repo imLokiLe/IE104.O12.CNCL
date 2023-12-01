@@ -105,7 +105,7 @@ function renderpetCategory (pets) {
 
         return (
             `<div class="product" data-id="pet${id}">
-                <a href="" class="product-link">
+                <a href="details.html?id=pet${id}" class="product-link">
                     <div class="product-image">
                         <div class="star-and-bag_plus">
                             <div class="star">${starIcons}</div>

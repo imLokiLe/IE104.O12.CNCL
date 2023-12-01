@@ -23,7 +23,6 @@ function renderPaymentProduct (products){
 };
 renderPaymentProduct(arrPayment)
 
-
 function renderDeliveryPayment(delivery){
     const list = [...new Set(delivery)];
     list.map((item) =>{
@@ -44,13 +43,9 @@ function renderDeliveryPayment(delivery){
 }
 renderDeliveryPayment(delivery);
 
-
-
-
-console.log(document.querySelector('.return-home'));
 document.querySelector('.return-home').addEventListener('click', function() {
     removeDuplicatesBetweenArrays(arrCart, arrPayment);
     resetPayment();
     resetDelivery();
-    window.location.href = '../Home1.html';
+    window.location.href = '../Home.html';
 });
