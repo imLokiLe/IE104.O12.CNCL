@@ -124,8 +124,8 @@ attackQuantity();
 
 function removeProductCart(product) {
     const productId = product.dataset.id;
-    const cartItem = arrCart.find(item => item.id === productId);
-    if (cartItem) {
+    const cartItem = arrCart.findIndex(item => item.id === productId);
+    if (cartItem !== -1) {
         arrCart.splice(cartItem, 1);
         updateCartLocalStorage();
     }
