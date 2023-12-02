@@ -129,3 +129,36 @@ question.forEach(function(element, idx){
        
     })
 })
+
+var popup = document.getElementById('popup');
+function unshow() {
+    window.location.href = '../Home.html';
+}
+let btn_complete = document.getElementById('btn_complete');
+btn_complete.addEventListener('click', function(){
+    popup.style.display = 'block';
+})
+
+// product-slider
+
+let product_next = document.getElementById('highlight_next');
+let product_prev = document.getElementById('highlight_prev');
+let product_list = document.getElementById('highlight_list');
+
+let currentIndex = 0;
+
+function moveNext() {
+    currentIndex = (currentIndex + 1) % 8; // Giả sử có 3 sản phẩm
+    updateSlider();
+}
+function movePrev() {
+    currentIndex = (currentIndex -1 + 8) % 8; // Giả sử có 3 sản phẩm
+    updateSlider();
+}
+
+function updateSlider() {
+    const translateValue = -currentIndex * (220 + 100); // Chiều rộng sản phẩm + khoảng cách giữa các sản phẩm
+    product_list.style.transform = 'translateX(' + translateValue + 'px)';
+}
+product_next.addEventListener('click', moveNext);
+product_prev.addEventListener('click', movePrev);

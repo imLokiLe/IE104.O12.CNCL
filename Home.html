@@ -14,6 +14,14 @@
     <div id="header"></div>
 
     <div class="container-body">
+        <!-- popup -->
+        <div id="popup" class="popup">
+            <div id="popupContent">
+                <p>Dịch vụ đã được đặt lịch thành công!!!</p>
+                <button onclick="unshow()">Đồng ý</button>
+            </div>
+        </div>
+
         <!-- intro -->
         <div class="slider">
             <div class="list">
@@ -142,12 +150,12 @@
                 <div class="bg_form_content"></div>
                 <div class="img_form_content">
                     <img src="./assets/images/Home1/img_form_bg.png" alt="img_form_bg" class="img_form_bg">
-                    <form>
+                    <form onsubmit="return false;">
                         <h1>ĐẶT LỊCH NGAY</h1>
                         <input type="text" placeholder="Khách Hàng">
                         <input type="email" placeholder="E-mail">
                         <input type="text" placeholder="Dịch vụ">
-                        <button>HOÀN TẤT</button>
+                        <button id="btn_complete">HOÀN TẤT</button>
                     </form>
                 </div>
             </div>
@@ -276,101 +284,284 @@
             <img src="./assets/images/Home1/img_bowl.png" alt="img_bowl" class="img_bowl">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 75.6 75.9" style="enable-background:new 0 0 75.6 75.9;" xml:space="preserve"><style type="text/css">	.fi1{fill:#324C5E;}	.fi2{fill:none;stroke:currentColor;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;}</style><g>	<g class="fi0">		<path class="fi1" d="M61.8,11.3c0.7-0.7,1.8-0.7,2.5,0c0.7,0.7,0.7,1.8,0,2.5c-0.7,0.7-1.8,0.7-2.5,0   c0,0,0,0,0,0C61.1,13.1,61.1,12,61.8,11.3"></path>		<path class="fi2" d="M61.8,11.3c0.7-0.7,1.8-0.7,2.5,0c0.7,0.7,0.7,1.8,0,2.5c-0.7,0.7-1.8,0.7-2.5,0   c0,0,0,0,0,0C61.1,13.1,61.1,12,61.8,11.3z"></path>		<line class="fi2" x1="27.2" y1="48.4" x2="54.9" y2="20.7"></line>		<path class="fi2" d="M65.4,29.9c6.4,6.4,10.7-19.1,7.5-27.2c-8.2-3.2-33.6,1.1-27.2,7.5L65.4,29.9z"></path>		<path class="fi2" d="M21.8,72.6c2.1,8.3,7.9-15.8,4.8-23.2C19.1,46.2-5,52,3.3,54.2L18,57.9L21.8,72.6z"></path>		<line class="fi2" x1="60.6" y1="40.2" x2="35.4" y2="15"></line>		<line class="fi2" x1="51.8" y1="46.8" x2="28.8" y2="23.8"></line>		<line class="fi2" x1="42.2" y1="52.5" x2="23.1" y2="33.4"></line>	</g></g></svg>
             <h1>Sản Phẩm Nổi Bật</h1>
-            <div class="product-list">
-                <!-- Product -->
-                <div class="product">
-                    <a href="" class="product-link">
-                        <div class="product-image">
-                            <div class="star">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+            <div class="highlight_slider">
+                <div class="highlight_wrapper">
+                    <div id="highlight_list">
+                        
+                            <!-- Product -->
+                            <div class="product">
+                                <a href="" class="product-link">
+                                    <div class="product-image">
+                                        <div class="star">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <img src="./assets/images/Pets/alaska.png" alt="image-product" class="image-product">
+                                    </div>
+                                    <div class="product-information">
+                                        <div class="price-product">
+                                            <span>17,000,000</span>
+                                            <span>đ</span>
+                                        </div>
+                                        <div class="name-product">Alaska Malamute trắng xám</div>
+                                    </div>
+                                </a>
                             </div>
-                            <img src="./assets/images/Pets/alaska.png" alt="image-product" class="image-product">
-                        </div>
-                        <div class="product-information">
-                            <div class="price-product">
-                                <span>17,000,000</span>
-                                <span>đ</span>
+                            <div class="product">
+                                <a href="" class="product-link">
+                                    <div class="product-image">
+                                        <div class="star">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <img src="./assets/images/Pets/scottish-fold-0.png" alt="image-product" class="image-product" style="width: 150px; height: 130px;">
+                                    </div>
+                                    <div class="product-information">
+                                        <div class="price-product">
+                                            <span>15,000,000</span>
+                                            <span>đ</span>
+                                        </div>
+                                        <div class="name-product">Anh lông ngắn tai cụp xám vàng</div>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="name-product">Alaska Malamute trắng xám</div>
-                        </div>
-                    </a>
+                            <div class="product">
+                                <a href="" class="product-link">
+                                    <div class="product-image">
+                                        <div class="star">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <img src="./assets/images/Pets/corgi-1.png" alt="image-product" class="image-product">
+                                    </div>
+                                    <div class="product-information">
+                                        <div class="price-product">
+                                            <span>17,000,000</span>
+                                            <span>đ</span>
+                                        </div>
+                                        <div class="name-product">Alaska Malamute trắng xám</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="product">
+                                <a href="" class="product-link">
+                                    <div class="product-image">
+                                        <div class="star">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <img src="./assets/images/Pets/munchkin-0.png" alt="image-product" class="image-product">
+                                    </div>
+                                    <div class="product-information">
+                                        <div class="price-product">
+                                            <span>17,000,000</span>
+                                            <span>đ</span>
+                                        </div>
+                                        <div class="name-product">Alaska Malamute trắng xám</div>
+                                    </div>
+                                </a>
+                            </div>
+                        
+                        
+                            <!-- Product -->
+                            <div class="product">
+                                <a href="" class="product-link">
+                                    <div class="product-image">
+                                        <div class="star">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <img src="./assets/images/Pets/alaska.png" alt="image-product" class="image-product">
+                                    </div>
+                                    <div class="product-information">
+                                        <div class="price-product">
+                                            <span>17,000,000</span>
+                                            <span>đ</span>
+                                        </div>
+                                        <div class="name-product">Alaska Malamute trắng xám</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="product">
+                                <a href="" class="product-link">
+                                    <div class="product-image">
+                                        <div class="star">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <img src="./assets/images/Pets/akita-0.png" alt="image-product" class="image-product" style="width: 150px; height: 130px;">
+                                    </div>
+                                    <div class="product-information">
+                                        <div class="price-product">
+                                            <span>15,000,000</span>
+                                            <span>đ</span>
+                                        </div>
+                                        <div class="name-product">Anh lông ngắn tai cụp xám vàng</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="product">
+                                <a href="" class="product-link">
+                                    <div class="product-image">
+                                        <div class="star">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <img src="./assets/images/Pets/alaska.png" alt="image-product" class="image-product">
+                                    </div>
+                                    <div class="product-information">
+                                        <div class="price-product">
+                                            <span>17,000,000</span>
+                                            <span>đ</span>
+                                        </div>
+                                        <div class="name-product">Alaska Malamute trắng xám</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="product">
+                                <a href="" class="product-link">
+                                    <div class="product-image">
+                                        <div class="star">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <img src="./assets/images/Pets/alaska.png" alt="image-product" class="image-product">
+                                    </div>
+                                    <div class="product-information">
+                                        <div class="price-product">
+                                            <span>17,000,000</span>
+                                            <span>đ</span>
+                                        </div>
+                                        <div class="name-product">Alaska Malamute trắng xám</div>
+                                    </div>
+                                </a>
+                            </div>
+                        
+                        
+                            <!-- Product -->
+                            <div class="product">
+                                <a href="" class="product-link">
+                                    <div class="product-image">
+                                        <div class="star">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <img src="./assets/images/Pets/alaska.png" alt="image-product" class="image-product">
+                                    </div>
+                                    <div class="product-information">
+                                        <div class="price-product">
+                                            <span>17,000,000</span>
+                                            <span>đ</span>
+                                        </div>
+                                        <div class="name-product">Alaska Malamute trắng xám</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="product">
+                                <a href="" class="product-link">
+                                    <div class="product-image">
+                                        <div class="star">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <img src="./assets/images/Pets/corgi-0.png" alt="image-product" class="image-product">
+                                    </div>
+                                    <div class="product-information">
+                                        <div class="price-product">
+                                            <span>15,000,000</span>
+                                            <span>đ</span>
+                                        </div>
+                                        <div class="name-product">Anh lông ngắn tai cụp xám vàng</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="product">
+                                <a href="" class="product-link">
+                                    <div class="product-image">
+                                        <div class="star">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <img src="./assets/images/Pets/alaska.png" alt="image-product" class="image-product">
+                                    </div>
+                                    <div class="product-information">
+                                        <div class="price-product">
+                                            <span>17,000,000</span>
+                                            <span>đ</span>
+                                        </div>
+                                        <div class="name-product">Alaska Malamute trắng xám</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="product">
+                                <a href="" class="product-link">
+                                    <div class="product-image">
+                                        <div class="star">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <img src="./assets/images/Pets/alaska.png" alt="image-product" class="image-product">
+                                    </div>
+                                    <div class="product-information">
+                                        <div class="price-product">
+                                            <span>17,000,000</span>
+                                            <span>đ</span>
+                                        </div>
+                                        <div class="name-product">Alaska Malamute trắng xám</div>
+                                    </div>
+                                </a>
+                            </div>
+                        
+                    </div>
                 </div>
-                <div class="product">
-                    <a href="" class="product-link">
-                        <div class="product-image">
-                            <div class="star">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <img src="./assets/images/Pets/alaska.png" alt="image-product" class="image-product">
-                        </div>
-                        <div class="product-information">
-                            <div class="price-product">
-                                <span>17,000,000</span>
-                                <span>đ</span>
-                            </div>
-                            <div class="name-product">Alaska Malamute trắng xám</div>
-                        </div>
-                    </a>
+                <!-- button next and prev -->
+                <div class="highlight_buttons">
+                    <button id="highlight_prev">&#10094;</button>
+                    <button id="highlight_next">&#10095;</button>
                 </div>
-                <div class="product">
-                    <a href="" class="product-link">
-                        <div class="product-image">
-                            <div class="star">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <img src="./assets/images/Pets/alaska.png" alt="image-product" class="image-product">
-                        </div>
-                        <div class="product-information">
-                            <div class="price-product">
-                                <span>17,000,000</span>
-                                <span>đ</span>
-                            </div>
-                            <div class="name-product">Alaska Malamute trắng xám</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="product">
-                    <a href="" class="product-link">
-                        <div class="product-image">
-                            <div class="star">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <img src="./assets/images/Pets/alaska.png" alt="image-product" class="image-product">
-                        </div>
-                        <div class="product-information">
-                            <div class="price-product">
-                                <span>17,000,000</span>
-                                <span>đ</span>
-                            </div>
-                            <div class="name-product">Alaska Malamute trắng xám</div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="num_pg_group">
-                <div class="num_pg 1"></div>
-                <div class="num_pg 2"></div>
-                <div class="num_pg 3"></div>
-                <div class="num_pg 4"></div>
-                <div class="num_pg 5"></div>
-                <div class="num_pg 6"></div>
-                <div class="num_pg 7"></div>
+    
+                <!-- dots -->
+                <!-- <ul class="highlight_dots">
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                </ul> -->
             </div>
         </div>
 
