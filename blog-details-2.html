@@ -14,8 +14,14 @@
 
 <body>
     <div id="header"></div>
+
+    <!-- scroll to top -->
+    <button class="go_top_btn">
+        <img src="./assets/images/Home1/To-Top.png" alt="img up" id="to_top">
+    </button>
+
     <div class="page-ruler">
-        <p>TRANG CHỦ > BÀI VIẾT > BV1001</p>
+        TRANG CHỦ > BÀI VIẾT > <b>BV1011</b>
     </div>
     <div class="blog-details-container">
         <div class="blog-details-create">
@@ -180,7 +186,26 @@
             </div>
         </div>
     </div>
-    <div id="footer" style="position: absolute; width: 100%;top: 680vh;"></div>
+    <div id="footer" style="position: absolute; width: 100%;top: 670vh;"></div>
+    <script>
+        // scroll to top
+        let goTopBtn = document.querySelector('.go_top_btn');
+        window.addEventListener('scroll', checkHeight)
+
+        function checkHeight(){
+            if (window.scrollY > 200){
+                goTopBtn.style.display = 'flex';
+            }else{
+                goTopBtn.style.display = 'none'
+            }
+        }
+        goTopBtn.addEventListener('click', () =>{
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            })
+        })
+    </script>
 </body>
 
 </html>

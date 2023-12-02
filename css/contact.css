@@ -5,7 +5,24 @@ body {
     box-sizing: border-box;
     /* font-size: 1.4rem; */
 }
-
+.go_top_btn{
+    position: fixed;
+    bottom: 35px;
+    right: 35px;
+    cursor: pointer;
+    height: 70px;
+    width: 70px;
+    background: none;
+    border: none;
+    display: none;
+    justify-content: center;
+    align-content: center;
+    z-index: 99;
+}
+#to_top{
+    width: 70px;
+    height: 70px;
+}
 .bg_overlay {
     content: "";
     position: fixed;

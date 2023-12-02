@@ -174,3 +174,21 @@ paymentButton.addEventListener('click', function (event) {
     // Thay đổi đường dẫn URL đến trang mới
     window.location.href = '../transpost.html';
 });
+
+// scroll to top
+let goTopBtn = document.querySelector('.go_top_btn');
+window.addEventListener('scroll', checkHeight)
+
+function checkHeight(){
+    if (window.scrollY > 200){
+        goTopBtn.style.display = 'flex';
+    }else{
+        goTopBtn.style.display = 'none'
+    }
+}
+goTopBtn.addEventListener('click', () =>{
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
+})

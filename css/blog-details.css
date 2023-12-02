@@ -9,6 +9,24 @@ body {
     font-size: 1.2rem;
 
 }
+.go_top_btn{
+    position: fixed;
+    bottom: 35px;
+    right: 35px;
+    cursor: pointer;
+    height: 70px;
+    width: 70px;
+    background: none;
+    border: none;
+    display: none;
+    justify-content: center;
+    align-content: center;
+    z-index: 99;
+}
+#to_top{
+    width: 70px;
+    height: 70px;
+}
 
 .blog-details-container {
     margin: 2% 7.5%;
@@ -242,8 +260,9 @@ body {
     top: 50%;
 }
 
-button:hover {
+.blog-card button:hover {
     background-color: #FF6B34;
+    cursor: pointer;
 }
 
 /* paginate */

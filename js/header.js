@@ -195,7 +195,7 @@ function setStyleLocation(href){
             }
         }
     }
-    else if (href == 'http://127.0.0.1:5500/blog.html'){
+    else if ((href == 'http://127.0.0.1:5500/blog.html') || (href == 'http://127.0.0.1:5500/blog-details.html') || (href == 'http://127.0.0.1:5500/blog-details-2.html')){
         for (let i=0; i<locationList.length; i++){
             if (i==4){
                 document.getElementById(locationList[i]).style.color = '#fc591e';
