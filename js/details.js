@@ -34,16 +34,16 @@ function renderProductDetails(productDetails) {
             `<div class="img-large"><img class="img" src=${productDetails.image} alt=${productDetails.featured.type.name}></div>
             <div class="img-small-group">
                 <div class="img-small-row">
-                    <img src="./images/pets/alaska.jpg" alt="alaska" class="img-small">
+                    <img  src=${productDetails.image} alt=${productDetails.featured.type.name} class="img-small">
                 </div>
                 <div class="img-small-row">
-                    <img src="./images/pets/alaska.jpg" alt="alaska" class="img-small">
+                    <img  src=${productDetails.image} alt=${productDetails.featured.type.name} class="img-small">
                 </div>
                 <div class="img-small-row">
-                    <img src="./images/pets/alaska.jpg" alt="alaska" class="img-small">
+                    <img  src=${productDetails.image} alt=${productDetails.featured.type.name} class="img-small">
                 </div>
                 <div class="img-small-row">
-                    <img src="./images/pets/alaska.jpg" alt="alaska" class="img-small">
+                    <img  src=${productDetails.image} alt=${productDetails.featured.type.name} class="img-small">
                 </div>
             </div>`;
         document.querySelector('.page-container .product-infomation .infomation .title').innerHTML = `${productDetails.name}`;
