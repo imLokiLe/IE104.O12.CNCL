@@ -25,7 +25,7 @@ const pets = [
             genus: 'cat',
             type: {
                 id: 'british-long',
-                name: 'british-long'
+                name: 'British long'
             },
         }
     },
@@ -41,7 +41,7 @@ const pets = [
             genus: 'dog',
             type: {
                 id: 'pomeranian',
-                name: 'pomeranian'
+                name: 'Pomeranian'
             },
         }
     },
@@ -56,7 +56,7 @@ const pets = [
             genus: 'cat',
             type: {
                 id: 'british-long',
-                name: 'british-long'
+                name: 'British long'
             },
         }
     },
@@ -70,8 +70,8 @@ const pets = [
         featured: {
             genus: 'cat',
             type: {
-                id: 'british',
-                name: 'british'
+                id: 'persian',
+                name: 'Persian'
             },
         }
     },
@@ -86,7 +86,7 @@ const pets = [
             genus: 'dog',
             type: {
                 id: 'pomeranian',
-                name: 'pomeranian'
+                name: 'Pomeranian'
             },
         }
     },
@@ -101,7 +101,7 @@ const pets = [
             genus: 'dog',
             type: {
                 id: 'golden',
-                name: 'golden'
+                name: 'Golden'
             },
         }
     },
@@ -116,7 +116,7 @@ const pets = [
             genus: 'cat',
             type: {
                 id: 'british',
-                name: 'british'
+                name: 'British'
             },
         }
     },
@@ -131,7 +131,7 @@ const pets = [
             genus: 'cat',
             type: {
                 id: 'british',
-                name: 'british'
+                name: 'British'
             },
         }
     },
@@ -146,7 +146,7 @@ const pets = [
             genus: 'dog',
             type: {
                 id: 'poodle',
-                name: 'poodle'
+                name: 'Poodle'
             },
         }
     },
@@ -161,7 +161,7 @@ const pets = [
             genus: 'dog',
             type: {
                 id: 'pomeranian',
-                name: 'pomeranian'
+                name: 'Pomeranian'
             },
         }
     },
@@ -176,7 +176,7 @@ const pets = [
             genus: 'dog',
             type: {
                 id: 'poodle',
-                name: 'poodle'
+                name: 'Poodle'
             },
         }
     },
@@ -191,7 +191,7 @@ const pets = [
             genus: 'cat',
             type: {
                 id: 'british',
-                name: 'british'
+                name: 'British'
             },
         }
     },
@@ -203,9 +203,9 @@ const pets = [
         unit: 'đ',
         rating: '4',
         featured: {
-            genus: 'cat',
+            genus: 'dog',
             type: {
-                id: 'Pomeranian',
+                id: 'pomeranian',
                 name: 'Pomeranian'
             },
         }
@@ -221,7 +221,7 @@ const pets = [
             genus: 'dog',
             type: {
                 id: 'akita',
-                name: 'akita'
+                name: 'Akita'
             },
         }
     },
@@ -236,7 +236,7 @@ const pets = [
             genus: 'dog',
             type: {
                 id: 'shiba',
-                name: 'shiba'
+                name: 'Shiba'
             },
         }
     },
@@ -251,7 +251,7 @@ const pets = [
             genus: 'dog',
             type: {
                 id: 'pomeranian',
-                name: 'pomeranian'
+                name: 'Pomeranian'
             },
         }
     },
@@ -266,7 +266,7 @@ const pets = [
             genus: 'dog',
             type: {
                 id: 'corgi',
-                name: 'corgi'
+                name: 'Corgi'
             },
         }
     },
@@ -281,7 +281,7 @@ const pets = [
             genus: 'cat',
             type: {
                 id: 'british',
-                name: 'british'
+                name: 'British'
             },
         }
     },
@@ -296,7 +296,7 @@ const pets = [
             genus: 'cat',
             type: {
                 id: 'british',
-                name: 'british'
+                name: 'British'
             },
         }
     },
@@ -311,7 +311,7 @@ const pets = [
             genus: 'dog',
             type: {
                 id: 'pomeranian',
-                name: 'pomeranian'
+                name: 'Pomeranian'
             },
         }
     },
@@ -326,7 +326,7 @@ const pets = [
             genus: 'dog',
             type: {
                 id: 'alaska',
-                name: 'alaska'
+                name: 'Alaska'
             },
         }
     },
@@ -341,7 +341,7 @@ const pets = [
             genus: 'dog',
             type: {
                 id: 'pomeranian',
-                name: 'pomeranian'
+                name: 'Pomeranian'
             },
         }
     },
@@ -370,8 +370,8 @@ const pets = [
         featured: {
             genus: 'cat',
             type: {
-                id: 'british-long',
-                name: 'british-long'
+                id: 'munchkin',
+                name: 'Chân ngắn Munchkin'
             },
         }
     },
