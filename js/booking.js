@@ -82,6 +82,7 @@ $(document).ready(function(){
         }
         // fill content form confirm
         $('#confirm_name').html($('#name').val());
+        $('#confirm_phone').html($('#phone').val());
         $('#confirm_service').html(confirm_service);
         $('#confirm_date').html(formatDate($('#date').val()));
         $('#confirm_time').html($('#time').val());
