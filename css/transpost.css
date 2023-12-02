@@ -1,15 +1,22 @@
-p,body, ul, input[type="radio"], input[type="checkbox"]{
+p,
+body,
+ul,
+input[type="radio"],
+input[type="checkbox"] {
     margin: 0;
     padding: 0;
 }
+
 a {
     text-decoration: none;
 }
-body{
+
+body {
     background-color: #F5F5FA;
     font-family: Quicksand;
 }
-.go_top_btn{
+
+.go_top_btn {
     position: fixed;
     bottom: 35px;
     right: 35px;
@@ -23,53 +30,63 @@ body{
     align-content: center;
     z-index: 99;
 }
-#to_top{
+
+#to_top {
     width: 70px;
     height: 70px;
 }
+
 /* Address */
-.address{
+.address {
     margin-top: 110px;
     padding: 25px 4%;
     text-align: left;
     font-size: 20px;
 }
-.product-link{
+
+.product-link {
     color: #000;
     text-transform: uppercase;
 }
-.current-link{
+
+.current-link {
     font-weight: bold;
 }
 
 
 /* Progress bar */
-.progress-bar{
+.progress-bar {
     margin: 0 4%;
     padding: 1% 0;
     background: #FFF;
     border-radius: 5px;
 }
-.bar{
+
+.bar {
     display: flex;
     column-gap: 5%;
     justify-content: center;
 }
-.bar li{
+
+.bar li {
     list-style: none;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.bar li .text{
+
+.bar li .text {
     font-size: 20px;
     font-weight: bold;
     color: #BBB;
 }
-.bar .current .text, .bar .pre .text{
+
+.bar .current .text,
+.bar .pre .text {
     color: #000;
 }
-.bar li .progress{
+
+.bar li .progress {
     width: 50px;
     height: 50px;
     border: 4px solid #bbb;
@@ -82,12 +99,15 @@ body{
     position: relative;
     cursor: pointer;
 }
-.bar .current .progress, .bar .pre .progress{
+
+.bar .current .progress,
+.bar .pre .progress {
     color: #fff;
-    background-color: #EFBB3F;
-    border: 4px solid #EFBB3F;
+    background-color: #FF6B35;
+    border: 4px solid #FF6B35;
 }
-.progress::after{
+
+.progress::after {
     content: " ";
     position: absolute;
     width: 114px;
@@ -95,59 +115,73 @@ body{
     background-color: #BBBBBB;
     right: 50px;
 }
-.current .progress::after, .pre .progress::after{
-    background-color: #EFBB3F;
+
+.current .progress::after,
+.pre .progress::after {
+    background-color: #FF6B35;
 }
-.one::after{
+
+.one::after {
     width: 0;
     height: 0;
 }
-.three::after{
+
+.three::after {
     width: 124px;
 }
-.fa-chevron-down:not(.current .fa-chevron-down){
+
+.fa-chevron-down:not(.current .fa-chevron-down) {
     color: #fff;
 }
 
 /* Transpost content */
-.transpost-content{
+.transpost-content {
     margin: 1% 4% 0;
     padding: 1% 20%;
     border: 1px solid #DDD;
-    border-radius: 5px;    
+    border-radius: 5px;
     background: #F7F7F7;
 }
-.transpost-content .transpost-name{
+
+.transpost-content .transpost-name {
     font-weight: bold;
 }
-.transpost-content  table {
+
+.transpost-content table {
     border-collapse: separate;
     border-spacing: 10px;
-  }
+}
+
 .transpost-content td:first-child {
     width: 25%;
 }
-.transpost-text input[type="text"], .transpost-text textarea, 
-.transpost-text select{
+
+.transpost-text input[type="text"],
+.transpost-text textarea,
+.transpost-text select {
     width: 100%;
     box-sizing: border-box;
     border: 1px solid #DFDFDF;
     padding: 8px;
     border-radius: 5px;
 }
-.transpost-text input::placeholder, .transpost-text textarea::placeholder,
-.transpost-text select{
+
+.transpost-text input::placeholder,
+.transpost-text textarea::placeholder,
+.transpost-text select {
     color: #bbb;
     font-family: Quicksand;
 }
+
 /* Input radio */
 .transpost-text .radio {
     display: flex;
     align-items: center;
 }
-.radio input[type="radio"]{
+
+.radio input[type="radio"] {
     appearance: none;
-    -webkit-appearance: none;  
+    -webkit-appearance: none;
     width: 12px;
     height: 12px;
     border: 1px solid #6A6A6A;
@@ -159,26 +193,31 @@ body{
     position: relative;
     margin-right: 5px;
 }
-.radio input[type="radio"]#company{
+
+.radio input[type="radio"]#company {
     margin-left: 15px;
 }
-.radio input[type="radio"]:after{
+
+.radio input[type="radio"]:after {
     font-family: "Font Awesome 6 Free";
     font-weight: bold;
     content: "\f111";
-    color: #EFBB3F;
+    color: #fc591e;
     font-size: 6px;
     display: none;
 }
-.radio input[type="radio"]:checked:after  {
+
+.radio input[type="radio"]:checked:after {
     display: block;
 }
+
 /* Input checkbox */
 .transpost-text .checkbox {
     display: flex;
     align-items: center;
 }
-.checkbox input[type="checkbox"]{
+
+.checkbox input[type="checkbox"] {
     appearance: none;
     -webkit-appearance: none;
     width: 12px;
@@ -190,32 +229,38 @@ body{
     align-items: center;
     justify-content: center;
     position: relative;
-    margin-right:10px;
+    margin-right: 10px;
 }
-.checkbox input[type="checkbox"]:after{
+
+.checkbox input[type="checkbox"]:after {
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     content: "\f00c";
     font-size: 10px;
     display: none;
 }
+
 .checkbox input[type="checkbox"]:hover {
     background-color: #BBB;
 }
+
 .checkbox input[type="checkbox"]:checked:after {
     display: block;
 }
+
 .radio input[type="radio"]:checked,
-.checkbox input[type="checkbox"]:checked{ 
-    border: 1px solid #EFBB3F;
+.checkbox input[type="checkbox"]:checked {
+    border: 1px solid #fc591e;
 }
+
 /* Button */
-.transpost-text.button{
+.transpost-text.button {
     display: grid;
     column-gap: 2%;
     grid-template-columns: 49% 49%;
 }
-.transpost-text.button .btn-cancel{
+
+.transpost-text.button .btn-cancel {
     font-family: Quicksand;
     font-size: 16px;
     padding: 3%;
@@ -224,13 +269,14 @@ body{
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     cursor: pointer;
 }
-.transpost-text.button .btn-accept{
+
+.transpost-text.button .btn-accept {
     font-family: Quicksand;
     font-size: 16px;
     color: #fff;
     padding: 3%;
     border: 1px solid #F7F7F7;
-    background: #EFBB3F;
+    background: #FF6B35;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     cursor: pointer;
 
