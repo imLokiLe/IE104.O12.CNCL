@@ -47,4 +47,12 @@ goTopBtn.addEventListener('click', () =>{
         behavior: "smooth"
     })
 })
-  
+
+// loading
+document.addEventListener("DOMContentLoaded", function () {
+    // Simulate a delay (you can remove this in production)
+    setTimeout(function () {
+        document.querySelector(".loading-overlay").style.display = "none";
+        document.querySelector(".content").style.display = "block";
+    }, 3000); // Adjust the delay time as needed
+});

@@ -9,119 +9,125 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <script src="./js/link_header_footer.js"></script>
-    <title>All pets</title>
+    <title>Petty Shop</title>
 </head>
 
 <body>
-    <!-- Header-->
-    <div id="header"></div>
-    <!-- scroll to top -->
-    <button class="go_top_btn">
-        <img src="./assets/images/Home1/To-Top.png" alt="img up" id="to_top">
-    </button>
-    <!-- Address -->
-    <section class="address">
-        <a href="" class="address-link">Trang chủ</a>
-        <span class="icon_more_than">></span>
-        <a href="./pets.html" class="address-link current-link">Thú cưng</a>
-    </section>
+    <div class="loading-overlay">
+        <img src="./assets/images/loading/Petty-Loader.gif" alt="Loading..." class="loading-gif">
+    </div>
 
-    <!-- Content -->
-    <section class="page-container">
-        <!-- Filter -->
-        <div class="sidebar-filter">
-            <p>Bộ lọc</p>
-
-            <!-- Filter Price -->
-            <div class="filter-block filter-price" id="filterPrice">
-                <div class="filter-title">
-                    <h4 id="togglePrice">Giá</h4>
-                </div>
-
-                <div class="range-price">
-                    <div class="price-input">
-                        <div class="field">
-                            <input type="number" value="0" class="min-input" placeholder="min-price">
+    <div class="content">
+        <!-- Header-->
+        <div id="header"></div>
+        <!-- scroll to top -->
+        <button class="go_top_btn">
+            <img src="./assets/images/Home1/To-Top.png" alt="img up" id="to_top">
+        </button>
+        <!-- Address -->
+        <section class="address">
+            <a href="" class="address-link">Trang chủ</a>
+            <span class="icon_more_than">></span>
+            <a href="./pets.html" class="address-link current-link">Thú cưng</a>
+        </section>
+    
+        <!-- Content -->
+        <section class="page-container">
+            <!-- Filter -->
+            <div class="sidebar-filter">
+                <p>Bộ lọc</p>
+    
+                <!-- Filter Price -->
+                <div class="filter-block filter-price" id="filterPrice">
+                    <div class="filter-title">
+                        <h4 id="togglePrice">Giá</h4>
+                    </div>
+    
+                    <div class="range-price">
+                        <div class="price-input">
+                            <div class="field">
+                                <input type="number" value="0" class="min-input" placeholder="min-price">
+                            </div>
+                            <div class="seperator">-</div>
+                            <div class="field">
+                                <input type="number" value="50000000" class="max-input" placeholder="max-price">
+                            </div>
                         </div>
-                        <div class="seperator">-</div>
-                        <div class="field">
-                            <input type="number" value="50000000" class="max-input" placeholder="max-price">
+    
+                        <div class="slider">
+                            <div class="progress"></div>
+                        </div>
+    
+                        <div class="range-input">
+                            <input type="range" min="0" max="50000000" value="0" class="min-range" step="50000">
+                            <input type="range" min="0" max="50000000" value="50000000" class="max-range" step="50000">
                         </div>
                     </div>
-
-                    <div class="slider">
-                        <div class="progress"></div>
+                </div>
+    
+                <!-- Filter Dog -->
+                <div class="filter-block filter-dog" id="filterDog">
+                    <div class="filter-title">
+                        <h4 id="toggleDog">Chó</h4>
+                        <div class="checkbox-all">
+                            <label for="dogs">
+                                <span class="pets-name">Chọn tất cả</span>
+                            </label>
+                            <input type="checkbox" name="checkbox" id="dogs">
+                        </div>
                     </div>
-
-                    <div class="range-input">
-                        <input type="range" min="0" max="50000000" value="0" class="min-range" step="50000">
-                        <input type="range" min="0" max="50000000" value="50000000" class="max-range" step="50000">
+    
+                    <ul class="pets-checkbox" id="filterOptionsDog"></ul>
+                </div>
+    
+                <!-- Filter Cat -->
+                <div class="filter-block filter-cat" id="filterCat">
+                    <div class="filter-title">
+                        <h4 id="toggleCat">Mèo</h4>
+                        <div class="checkbox-all">
+                            <label for="cats">
+                                <span class="pets-name">Chọn tất cả</span>
+                            </label>
+                            <input type="checkbox" name="checkbox" id="cats">
+                        </div>
+                    </div>
+    
+                    <ul class="pets-checkbox" id="filterOptionsCat"></ul>
+                </div>
+            </div>
+    
+            <div class="content-product">
+                <!-- Showing results header -->
+                <div class="results-header">
+                    <!-- Showing num product available -->
+                    <div class="result-count">
+    
+                    </div>
+    
+                    <!-- Sort options -->
+                    <div class="sort-options">
+                        <select class="sort-select">
+                            <option disabled selected hidden>Sắp xếp theo</option>
+                            <option value="low-to-high">Giá: Thấp đến cao</option>
+                            <option value="high-to-low">Giá: Cao đến thấp</option>
+                        </select>
                     </div>
                 </div>
-            </div>
-
-            <!-- Filter Dog -->
-            <div class="filter-block filter-dog" id="filterDog">
-                <div class="filter-title">
-                    <h4 id="toggleDog">Chó</h4>
-                    <div class="checkbox-all">
-                        <label for="dogs">
-                            <span class="pets-name">Chọn tất cả</span>
-                        </label>
-                        <input type="checkbox" name="checkbox" id="dogs">
-                    </div>
-                </div>
-
-                <ul class="pets-checkbox" id="filterOptionsDog"></ul>
-            </div>
-
-            <!-- Filter Cat -->
-            <div class="filter-block filter-cat" id="filterCat">
-                <div class="filter-title">
-                    <h4 id="toggleCat">Mèo</h4>
-                    <div class="checkbox-all">
-                        <label for="cats">
-                            <span class="pets-name">Chọn tất cả</span>
-                        </label>
-                        <input type="checkbox" name="checkbox" id="cats">
-                    </div>
-                </div>
-
-                <ul class="pets-checkbox" id="filterOptionsCat"></ul>
-            </div>
-        </div>
-
-        <div class="content-product">
-            <!-- Showing results header -->
-            <div class="results-header">
-                <!-- Showing num product available -->
-                <div class="result-count">
-
-                </div>
-
-                <!-- Sort options -->
-                <div class="sort-options">
-                    <select class="sort-select">
-                        <option disabled selected hidden>Sắp xếp theo</option>
-                        <option value="low-to-high">Giá: Thấp đến cao</option>
-                        <option value="high-to-low">Giá: Cao đến thấp</option>
-                    </select>
+    
+                <!-- Product list -->
+                <div id="product-list"></div>
+                <!-- Pagination -->
+                <div class="pagination-container">
+                    <!-- <div class="pagination"> -->
                 </div>
             </div>
-
-            <!-- Product list -->
-            <div id="product-list"></div>
-            <!-- Pagination -->
-            <div class="pagination-container">
-                <!-- <div class="pagination"> -->
             </div>
-        </div>
-        </div>
-    </section>
-
-
-    <!-- Footer -->
-    <div id="footer"></div>
+        </section>
+    
+    
+        <!-- Footer -->
+        <div id="footer"></div>
+    </div>
 
     <script type="module" src="./js/pet-category.js"></script>
 </body>

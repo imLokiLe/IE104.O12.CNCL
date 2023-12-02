@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Petty Shop</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
@@ -11,182 +11,188 @@
     <link rel="stylesheet" href="./css/Exercise.css">
 </head>
 <body>
-    <div id="header"></div>
+    <div class="loading-overlay">
+        <img src="./assets/images/loading/Petty-Loader.gif" alt="Loading..." class="loading-gif">
+    </div>
 
-    <div class="container-body">
-        <!-- scroll to top -->
-        <button class="go_top_btn">
-            <img src="./assets/images/Home1/To-Top.png" alt="img up" id="to_top">
-        </button>
-        
-        <div class="bg_overlay"></div>
-        <div class="address">
-            <a href="./Home.html">TRANG CHỦ</a> > <a href="./Exercise.html"><b>DỊCH VỤ TẬP THỂ DỤC</b></a>
-        </div>
-
-        <!-- Intro -->
-        <img src="./assets/images/Exercise/intro_img.png" alt="img_intro" class="img_intro_exercise">
-        <div class="intro">
-            <div class="intro_content">
-                <h1>Dịch Vụ Tập Thể Dục</h1>
-                <p>Chào mừng bạn đến với dịch vụ tập thể dục cho chó mèo! Chúng tôi sẽ thay bạn huấn luyện sức khỏe cho những thú cưng thân yêu!</p>
-                <div class="intro_btn_field">
+    <div class="content">
+        <div id="header"></div>
+    
+        <div class="container-body">
+            <!-- scroll to top -->
+            <button class="go_top_btn">
+                <img src="./assets/images/Home1/To-Top.png" alt="img up" id="to_top">
+            </button>
+            
+            <div class="bg_overlay"></div>
+            <div class="address">
+                <a href="./Home.html">TRANG CHỦ</a> > <a href="./Exercise.html"><b>DỊCH VỤ TẬP THỂ DỤC</b></a>
+            </div>
+    
+            <!-- Intro -->
+            <img src="./assets/images/Exercise/intro_img.png" alt="img_intro" class="img_intro_exercise">
+            <div class="intro">
+                <div class="intro_content">
+                    <h1>Dịch Vụ Tập Thể Dục</h1>
+                    <p>Chào mừng bạn đến với dịch vụ tập thể dục cho chó mèo! Chúng tôi sẽ thay bạn huấn luyện sức khỏe cho những thú cưng thân yêu!</p>
+                    <div class="intro_btn_field">
+                        <a href="./Booking.html">
+                            <div class="btn btn_booking">
+                                <i class="fa-solid fa-calendar-days fa-lg"></i>
+                                <p>ĐẶT LỊCH</p>
+                            </div>
+                        </a>
+                        <button class="btn btn_menu" onclick="scrollToSection('menu')">
+                            <i class="fa-regular fa-clipboard fa-xl"></i>
+                            <p>MENU</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Infor -->
+            <img src="../assets/backgrounds/bg-exercise-process2.png" alt="bg-exercise-process2" class="bg infor_fr">
+            <div class="infor">
+                <div class="infor_content">
+                    <h2>CHÚNG TÔI SẼ CÙNG BẠN CHĂM SÓC BÉ!</h2>
+                    <p>
+                        - Hầu hết các bé chó đều thích chạy khi có cơ hội <br>
+                        - Nhiều em chó có mức năng lượng cao, sẽ rất hứng thú với việc thường xuyên được chạy <br>
+                        - Một số bị dư thừa năng lượng có thể gây ra các hành vi: phá hoại, sủa nhiều và trầm cảm <br>
+                        - Một số chó lớn hoặc nhỏ cần hoạt động để cung cấp năng lượng cho sự phát triển hằng ngày <br>
+                        - Bất cứ điều gì từ chạy bộ chạy hoặc chạy nhanh đều có thể làm cho các bé chó nhà bạn vui vẻ!
+                    </p>
+                </div>
+                <img src="../assets/images/Exercise/doggym.png" alt="doggym" class="doggym_img">
+                <img src="../assets/images/Exercise/dogstatus.png" alt="dogstatus" class="dogstatus_img">
+    
+                <img src="../assets/images/Exercise/arrow.png" alt="arrow" class="arrow_img">
+                <h1>Các bé cần được chơi đùa & đi dạo cùng!</h1>
+            </div>
+    
+            <!-- process -->
+            <div class="process">
+                <img src="../assets/images/Exercise/process_img1.png" alt="process_img1" class="process_img1">
+                <h2>QUY TRÌNH CHẠY BỘ TIÊU CHUẨN</h2>
+                <div class="process_content">
+                    <div class="process_title">
+                        <div class="process_start">
+                            <span>Khởi động</span>
+                            <p>5 phút</p>
+                        </div>
+                        <div class="process_run">
+                            <span>Chạy</span>
+                            <p>15-25 phút</p>
+                        </div>
+                        <div class="process_end">
+                            <span>Hạ nhiệt độ cơ thể</span>
+                            <p>5 phút</p>
+                        </div>
+                    </div>
+                    <img src="../assets/images/Exercise/timeline.png" alt="timeline" class="timeline">
+                    <div class="process_description">
+                        <div class="process_start_description">
+                            <p>Đi bộ làm nóng cơ thể & các khớp</p>
+                        </div>
+                        <div class="process_run_description">
+                            <ul>
+                                <li>Tốc độ tùy theo từng loại</li>
+                                <li>Quãng đường sẽ phụ thuộc vào sức khỏe của pet.</li>
+                                <li>HLV sẽ chạy hỗ trợ các pet mới chạy</li>
+                                <li>Uống nước, bánh thưởng và nghỉ ngơi giữa hiệp cho các pet</li>
+                            </ul>
+                        </div>
+                        <div class="process_end_description">
+                            <ul>
+                                <li>Đi chậm để hạ nhiệt độ cơ thể</li>
+                                <li>Uống nước và ăn bánh thưởng cung cấp năng lượng</li>
+                                <li>Hoàn thành buổi chạy và nhận kết quả.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="../assets/backgrounds/bg-exercise-process1.png" alt="bg-exercise-process1" class="bg process_fr">
+    
+            <!-- support -->
+            <div class="support_process">
+                <div class="support_content">
+                    <div class="support_start">
+                        <h1>Trước chạy</h1>
+                        <ul>
+                            <li>Sức khỏe, tình trạng</li>
+                            <li>Vật dụng trang bị: nước, bánh thưởng, dây, đồng phục, …</li>
+                            <li>Máy móc: Gopro, Điện thọai</li>
+                            <li>App hỗ trợ khác</li>
+                        </ul>
+                    </div>
+                    <div class="support_run">
+                        <h1>Quá trình chạy</h1>
+                        <ul>
+                            <li>Biểu hiện của pet để hỗ trợ kịp thời:</li>
+                                <ul>
+                                    <span>
+                                        <li>Cụp tai, thở mạnh: giảm tốc độ, cung cấp nước và đồ ăn.</li>
+                                        <li>Theo dõi vận tốc chạy của pet để chạy theo.</li>
+                                    </span>
+                                </ul>
+                            <li>Nghỉ ngơi giữa các hiệp: Uống nước, ăn bánh,..</li>
+                            <li>Chụp hình & video 30s về quá trình chạy của pet.</li>
+                        </ul>
+                    </div>
+                    <div class="support_end">
+                        <h1>Sau khi chạy</h1>
+                        <ul>
+                            <li>Bàn giao lại pet và vật dụng liên quan</li>
+                            <li>Gửi lại video + hình ảnh cho nhân viên</li>
+                            <li>Tư vấn, giới thiệu các biện pháp chạy phù hợp cho pet (nếu có)</li>
+                        </ul>
+                    </div>
+                </div>
+                <img src="../assets/images/Exercise/process_img2.png" alt="process_img2" class="process_img2">
+            </div>
+    
+            <!-- menu -->
+            <img src="../assets/backgrounds/bg-exercise-menu.png" alt="bg-exercise-menu" class="bg menu_fr">
+            <div id="menu">
+                <img src="../assets/images/Exercise/Menu.png" alt="menu" class="menu_detail">
+                <div class="menu_btn_field">
                     <a href="./Booking.html">
-                        <div class="btn btn_booking">
+                        <div class="btn btn_booking menu_btn_booking">
                             <i class="fa-solid fa-calendar-days fa-lg"></i>
                             <p>ĐẶT LỊCH</p>
                         </div>
                     </a>
-                    <button class="btn btn_menu" onclick="scrollToSection('menu')">
-                        <i class="fa-regular fa-clipboard fa-xl"></i>
-                        <p>MENU</p>
-                    </button>
+                    <a href="./contact.html">
+                        <div class="btn btn_contact menu_btn_contact">
+                            <i class="fa-solid fa-phone fa-lg"></i>
+                            <p>LIÊN HỆ</p>
+                        </div>
+                    </a>
                 </div>
             </div>
-        </div>
-
-        <!-- Infor -->
-        <img src="../assets/backgrounds/bg-exercise-process2.png" alt="bg-exercise-process2" class="bg infor_fr">
-        <div class="infor">
-            <div class="infor_content">
-                <h2>CHÚNG TÔI SẼ CÙNG BẠN CHĂM SÓC BÉ!</h2>
-                <p>
-                    - Hầu hết các bé chó đều thích chạy khi có cơ hội <br>
-                    - Nhiều em chó có mức năng lượng cao, sẽ rất hứng thú với việc thường xuyên được chạy <br>
-                    - Một số bị dư thừa năng lượng có thể gây ra các hành vi: phá hoại, sủa nhiều và trầm cảm <br>
-                    - Một số chó lớn hoặc nhỏ cần hoạt động để cung cấp năng lượng cho sự phát triển hằng ngày <br>
-                    - Bất cứ điều gì từ chạy bộ chạy hoặc chạy nhanh đều có thể làm cho các bé chó nhà bạn vui vẻ!
-                </p>
-            </div>
-            <img src="../assets/images/Exercise/doggym.png" alt="doggym" class="doggym_img">
-            <img src="../assets/images/Exercise/dogstatus.png" alt="dogstatus" class="dogstatus_img">
-
-            <img src="../assets/images/Exercise/arrow.png" alt="arrow" class="arrow_img">
-            <h1>Các bé cần được chơi đùa & đi dạo cùng!</h1>
-        </div>
-
-        <!-- process -->
-        <div class="process">
-            <img src="../assets/images/Exercise/process_img1.png" alt="process_img1" class="process_img1">
-            <h2>QUY TRÌNH CHẠY BỘ TIÊU CHUẨN</h2>
-            <div class="process_content">
-                <div class="process_title">
-                    <div class="process_start">
-                        <span>Khởi động</span>
-                        <p>5 phút</p>
-                    </div>
-                    <div class="process_run">
-                        <span>Chạy</span>
-                        <p>15-25 phút</p>
-                    </div>
-                    <div class="process_end">
-                        <span>Hạ nhiệt độ cơ thể</span>
-                        <p>5 phút</p>
-                    </div>
-                </div>
-                <img src="../assets/images/Exercise/timeline.png" alt="timeline" class="timeline">
-                <div class="process_description">
-                    <div class="process_start_description">
-                        <p>Đi bộ làm nóng cơ thể & các khớp</p>
-                    </div>
-                    <div class="process_run_description">
-                        <ul>
-                            <li>Tốc độ tùy theo từng loại</li>
-                            <li>Quãng đường sẽ phụ thuộc vào sức khỏe của pet.</li>
-                            <li>HLV sẽ chạy hỗ trợ các pet mới chạy</li>
-                            <li>Uống nước, bánh thưởng và nghỉ ngơi giữa hiệp cho các pet</li>
-                        </ul>
-                    </div>
-                    <div class="process_end_description">
-                        <ul>
-                            <li>Đi chậm để hạ nhiệt độ cơ thể</li>
-                            <li>Uống nước và ăn bánh thưởng cung cấp năng lượng</li>
-                            <li>Hoàn thành buổi chạy và nhận kết quả.</li>
-                        </ul>
+    
+            <!-- partner -->
+            <div class="partner">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 73.5 70.7" style="enable-background:new 0 0 73.5 70.7;" xml:space="preserve"><g>	<path d="M14,37.3c3.2-5.9,13.6-10.5,22.7-0.4c9.1-10.1,19.5-5.5,22.7,0.4c9.3,17.2-22.5,31-22.7,31.1C36.5,68.3,4.7,54.5,14,37.3z"></path>	<path d="M60.5,32.2c-3.3-1.5-4.3-6.3-2.4-10.8c2-4.5,6.3-6.9,9.5-5.5s4.3,6.3,2.4,10.8c-1.6,3.6-4.7,5.9-7.5,5.9  C61.8,32.6,61.2,32.5,60.5,32.2L60.5,32.2z"></path>	<path d="M3.5,26.7c-2-4.5-0.9-9.3,2.4-10.8s7.6,1,9.5,5.5s0.9,9.3-2.4,10.8c-0.6,0.3-1.3,0.4-2,0.4C8.1,32.6,5.1,30.3,3.5,26.7z"></path>	<path d="M44.1,23.3c-4.2-1.1-6.3-6.7-4.8-12.4s6.2-9.4,10.4-8.3S56,9.3,54.5,15c-1.4,5-5.1,8.5-8.8,8.5  C45.1,23.5,44.6,23.4,44.1,23.3L44.1,23.3z"></path>	<path d="M19,15c-1.5-5.7,0.6-11.3,4.8-12.4s8.8,2.6,10.4,8.3s-0.6,11.3-4.8,12.4c-0.5,0.1-1,0.2-1.5,0.2C24.2,23.5,20.4,20,19,15  L19,15z"></path></g></svg>
+                <h1>Đối Tác</h1>
+                <div class="partner_wrapper">
+                    <div class="partner_list">
+                        <img src="./assets/images/Home1/logo_partner1.png" alt="logo_partner1" class="logo_partner">
+                        <img src="./assets/images/Home1/logo_partner2.png" alt="logo_partner2" class="logo_partner">
+                        <img src="./assets/images/Home1/logo_partner3.png" alt="logo_partner3" class="logo_partner">
+                        <img src="./assets/images/Home1/logo_partner4.png" alt="logo_partner4" class="logo_partner">
+                        <img src="./assets/images/Home1/logo_partner5.png" alt="logo_partner5" class="logo_partner">
+                        <img src="./assets/images/Home1/logo_partner6.png" alt="logo_partner6" class="logo_partner">
+                        <img src="./assets/images/Home1/logo_partner7.png" alt="logo_partner7" class="logo_partner">
+                        <img src="./assets/images/Home1/logo_partner8.png" alt="logo_partner8" class="logo_partner">
                     </div>
                 </div>
             </div>
         </div>
-        <img src="../assets/backgrounds/bg-exercise-process1.png" alt="bg-exercise-process1" class="bg process_fr">
-
-        <!-- support -->
-        <div class="support_process">
-            <div class="support_content">
-                <div class="support_start">
-                    <h1>Trước chạy</h1>
-                    <ul>
-                        <li>Sức khỏe, tình trạng</li>
-                        <li>Vật dụng trang bị: nước, bánh thưởng, dây, đồng phục, …</li>
-                        <li>Máy móc: Gopro, Điện thọai</li>
-                        <li>App hỗ trợ khác</li>
-                    </ul>
-                </div>
-                <div class="support_run">
-                    <h1>Quá trình chạy</h1>
-                    <ul>
-                        <li>Biểu hiện của pet để hỗ trợ kịp thời:</li>
-                            <ul>
-                                <span>
-                                    <li>Cụp tai, thở mạnh: giảm tốc độ, cung cấp nước và đồ ăn.</li>
-                                    <li>Theo dõi vận tốc chạy của pet để chạy theo.</li>
-                                </span>
-                            </ul>
-                        <li>Nghỉ ngơi giữa các hiệp: Uống nước, ăn bánh,..</li>
-                        <li>Chụp hình & video 30s về quá trình chạy của pet.</li>
-                    </ul>
-                </div>
-                <div class="support_end">
-                    <h1>Sau khi chạy</h1>
-                    <ul>
-                        <li>Bàn giao lại pet và vật dụng liên quan</li>
-                        <li>Gửi lại video + hình ảnh cho nhân viên</li>
-                        <li>Tư vấn, giới thiệu các biện pháp chạy phù hợp cho pet (nếu có)</li>
-                    </ul>
-                </div>
-            </div>
-            <img src="../assets/images/Exercise/process_img2.png" alt="process_img2" class="process_img2">
-        </div>
-
-        <!-- menu -->
-        <img src="../assets/backgrounds/bg-exercise-menu.png" alt="bg-exercise-menu" class="bg menu_fr">
-        <div id="menu">
-            <img src="../assets/images/Exercise/Menu.png" alt="menu" class="menu_detail">
-            <div class="menu_btn_field">
-                <a href="./Booking.html">
-                    <div class="btn btn_booking menu_btn_booking">
-                        <i class="fa-solid fa-calendar-days fa-lg"></i>
-                        <p>ĐẶT LỊCH</p>
-                    </div>
-                </a>
-                <a href="./contact.html">
-                    <div class="btn btn_contact menu_btn_contact">
-                        <i class="fa-solid fa-phone fa-lg"></i>
-                        <p>LIÊN HỆ</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        <!-- partner -->
-        <div class="partner">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 73.5 70.7" style="enable-background:new 0 0 73.5 70.7;" xml:space="preserve"><g>	<path d="M14,37.3c3.2-5.9,13.6-10.5,22.7-0.4c9.1-10.1,19.5-5.5,22.7,0.4c9.3,17.2-22.5,31-22.7,31.1C36.5,68.3,4.7,54.5,14,37.3z"></path>	<path d="M60.5,32.2c-3.3-1.5-4.3-6.3-2.4-10.8c2-4.5,6.3-6.9,9.5-5.5s4.3,6.3,2.4,10.8c-1.6,3.6-4.7,5.9-7.5,5.9  C61.8,32.6,61.2,32.5,60.5,32.2L60.5,32.2z"></path>	<path d="M3.5,26.7c-2-4.5-0.9-9.3,2.4-10.8s7.6,1,9.5,5.5s0.9,9.3-2.4,10.8c-0.6,0.3-1.3,0.4-2,0.4C8.1,32.6,5.1,30.3,3.5,26.7z"></path>	<path d="M44.1,23.3c-4.2-1.1-6.3-6.7-4.8-12.4s6.2-9.4,10.4-8.3S56,9.3,54.5,15c-1.4,5-5.1,8.5-8.8,8.5  C45.1,23.5,44.6,23.4,44.1,23.3L44.1,23.3z"></path>	<path d="M19,15c-1.5-5.7,0.6-11.3,4.8-12.4s8.8,2.6,10.4,8.3s-0.6,11.3-4.8,12.4c-0.5,0.1-1,0.2-1.5,0.2C24.2,23.5,20.4,20,19,15  L19,15z"></path></g></svg>
-            <h1>Đối Tác</h1>
-            <div class="partner_wrapper">
-                <div class="partner_list">
-                    <img src="./assets/images/Home1/logo_partner1.png" alt="logo_partner1" class="logo_partner">
-                    <img src="./assets/images/Home1/logo_partner2.png" alt="logo_partner2" class="logo_partner">
-                    <img src="./assets/images/Home1/logo_partner3.png" alt="logo_partner3" class="logo_partner">
-                    <img src="./assets/images/Home1/logo_partner4.png" alt="logo_partner4" class="logo_partner">
-                    <img src="./assets/images/Home1/logo_partner5.png" alt="logo_partner5" class="logo_partner">
-                    <img src="./assets/images/Home1/logo_partner6.png" alt="logo_partner6" class="logo_partner">
-                    <img src="./assets/images/Home1/logo_partner7.png" alt="logo_partner7" class="logo_partner">
-                    <img src="./assets/images/Home1/logo_partner8.png" alt="logo_partner8" class="logo_partner">
-                </div>
-            </div>
-        </div>
+    
+        <div id="footer"></div>
     </div>
-
-    <div id="footer"></div>
     <script src="./js/exercise.js"></script>
 </body>
 </html>

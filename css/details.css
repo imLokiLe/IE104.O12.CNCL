@@ -10,7 +10,23 @@ body {
 a {
     text-decoration: none;
 }
+.loading-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ededed;
+    z-index: 9999;
+}
 
+.loading-gif {
+    width: 300px; /* Adjust the width as needed */
+    height: auto;
+}
 .page-container {
     background-color: #fffaf0;
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Petty Shop</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
@@ -12,145 +12,167 @@
     
 </head>
 <body>
-    <div id="header"></div>
+    <div class="loading-overlay">
+        <img src="./assets/images/loading/Petty-Loader.gif" alt="Loading..." class="loading-gif">
+    </div>
 
-    <div class="container-body">
-        <!-- scroll to top -->
-        <button class="go_top_btn">
-            <img src="./assets/images/Home1/To-Top.png" alt="img up" id="to_top">
-        </button>
-        
-        <div class="bg_overlay"></div>
-        <div class="address">
-            <a href="./Home.html">TRANG CHỦ</a> > <a href="./Grooming.html"><b>DỊCH VỤ TẮM GỘI - CẮT TỈA LÔNG</b></a>
-        </div>
-
-        <!-- Intro -->
-        <img src="../assets/images/Grooming/intro_img.png" alt="img_intro" class="img_intro_grooming">
-        <div class="intro">
-            <div class="intro_content">
-                <h1>Tắm Gội - Cắt Tỉa Lông</h1>
-                <p>Chào mừng bạn đến với dịch vụ tắm gội - cắt tỉa lông chuyên nghiệp của chúng tôi! Chúng tôi tự hào là một địa điểm tuyệt vời để thú cưng thư giản và làm đẹp!</p>
-                <div class="intro_btn_field">
+    <div class="content">
+        <div id="header"></div>
+    
+        <div class="container-body">
+            <!-- scroll to top -->
+            <button class="go_top_btn">
+                <img src="./assets/images/Home1/To-Top.png" alt="img up" id="to_top">
+            </button>
+            
+            <div class="bg_overlay"></div>
+            <div class="address">
+                <a href="./Home.html">TRANG CHỦ</a> > <a href="./Grooming.html"><b>DỊCH VỤ TẮM GỘI - CẮT TỈA LÔNG</b></a>
+            </div>
+    
+            <!-- Intro -->
+            <img src="../assets/images/Grooming/intro_img.png" alt="img_intro" class="img_intro_grooming">
+            <div class="intro">
+                <div class="intro_content">
+                    <h1>Tắm Gội - Cắt Tỉa Lông</h1>
+                    <p>Chào mừng bạn đến với dịch vụ tắm gội - cắt tỉa lông chuyên nghiệp của chúng tôi! Chúng tôi tự hào là một địa điểm tuyệt vời để thú cưng thư giản và làm đẹp!</p>
+                    <div class="intro_btn_field">
+                        <a href="./Booking.html">
+                            <div class="btn btn_booking">
+                                <i class="fa-solid fa-calendar-days fa-lg"></i>
+                                <p>ĐẶT LỊCH</p>
+                            </div>
+                        </a>
+                        <button class="btn btn_menu" onclick="scrollToSection('menu')">
+                            <i class="fa-regular fa-clipboard fa-xl"></i>
+                            <p>MENU</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- process -->
+            <img src="../assets/images/Grooming/Process.png" alt="process" class="process">
+    
+            <!-- service -->
+            <div class="service">
+                <h1>CHÚNG TÔI CÓ</h1>
+                    <div class="service_content">
+                        <div class="service_subcontent">
+                            <i class="fa-solid fa-star"></i>
+                            <p>Kĩ thuật viên được đào tạo hàng đầu Việt Nam, với kinh nghiệm 7 năm.</p>
+                        </div>
+                        <div class="service_subcontent">
+                            <i class="fa-solid fa-star"></i>
+                            <p>Tư vấn tạo kiểu phù hợp với bé.</p>
+                        </div>
+                        <div class="service_subcontent">
+                            <i class="fa-solid fa-star"></i>
+                            <p>Đầy đủ quy trình SPA Quốc Tế 12 bước.</p>
+                        </div>
+                        <div class="service_subcontent">
+                            <i class="fa-solid fa-star"></i>
+                            <p>Miễn phí vận chuyển bé từ nhà đến Spa (5km).</p>
+                        </div>
+                    </div>
+                <img src="../assets/images/Grooming/service_img.png" alt="service_img" class="service_img">
+            </div>
+    
+            <!-- menu -->
+            <img src="../assets/backgrounds/bg-grooming-menu.png" alt="bg-grooming-menu" class="bg menu_fr">
+            <div id="menu">
+                <div class="menu_content">
+                    <h1>MENU</h1>
+                    <div class="menu_option">
+                        <div id="selected_option"></div>
+                        <button class="toggle_btn" onclick="leftClick()">Chó</button>
+                        <button class="toggle_btn" onclick="rightClick()">Mèo</button>
+                    </div>
                     <a href="./Booking.html">
-                        <div class="btn btn_booking">
+                        <div class="btn btn_booking menu_btn_booking">
                             <i class="fa-solid fa-calendar-days fa-lg"></i>
                             <p>ĐẶT LỊCH</p>
                         </div>
                     </a>
-                    <button class="btn btn_menu" onclick="scrollToSection('menu')">
-                        <i class="fa-regular fa-clipboard fa-xl"></i>
-                        <p>MENU</p>
-                    </button>
+                </div>
+                <img src="./assets/images/Grooming/menu.png" alt="menu" id="menu_detail">
+                <img src="./assets/images/Grooming/menu_cat.png" alt="menu" id="menu_cat">
+            </div>
+    
+            <!-- extra service -->
+            <div class="extra">
+                <img src="../assets/images/Grooming/extra.png" alt="extra" class="extra_service">
+                <div class="extra_content">
+                    <h1>DỊCH VỤ THÊM</h1>
+                    <p>Các dịch vụ thêm để chăm sóc cho bé yêu với các sản phẩm chăm sóc và tẩy ố, chúng tôi dùng sản phẩm của Tropiclean đạt chứng nhận hữu cơ 100% sản xuất tại USA</p>
+                    <p class="extra_note">*Lưu Ý: <br>
+                        - Nếu hình/rối khó tạo kiểu giá sẽ tăng 10 đến 50% giá ban đầu <br>
+                        - Giá trên là lông nhiều, nếu lông ít giảm 10 đến 50%</p>
+                    <div class="service_premium">
+                        <div class="service_premium_description">
+                            <h2>Bồn Ozone</h2>
+                            <p>Tắm bồn Ozone với các sản phẩm chăm sóc da và lông chuyên sâu của Topiclean và Massage thư giãn <br>
+                                Gồm 30 phút + dưỡng da chân + Vệ sinh răng miệng</p>
+                            <p class="service_premium_price"><b>300k + Giá tắm</b></p>
+                        </div>
+                        <div class="service_premium_title">
+                            <h2><b>Spa Cao Cấp</b></h2>
+                        </div>
+                    </div>
+                    <a href="./Booking.html">
+                        <div class="btn btn_booking extra_btn_booking">
+                            <i class="fa-solid fa-calendar-days fa-lg"></i>
+                            <p>ĐẶT LỊCH</p>
+                        </div>
+                    </a>
                 </div>
             </div>
-        </div>
-
-        <!-- process -->
-        <img src="../assets/images/Grooming/Process.png" alt="process" class="process">
-
-        <!-- service -->
-        <div class="service">
-            <h1>CHÚNG TÔI CÓ</h1>
-                <div class="service_content">
-                    <div class="service_subcontent">
-                        <i class="fa-solid fa-star"></i>
-                        <p>Kĩ thuật viên được đào tạo hàng đầu Việt Nam, với kinh nghiệm 7 năm.</p>
-                    </div>
-                    <div class="service_subcontent">
-                        <i class="fa-solid fa-star"></i>
-                        <p>Tư vấn tạo kiểu phù hợp với bé.</p>
-                    </div>
-                    <div class="service_subcontent">
-                        <i class="fa-solid fa-star"></i>
-                        <p>Đầy đủ quy trình SPA Quốc Tế 12 bước.</p>
-                    </div>
-                    <div class="service_subcontent">
-                        <i class="fa-solid fa-star"></i>
-                        <p>Miễn phí vận chuyển bé từ nhà đến Spa (5km).</p>
-                    </div>
-                </div>
-            <img src="../assets/images/Grooming/service_img.png" alt="service_img" class="service_img">
-        </div>
-
-        <!-- menu -->
-        <img src="../assets/backgrounds/bg-grooming-menu.png" alt="bg-grooming-menu" class="bg menu_fr">
-        <div id="menu">
-            <div class="menu_content">
-                <h1>MENU</h1>
-                <div class="menu_option">
-                    <div id="selected_option"></div>
-                    <button class="toggle_btn" onclick="leftClick()">Chó</button>
-                    <button class="toggle_btn" onclick="rightClick()">Mèo</button>
-                </div>
-                <a href="./Booking.html">
-                    <div class="btn btn_booking menu_btn_booking">
-                        <i class="fa-solid fa-calendar-days fa-lg"></i>
-                        <p>ĐẶT LỊCH</p>
-                    </div>
-                </a>
-            </div>
-            <img src="./assets/images/Grooming/menu.png" alt="menu" id="menu_detail">
-            <img src="./assets/images/Grooming/menu_cat.png" alt="menu" id="menu_cat">
-        </div>
-
-        <!-- extra service -->
-        <div class="extra">
-            <img src="../assets/images/Grooming/extra.png" alt="extra" class="extra_service">
-            <div class="extra_content">
-                <h1>DỊCH VỤ THÊM</h1>
-                <p>Các dịch vụ thêm để chăm sóc cho bé yêu với các sản phẩm chăm sóc và tẩy ố, chúng tôi dùng sản phẩm của Tropiclean đạt chứng nhận hữu cơ 100% sản xuất tại USA</p>
-                <p class="extra_note">*Lưu Ý: <br>
-                    - Nếu hình/rối khó tạo kiểu giá sẽ tăng 10 đến 50% giá ban đầu <br>
-                    - Giá trên là lông nhiều, nếu lông ít giảm 10 đến 50%</p>
-                <div class="service_premium">
-                    <div class="service_premium_description">
-                        <h2>Bồn Ozone</h2>
-                        <p>Tắm bồn Ozone với các sản phẩm chăm sóc da và lông chuyên sâu của Topiclean và Massage thư giãn <br>
-                            Gồm 30 phút + dưỡng da chân + Vệ sinh răng miệng</p>
-                        <p class="service_premium_price"><b>300k + Giá tắm</b></p>
-                    </div>
-                    <div class="service_premium_title">
-                        <h2><b>Spa Cao Cấp</b></h2>
-                    </div>
-                </div>
-                <a href="./Booking.html">
-                    <div class="btn btn_booking extra_btn_booking">
-                        <i class="fa-solid fa-calendar-days fa-lg"></i>
-                        <p>ĐẶT LỊCH</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-         <!-- Comment -->
-         <img src="../assets/backgrounds/bg-comment.png" alt="bg-comment" class="bg comment_fr">
-         <div class="comment">
-             <div class="comment_heading">
-                 <hr>
-                 <p><b>TRẢI NGHIỆM CHĂM SÓC SỨC KHỎE CHO THÚ CƯNG</b></p>
-             </div>
-             <div class="comment_slider">
-                 <div class="comment_list">
-                    <div class="comment_box">
-                         <img src="./assets/images/Vet/comment_img.png" alt="comment_img" class="comment_img">
-                         <div class="comment_content">
-                             <div class="comment_author">
-                                 <hr>
-                                 <p>Những “người mẫu” trước</p>
+    
+             <!-- Comment -->
+             <img src="../assets/backgrounds/bg-comment.png" alt="bg-comment" class="bg comment_fr">
+             <div class="comment">
+                 <div class="comment_heading">
+                     <hr>
+                     <p><b>TRẢI NGHIỆM CHĂM SÓC SỨC KHỎE CHO THÚ CƯNG</b></p>
+                 </div>
+                 <div class="comment_slider">
+                     <div class="comment_list">
+                        <div class="comment_box">
+                             <img src="./assets/images/Vet/comment_img.png" alt="comment_img" class="comment_img">
+                             <div class="comment_content">
+                                 <div class="comment_author">
+                                     <hr>
+                                     <p>Những “người mẫu” trước</p>
+                                 </div>
+                                 <h1>PINKY</h1>
+                                 <p class="comment_detail">
+                                    <ul>
+                                        <li>Giống: Golden</li>
+                                        <li>Cắt tạo kiểu: Tròn tròn</li>
+                                        <li>Ngày cắt: 20.3.2023</li>
+                                    </ul>
+                                 </p>
                              </div>
-                             <h1>PINKY</h1>
-                             <p class="comment_detail">
-                                <ul>
-                                    <li>Giống: Golden</li>
-                                    <li>Cắt tạo kiểu: Tròn tròn</li>
-                                    <li>Ngày cắt: 20.3.2023</li>
-                                </ul>
-                             </p>
-                         </div>
-                    </div>
-                    <div class="comment_box">
-                        <img src="./assets/images/Vet/comment_img1.png" alt="comment_img" class="comment_img1">
+                        </div>
+                        <div class="comment_box">
+                            <img src="./assets/images/Vet/comment_img1.png" alt="comment_img" class="comment_img1">
+                            <div class="comment_content">
+                                <div class="comment_author">
+                                    <hr>
+                                    <p>Những “người mẫu” trước</p>
+                                </div>
+                                <h1>PINKY</h1>
+                                <p class="comment_detail">
+                                   <ul>
+                                       <li>Giống: Golden</li>
+                                       <li>Cắt tạo kiểu: Tròn tròn</li>
+                                       <li>Ngày cắt: 20.3.2023</li>
+                                   </ul>
+                                </p>
+                            </div>
+                       </div>
+                       <div class="comment_box">
+                        <img src="./assets/images/Vet/comment_img2.png" alt="comment_img" class="comment_img2">
                         <div class="comment_content">
                             <div class="comment_author">
                                 <hr>
@@ -166,44 +188,28 @@
                             </p>
                         </div>
                    </div>
-                   <div class="comment_box">
-                    <img src="./assets/images/Vet/comment_img2.png" alt="comment_img" class="comment_img2">
-                    <div class="comment_content">
-                        <div class="comment_author">
-                            <hr>
-                            <p>Những “người mẫu” trước</p>
-                        </div>
-                        <h1>PINKY</h1>
-                        <p class="comment_detail">
-                           <ul>
-                               <li>Giống: Golden</li>
-                               <li>Cắt tạo kiểu: Tròn tròn</li>
-                               <li>Ngày cắt: 20.3.2023</li>
-                           </ul>
-                        </p>
+                        
+                     </div>
+    
+                     <!-- button next and prev -->
+                    <div class="buttons">
+                        <button id="prev"><img src="./assets/images/Vet/next_left.png" class="next_left"></button>
+                        <button id="next"><img src="./assets/images/Vet/next_right.png" class="next_right"></button>
                     </div>
-               </div>
-                    
+    
+                    <!-- dots -->
+                    <ul class="dots">
+                        <li class="active"></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                  </div>
-
-                 <!-- button next and prev -->
-                <div class="buttons">
-                    <button id="prev"><img src="./assets/images/Vet/next_left.png" class="next_left"></button>
-                    <button id="next"><img src="./assets/images/Vet/next_right.png" class="next_right"></button>
-                </div>
-
-                <!-- dots -->
-                <ul class="dots">
-                    <li class="active"></li>
-                    <li></li>
-                    <li></li>
-                </ul>
+                 
              </div>
-             
-         </div>
+        </div>
+    
+        <div id="footer"></div>
     </div>
-
-    <div id="footer"></div>
     <script src="./js/grooming.js"></script>
 </body>
 </html>

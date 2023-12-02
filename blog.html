@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+    <title>Petty Shop</title>
     <link rel="stylesheet" href="./css/blog.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -15,305 +15,311 @@
 </head>
 
 <body>
-    <div id="header"></div>
-    <!-- Giới thiệu -->
-    <div class="container">
-        <!-- scroll to top -->
-        <button class="go_top_btn">
-            <img src="./assets/images/Home1/To-Top.png" alt="img up" id="to_top">
-        </button>
-        
-        <div class="bg_overlay"></div>
-        <div class="page-ruler">
-            <a href="./Home.html">TRANG CHỦ</a> > <b> BÀI VIẾT</b></a>
-        </div>
-        <div class="intro">
-            <div class="left-intro">
-                <h2>CÓ THỂ BẠN CHƯA BIẾT</h2>
-                <h4>Chăm sóc | Nuôi dạy | Kiến thức</h4>
-                <p>Nơi chia sẻ, trao đổi một số tips, kinh nghiệm nuôi dạy, chăm sóc sức khoẻ của thú cưng, ...</p>
+    <div class="loading-overlay">
+        <img src="./assets/images/loading/Petty-Loader.gif" alt="Loading..." class="loading-gif">
+    </div>
+
+    <div class="content">
+        <div id="header"></div>
+        <!-- Giới thiệu -->
+        <div class="container">
+            <!-- scroll to top -->
+            <button class="go_top_btn">
+                <img src="./assets/images/Home1/To-Top.png" alt="img up" id="to_top">
+            </button>
+            
+            <div class="bg_overlay"></div>
+            <div class="page-ruler">
+                <a href="./Home.html">TRANG CHỦ</a> > <b> BÀI VIẾT</b></a>
             </div>
-            <div class="right-intro">
-                <div class="img">
-                    <img src="./assets/images/blog/cat-glasses-1.png" alt="" height="450px" width="750px">
+            <div class="intro">
+                <div class="left-intro">
+                    <h2>CÓ THỂ BẠN CHƯA BIẾT</h2>
+                    <h4>Chăm sóc | Nuôi dạy | Kiến thức</h4>
+                    <p>Nơi chia sẻ, trao đổi một số tips, kinh nghiệm nuôi dạy, chăm sóc sức khoẻ của thú cưng, ...</p>
                 </div>
-
-            </div>
-        </div>
-
-        <!-- CÁC BÀI VIẾT -->
-        <div class="news">
-            <div class="new">
-                <div class="title">
-                    <div class="hr-lines">
-                        <h2>TIN TỨC</h2>
+                <div class="right-intro">
+                    <div class="img">
+                        <img src="./assets/images/blog/cat-glasses-1.png" alt="" height="450px" width="750px">
                     </div>
+    
                 </div>
-                <div class="new-container">
-                    <div class="sub-nav">
-                        <div class="topic-filter">
-                            <div class="select-menu1">
-                                <div class="select-btn1">
-                                    <i class="bi bi-funnel" style="padding-left: 8px;"></i>
-                                    <p class="sBtn_text1">Đề tài</p>
-                                    <i class="bx bx-chevron-down" id="chevron"></i>
-                                </div>
-                                <ul class="options">
-                                    <li class="option1">
-                                        <input type="checkbox" id="topic-1">
-                                        <label for="topic-1">#meovat</label>
-                                    </li>
-                                    <a href="./blog-health.html">
+            </div>
+    
+            <!-- CÁC BÀI VIẾT -->
+            <div class="news">
+                <div class="new">
+                    <div class="title">
+                        <div class="hr-lines">
+                            <h2>TIN TỨC</h2>
+                        </div>
+                    </div>
+                    <div class="new-container">
+                        <div class="sub-nav">
+                            <div class="topic-filter">
+                                <div class="select-menu1">
+                                    <div class="select-btn1">
+                                        <i class="bi bi-funnel" style="padding-left: 8px;"></i>
+                                        <p class="sBtn_text1">Đề tài</p>
+                                        <i class="bx bx-chevron-down" id="chevron"></i>
+                                    </div>
+                                    <ul class="options">
                                         <li class="option1">
-                                            <input type="checkbox" id="topic-2">
-                                            <label for="topic-2">#suckhoe</label>
+                                            <input type="checkbox" id="topic-1">
+                                            <label for="topic-1">#meovat</label>
                                         </li>
-                                    </a>
-                                    <li class="option1">
-                                        <input type="checkbox" id="topic-3">
-                                        <label for="topic-3">#doisong</label>
-                                    </li>
-                                    <li class="option1">
-                                        <input type="checkbox" id="topic-4">
-                                        <label for="topic-4">#kienthuc</label>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="pet-filter">
-                            <div class="select-menu2">
-                                <div class="select-btn2">
-                                    <i class="bi bi-arrow-down-up"></i>
-                                    <p class="sBtn_text2">Phân loại</p>
-                                    <i class="bx bx-chevron-down" id="chevron"></i>
+                                        <a href="./blog-health.html">
+                                            <li class="option1">
+                                                <input type="checkbox" id="topic-2">
+                                                <label for="topic-2">#suckhoe</label>
+                                            </li>
+                                        </a>
+                                        <li class="option1">
+                                            <input type="checkbox" id="topic-3">
+                                            <label for="topic-3">#doisong</label>
+                                        </li>
+                                        <li class="option1">
+                                            <input type="checkbox" id="topic-4">
+                                            <label for="topic-4">#kienthuc</label>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <ul class="options">
-                                    <a href="./blog-cat.html">
+                            </div>
+                            <div class="pet-filter">
+                                <div class="select-menu2">
+                                    <div class="select-btn2">
+                                        <i class="bi bi-arrow-down-up"></i>
+                                        <p class="sBtn_text2">Phân loại</p>
+                                        <i class="bx bx-chevron-down" id="chevron"></i>
+                                    </div>
+                                    <ul class="options">
+                                        <a href="./blog-cat.html">
+                                            <li class="option2">
+                                                <input type="checkbox" id="filter-1">
+                                                <label for="filter-1">#meo</label>
+                                            </li>
+                                        </a>
                                         <li class="option2">
-                                            <input type="checkbox" id="filter-1">
-                                            <label for="filter-1">#meo</label>
+                                            <input type="checkbox" id="filter-2">
+                                            <label for="filter-2">#cho</label>
                                         </li>
-                                    </a>
-                                    <li class="option2">
-                                        <input type="checkbox" id="filter-2">
-                                        <label for="filter-2">#cho</label>
-                                    </li>
-                                </ul>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-                        <!-- Search -->
-                        <div class="search_wrap">
-                            <div class="search_box">
-                                <input type="text" class="input" placeholder="Tìm kiếm..."
-                                    style="background-color: black; color: #fff;  font-family: 'Quicksand', sans-serif; padding-left: 20px;">
-                                <div class="btn btn_common">
-                                    <i class="fas fa-search"></i>
+                            <!-- Search -->
+                            <div class="search_wrap">
+                                <div class="search_box">
+                                    <input type="text" class="input" placeholder="Tìm kiếm..."
+                                        style="background-color: black; color: #fff;  font-family: 'Quicksand', sans-serif; padding-left: 20px;">
+                                    <div class="btn btn_common">
+                                        <i class="fas fa-search"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <!-- BLOG -->
+                    <div class="blog-items">
+                        <div class="blog-card" id="blog-1">
+                            <div class="blog-card-banner">
+                                <img src="./assets/images/blog/blog-card-1.png" alt="" width="380" height="300"
+                                    class="blog-banner-img">
+                            </div>
+                            <div class="blog-content-wrapper">
+                                <div>
+                                    <div class="hr-lines" style="margin-left: 0;">
+                                        <p class="doctor-name">Bác sĩ Lê Tấn Lộc</p>
+                                    </div>
+                                </div>
+                                <h3>Hướng dẫn mèo đi vệ sinh cát</h3>
+                                <p class="blog-text">
+                                    Nếu bạn ghét việc phải tốn nhiều thời gian làm sạch khay cát vệ sinh của mèo mỗi ngày,
+                                    bạn
+                                    có
+                                    thể
+                                    dạy mèo đi vệ sinh đúng chỗ. Huấn luyện vệ sinh cho mèo là một cách tuyệt vời để giữ cho
+                                    ngôi
+                                    nhà
+                                    của bạn sạch sẽ hơn, và nhiều con mèo thực hiện nó khá tốt.
+                                </p>
+                                <a href="./blog-details-2.html"><button>Xem hết</button></a>
+                                <div class="hashtag">
+                                    <p>#kienthuc #meo</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-card" id="blog-2">
+                            <div class="blog-card-banner">
+                                <img src="./assets/images/blog/blog-card-2.png" alt="" width="380" height="300"
+                                    class="blog-banner-img">
+                            </div>
+                            <div class="blog-content-wrapper">
+                                <div>
+                                    <div class="hr-lines" style="margin-left: 0;">
+                                        <p class="doctor-name">Bác sĩ Truơng Thị Thanh Thanh</p>
+                                    </div>
+                                </div>
+                                <h3>Các dòng chó Pom phổ biến nhất tại Việt Nam </h3>
+                                <p class="blog-text">
+                                    Chó Pom hay còn gọi là chó Phốc Sóc là một trong những giống chó cảnh
+                                    nhỏ
+                                    được
+                                    ưa chuộng tại Việt Nam hiện nay. Giống chó Pom có nhiều dòng khác nhau. Điều này có
+                                    thể
+                                    khiến nhiều người băn khoăn, không biết mình phù hợp để nuôi dòng chó Pom nào.
+                                </p>
+                                <button>Xem hết</button>
+                                <div class="hashtag">
+                                    <p>#kienthuc #cho</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-card" id="blog-3">
+                            <div class="blog-card-banner">
+                                <img src="./assets/images/blog/dog&cat2.jpeg" alt="" width="380" height="300"
+                                    class="blog-banner-img">
+                            </div>
+                            <div class="blog-content-wrapper">
+                                <div>
+                                    <div class="hr-lines" style="margin-left: 0;">
+                                        <p class="doctor-name">Bác sĩ Nguyễn Đặng Bảo Ngọc</p>
+                                    </div>
+                                </div>
+                                <h3>Nhu cầu dinh dưỡng của chó và mèo theo khoa học</h3>
+                                <p class="blog-text">
+                                    Cũng như những động vật khác, chó và mèo cần có thức ăn để sống và duy trì sức khỏe.
+                                    Những
+                                    chất
+                                    dinh dưỡng mà cơ thể động vật đòi hỏi nhưng cơ thể không tự tổng hợp được thì gọi là
+                                    chất
+                                    dinh
+                                    dưỡng thiết yếu và phải được cung cấp từ thức ăn.
+                                </p>
+                                <a href="./blog-details.html"><button>Xem hết</button></a>
+                                <div class="hashtag">
+                                    <p>#suckhoe #doisong</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pagination -->
+                    <div class="pagination-container">
+                        <button class="btn-prep">
+                            <i class="fa-solid fa-caret-left"></i>
+                        </button>
+                        <ul class="pagination">
+                            <li class="page-product" value="1">1</li>
+                            <li class="page-product" value="2">2</li>
+                            <li class="page-product" value="4">...</li>
+                            <li class="page-product" value="5">5</li>
+                        </ul>
+                        <button class="btn-next">
+                            <i class="fa-solid fa-caret-right"></i>
+                        </button>
+                        <!-- <div class="pagination"> -->
                     </div>
                 </div>
-                <!-- BLOG -->
-                <div class="blog-items">
-                    <div class="blog-card" id="blog-1">
-                        <div class="blog-card-banner">
-                            <img src="./assets/images/blog/blog-card-1.png" alt="" width="380" height="300"
-                                class="blog-banner-img">
-                        </div>
-                        <div class="blog-content-wrapper">
-                            <div>
-                                <div class="hr-lines" style="margin-left: 0;">
-                                    <p class="doctor-name">Bác sĩ Lê Tấn Lộc</p>
-                                </div>
-                            </div>
-                            <h3>Hướng dẫn mèo đi vệ sinh cát</h3>
-                            <p class="blog-text">
-                                Nếu bạn ghét việc phải tốn nhiều thời gian làm sạch khay cát vệ sinh của mèo mỗi ngày,
-                                bạn
-                                có
-                                thể
-                                dạy mèo đi vệ sinh đúng chỗ. Huấn luyện vệ sinh cho mèo là một cách tuyệt vời để giữ cho
-                                ngôi
-                                nhà
-                                của bạn sạch sẽ hơn, và nhiều con mèo thực hiện nó khá tốt.
-                            </p>
-                            <a href="./blog-details-2.html"><button>Xem hết</button></a>
-                            <div class="hashtag">
-                                <p>#kienthuc #meo</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="blog-card" id="blog-2">
-                        <div class="blog-card-banner">
-                            <img src="./assets/images/blog/blog-card-2.png" alt="" width="380" height="300"
-                                class="blog-banner-img">
-                        </div>
-                        <div class="blog-content-wrapper">
-                            <div>
-                                <div class="hr-lines" style="margin-left: 0;">
-                                    <p class="doctor-name">Bác sĩ Truơng Thị Thanh Thanh</p>
-                                </div>
-                            </div>
-                            <h3>Các dòng chó Pom phổ biến nhất tại Việt Nam </h3>
-                            <p class="blog-text">
-                                Chó Pom hay còn gọi là chó Phốc Sóc là một trong những giống chó cảnh
-                                nhỏ
-                                được
-                                ưa chuộng tại Việt Nam hiện nay. Giống chó Pom có nhiều dòng khác nhau. Điều này có
-                                thể
-                                khiến nhiều người băn khoăn, không biết mình phù hợp để nuôi dòng chó Pom nào.
-                            </p>
-                            <button>Xem hết</button>
-                            <div class="hashtag">
-                                <p>#kienthuc #cho</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="blog-card" id="blog-3">
-                        <div class="blog-card-banner">
-                            <img src="./assets/images/blog/dog&cat2.jpeg" alt="" width="380" height="300"
-                                class="blog-banner-img">
-                        </div>
-                        <div class="blog-content-wrapper">
-                            <div>
-                                <div class="hr-lines" style="margin-left: 0;">
-                                    <p class="doctor-name">Bác sĩ Nguyễn Đặng Bảo Ngọc</p>
-                                </div>
-                            </div>
-                            <h3>Nhu cầu dinh dưỡng của chó và mèo theo khoa học</h3>
-                            <p class="blog-text">
-                                Cũng như những động vật khác, chó và mèo cần có thức ăn để sống và duy trì sức khỏe.
-                                Những
-                                chất
-                                dinh dưỡng mà cơ thể động vật đòi hỏi nhưng cơ thể không tự tổng hợp được thì gọi là
-                                chất
-                                dinh
-                                dưỡng thiết yếu và phải được cung cấp từ thức ăn.
-                            </p>
-                            <a href="./blog-details.html"><button>Xem hết</button></a>
-                            <div class="hashtag">
-                                <p>#suckhoe #doisong</p>
-                            </div>
-                        </div>
-                    </div>
+    
+            </div>
+        </div>
+        </div>
+        <!-- CÁC ƯU ĐÃI -->
+        <div class="deals">
+            <div class="title">
+                <div class="hr-lines">
+                    <h2>CÁC ƯU ĐÃI</h2>
                 </div>
-                <!-- Pagination -->
-                <div class="pagination-container">
-                    <button class="btn-prep">
-                        <i class="fa-solid fa-caret-left"></i>
+            </div>
+            <div class="deal-container">
+                <div class="left-deals">
+                    <h4 style="font-size: 35px; color: #FE5B2E;">THÔNG TIN KHUYẾN MÃI</h4>
+                    <p>Nhằm mục đích tri ân và hỗ trợ khách hàng, Petline cung cấp một số các ưu đãi, khuyến mãi dành
+                        riêng cho các Sen, nhanh tay nào!!! </p>
+                    <button class="booking-btn">
+                        <div class="icon"><i class="fa-solid fa-calendar-days"></i></div>
+                        <p>ĐẶT LỊCH</p>
                     </button>
-                    <ul class="pagination">
-                        <li class="page-product" value="1">1</li>
-                        <li class="page-product" value="2">2</li>
-                        <li class="page-product" value="4">...</li>
-                        <li class="page-product" value="5">5</li>
-                    </ul>
-                    <button class="btn-next">
-                        <i class="fa-solid fa-caret-right"></i>
-                    </button>
-                    <!-- <div class="pagination"> -->
                 </div>
-            </div>
-
-        </div>
-    </div>
-    </div>
-    <!-- CÁC ƯU ĐÃI -->
-    <div class="deals">
-        <div class="title">
-            <div class="hr-lines">
-                <h2>CÁC ƯU ĐÃI</h2>
-            </div>
-        </div>
-        <div class="deal-container">
-            <div class="left-deals">
-                <h4 style="font-size: 35px; color: #FE5B2E;">THÔNG TIN KHUYẾN MÃI</h4>
-                <p>Nhằm mục đích tri ân và hỗ trợ khách hàng, Petline cung cấp một số các ưu đãi, khuyến mãi dành
-                    riêng cho các Sen, nhanh tay nào!!! </p>
-                <button class="booking-btn">
-                    <div class="icon"><i class="fa-solid fa-calendar-days"></i></div>
-                    <p>ĐẶT LỊCH</p>
-                </button>
-            </div>
-            <div class="right-deals">
-                <div class="deal-card">
-                    <div class="deal-content-wrapper">
-                        <div>
-                            <div class="hr-lines" style="margin-left: 30px;">
-                                <p class="deal-name" style="padding-left:100px; font-size: 23px; margin-top: 7%;">
-                                    Ưu đãi thẻ tín
-                                    dụng</p>
+                <div class="right-deals">
+                    <div class="deal-card">
+                        <div class="deal-content-wrapper">
+                            <div>
+                                <div class="hr-lines" style="margin-left: 30px;">
+                                    <p class="deal-name" style="padding-left:100px; font-size: 23px; margin-top: 7%;">
+                                        Ưu đãi thẻ tín
+                                        dụng</p>
+                                </div>
                             </div>
+                            <h1>TRẢ GÓP <br> LÃI SUẤT 0%</h1>
                         </div>
-                        <h1>TRẢ GÓP <br> LÃI SUẤT 0%</h1>
+                        <div class="deal-banner">
+                            <img src="./assets/images/blog/deal-1.png" alt="" width="350" height="350"
+                                class="deal-banner-img">
+                            <h3>Trả góp ngay, rước BOSS liền tay!</h3>
+                        </div>
                     </div>
-                    <div class="deal-banner">
-                        <img src="./assets/images/blog/deal-1.png" alt="" width="350" height="350"
-                            class="deal-banner-img">
-                        <h3>Trả góp ngay, rước BOSS liền tay!</h3>
-                    </div>
-                </div>
-
-                <div class="deal-card">
-                    <div class="deal-banner">
-                        <img src="./assets/images/blog/deal-2.png" alt="" width="280" height="370"
-                            class="deal-banner-img2">
-                    </div>
-                    <div class="deal-content-wrapper-2">
-                        <div>
-                            <div class="hr-lines" style="margin-left: 5px;">
-                                <p class="deal-name" style="padding-left:100px; font-size: 23px; margin-top: 7%;">
-                                    01.05.2023 - 01.08.2023</p>
+    
+                    <div class="deal-card">
+                        <div class="deal-banner">
+                            <img src="./assets/images/blog/deal-2.png" alt="" width="280" height="370"
+                                class="deal-banner-img2">
+                        </div>
+                        <div class="deal-content-wrapper-2">
+                            <div>
+                                <div class="hr-lines" style="margin-left: 5px;">
+                                    <p class="deal-name" style="padding-left:100px; font-size: 23px; margin-top: 7%;">
+                                        01.05.2023 - 01.08.2023</p>
+                                </div>
                             </div>
+                            <h2>GIẢM GIÁ 50% DỊCH VỤ SPA</h2>
+                            <p>Giảm ngay 50% cho dịch vụ spa lần đầu cho các khách hàng đã tin tưởng mua thú cưng tại
+                                PetLine Shop.</p>
                         </div>
-                        <h2>GIẢM GIÁ 50% DỊCH VỤ SPA</h2>
-                        <p>Giảm ngay 50% cho dịch vụ spa lần đầu cho các khách hàng đã tin tưởng mua thú cưng tại
-                            PetLine Shop.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- partner -->
-    <div class="partner">
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            viewBox="0 0 73.5 70.7" style="enable-background:new 0 0 73.5 70.7;" xml:space="preserve">
-            <g>
-                <path
-                    d="M14,37.3c3.2-5.9,13.6-10.5,22.7-0.4c9.1-10.1,19.5-5.5,22.7,0.4c9.3,17.2-22.5,31-22.7,31.1C36.5,68.3,4.7,54.5,14,37.3z">
-                </path>
-                <path
-                    d="M60.5,32.2c-3.3-1.5-4.3-6.3-2.4-10.8c2-4.5,6.3-6.9,9.5-5.5s4.3,6.3,2.4,10.8c-1.6,3.6-4.7,5.9-7.5,5.9  C61.8,32.6,61.2,32.5,60.5,32.2L60.5,32.2z">
-                </path>
-                <path
-                    d="M3.5,26.7c-2-4.5-0.9-9.3,2.4-10.8s7.6,1,9.5,5.5s0.9,9.3-2.4,10.8c-0.6,0.3-1.3,0.4-2,0.4C8.1,32.6,5.1,30.3,3.5,26.7z">
-                </path>
-                <path
-                    d="M44.1,23.3c-4.2-1.1-6.3-6.7-4.8-12.4s6.2-9.4,10.4-8.3S56,9.3,54.5,15c-1.4,5-5.1,8.5-8.8,8.5  C45.1,23.5,44.6,23.4,44.1,23.3L44.1,23.3z">
-                </path>
-                <path
-                    d="M19,15c-1.5-5.7,0.6-11.3,4.8-12.4s8.8,2.6,10.4,8.3s-0.6,11.3-4.8,12.4c-0.5,0.1-1,0.2-1.5,0.2C24.2,23.5,20.4,20,19,15  L19,15z">
-                </path>
-            </g>
-        </svg>
-        <h1>Đối Tác</h1>
-        <div class="partner_wrapper">
-            <div class="partner_list">
-                <img src="./assets/images/Home1/logo_partner1.png" alt="logo_partner1" class="logo_partner">
-                <img src="./assets/images/Home1/logo_partner2.png" alt="logo_partner2" class="logo_partner">
-                <img src="./assets/images/Home1/logo_partner3.png" alt="logo_partner3" class="logo_partner">
-                <img src="./assets/images/Home1/logo_partner4.png" alt="logo_partner4" class="logo_partner">
-                <img src="./assets/images/Home1/logo_partner5.png" alt="logo_partner5" class="logo_partner">
-                <img src="./assets/images/Home1/logo_partner6.png" alt="logo_partner6" class="logo_partner">
-                <img src="./assets/images/Home1/logo_partner7.png" alt="logo_partner7" class="logo_partner">
-                <img src="./assets/images/Home1/logo_partner8.png" alt="logo_partner8" class="logo_partner">
+        <!-- partner -->
+        <div class="partner">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 73.5 70.7" style="enable-background:new 0 0 73.5 70.7;" xml:space="preserve">
+                <g>
+                    <path
+                        d="M14,37.3c3.2-5.9,13.6-10.5,22.7-0.4c9.1-10.1,19.5-5.5,22.7,0.4c9.3,17.2-22.5,31-22.7,31.1C36.5,68.3,4.7,54.5,14,37.3z">
+                    </path>
+                    <path
+                        d="M60.5,32.2c-3.3-1.5-4.3-6.3-2.4-10.8c2-4.5,6.3-6.9,9.5-5.5s4.3,6.3,2.4,10.8c-1.6,3.6-4.7,5.9-7.5,5.9  C61.8,32.6,61.2,32.5,60.5,32.2L60.5,32.2z">
+                    </path>
+                    <path
+                        d="M3.5,26.7c-2-4.5-0.9-9.3,2.4-10.8s7.6,1,9.5,5.5s0.9,9.3-2.4,10.8c-0.6,0.3-1.3,0.4-2,0.4C8.1,32.6,5.1,30.3,3.5,26.7z">
+                    </path>
+                    <path
+                        d="M44.1,23.3c-4.2-1.1-6.3-6.7-4.8-12.4s6.2-9.4,10.4-8.3S56,9.3,54.5,15c-1.4,5-5.1,8.5-8.8,8.5  C45.1,23.5,44.6,23.4,44.1,23.3L44.1,23.3z">
+                    </path>
+                    <path
+                        d="M19,15c-1.5-5.7,0.6-11.3,4.8-12.4s8.8,2.6,10.4,8.3s-0.6,11.3-4.8,12.4c-0.5,0.1-1,0.2-1.5,0.2C24.2,23.5,20.4,20,19,15  L19,15z">
+                    </path>
+                </g>
+            </svg>
+            <h1>Đối Tác</h1>
+            <div class="partner_wrapper">
+                <div class="partner_list">
+                    <img src="./assets/images/Home1/logo_partner1.png" alt="logo_partner1" class="logo_partner">
+                    <img src="./assets/images/Home1/logo_partner2.png" alt="logo_partner2" class="logo_partner">
+                    <img src="./assets/images/Home1/logo_partner3.png" alt="logo_partner3" class="logo_partner">
+                    <img src="./assets/images/Home1/logo_partner4.png" alt="logo_partner4" class="logo_partner">
+                    <img src="./assets/images/Home1/logo_partner5.png" alt="logo_partner5" class="logo_partner">
+                    <img src="./assets/images/Home1/logo_partner6.png" alt="logo_partner6" class="logo_partner">
+                    <img src="./assets/images/Home1/logo_partner7.png" alt="logo_partner7" class="logo_partner">
+                    <img src="./assets/images/Home1/logo_partner8.png" alt="logo_partner8" class="logo_partner">
+                </div>
             </div>
         </div>
+    
+    
+        </div>
+        <div id="footer"></div>
     </div>
-
-
-    </div>
-    <div id="footer"></div>
     <script src="./js/blog.js"></script>
 
 </body>
