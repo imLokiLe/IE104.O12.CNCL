@@ -147,3 +147,77 @@ document.addEventListener('click', function (e) {
         autocomBox.style.display = 'none';
     }
 });
+
+// highlight location
+let locationList = ['nav_home', 'nav_store', 'nav_pet', 'nav_service', 'nav_blog', 'nav_contact'];
+function setStyleLocation(href){
+    if (href == 'http://127.0.0.1:5500/Home.html'){
+        for (let i=0; i<locationList.length; i++){
+            if (i==0){
+                document.getElementById(locationList[i]).style.color = '#fc591e';
+                document.getElementById('service-icon').style.color = 'black';
+            }
+            else{
+                document.getElementById(locationList[i]).style.color = 'black';
+            }
+        }
+    }
+    else if (href == 'http://127.0.0.1:5500/shop-category.html'){
+        for (let i=0; i<locationList.length; i++){
+            if (i==1){
+                document.getElementById(locationList[i]).style.color = '#fc591e';
+                document.getElementById('service-icon').style.color = 'black';
+            }
+            else{
+                document.getElementById(locationList[i]).style.color = 'black';
+            }
+        }
+    }
+    else if (href == 'http://127.0.0.1:5500/pet-category.html'){
+        for (let i=0; i<locationList.length; i++){
+            if (i==2){
+                document.getElementById(locationList[i]).style.color = '#fc591e';
+                document.getElementById('service-icon').style.color = 'black';
+            }
+            else{
+                document.getElementById(locationList[i]).style.color = 'black';
+            }
+        }
+    }
+    else if ((href == 'http://127.0.0.1:5500/Vet.html') || (href == 'http://127.0.0.1:5500/Hotel.html') || (href == 'http://127.0.0.1:5500/Exercise.html')|| (href == 'http://127.0.0.1:5500/Grooming.html')){
+        for (let i=0; i<locationList.length; i++){
+            if (i==3){
+                document.getElementById(locationList[i]).style.color = '#fc591e';
+                document.getElementById('service-icon').style.color = '#fc591e';
+            }
+            else{
+                document.getElementById(locationList[i]).style.color = 'black';
+            }
+        }
+    }
+    else if (href == 'http://127.0.0.1:5500/blog.html'){
+        for (let i=0; i<locationList.length; i++){
+            if (i==4){
+                document.getElementById(locationList[i]).style.color = '#fc591e';
+                document.getElementById('service-icon').style.color = 'black';
+            }
+            else{
+                document.getElementById(locationList[i]).style.color = 'black';
+            }
+        }
+    }
+    else if (href == 'http://127.0.0.1:5500/contact.html'){
+        for (let i=0; i<locationList.length; i++){
+            if (i==5){
+                document.getElementById(locationList[i]).style.color = '#fc591e';
+                document.getElementById('service-icon').style.color = 'black';
+            }
+            else{
+                document.getElementById(locationList[i]).style.color = 'black';
+            }
+        }
+    }
+}
+
+let currentLocation = window.location.href;
+setStyleLocation(currentLocation);
