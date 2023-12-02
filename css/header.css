@@ -182,7 +182,7 @@ header ul li a:hover::before {
     display: flex;
     width: 15px;
     height: 15px;
-    background: #eebe62;
+    background: #FF6B35;
     justify-content: center;
     align-items: center;
     color: #fff;
