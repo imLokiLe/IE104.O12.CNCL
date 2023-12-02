@@ -139,18 +139,19 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #fff;
-    width: 32%;
-    height: 25vh;
+    width: 33%;
+    height: 27vh;
     padding: 20px 27px;
     font-weight: bold;
     line-height: 45px;
     border-radius: 40px;
+    text-align: center;
 }
 
 #popupContent button {
     position: relative;
-    left: 9vw;
-    top: 4vh;
+    left: -5px;
+    top: 1vh;
     width: 150px;
     height: 50px;
     border-radius: 40px;
