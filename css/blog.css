@@ -34,9 +34,11 @@
 }
 .page-ruler a{
     color: #000;
+    text-decoration: none;
 }
 .page-ruler a:visited{
     color: #000;
+    text-decoration: none;
 }
 .bg_overlay{
     background-image: url(../assets/backgrounds/bg-home-overlay.png);
@@ -229,7 +231,8 @@
     background: #fffaf0;
 }
 
-.options .option1:hover {
+.options .option1:hover,
+.options .option2:hover {
     position: relative;
     background: #F2F2F2;
     width: 200px;
@@ -341,6 +344,7 @@
     /* margin-top: 2%; */
     font-weight: bold;
     font-size: 1.5em;
+    padding-top: 2%;
 }
 
 .blog-text {
