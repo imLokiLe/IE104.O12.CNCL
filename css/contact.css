@@ -24,12 +24,13 @@ body {
     height: 70px;
 }
 .bg_overlay {
-    content: "";
-    position: fixed;
+    /* content: ""; */
+    position: absolute;
     width: 100%;
     height: 100%;
     background-image: url(../assets/backgrounds/bg-home-overlay.png);
-    background-repeat: no-repeat;
+    opacity: 0.8;
+    background-repeat: repeat-x;
     background-size: cover;
     background-position: center center;
     z-index: -1;
@@ -38,15 +39,22 @@ body {
 
 .form-img {
     position: relative;
-    left: 10%;
-    height: 880px;
+    left: 5%;
+    height: 750px;
 }
 
 .page-ruler {
     margin-top: 9%;
-    padding-left: 40px
+    
+    padding: 20px 50px;
+    font-size: 1.2rem;
 }
-
+.page-ruler a{
+    color: #000;
+}
+.page-ruler a:visited{
+    color: #000;
+}
 .container {
     margin-top: 80px;
     position: relative;
@@ -74,8 +82,8 @@ body {
 .form {
     position: relative;
     width: 100%;
-    max-width: 60%;
-    left: 18%;
+    max-width: 70%;
+    left: 5%;
     background-color: #fffaf0;
     border-radius: 10px;
     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
@@ -136,7 +144,7 @@ form {
 .title {
     color: #fffaf0;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 2rem;
     line-height: 1;
     margin-bottom: 0.7rem;
 }
@@ -264,15 +272,16 @@ textarea.input {
 .text {
     color: #333;
     margin: 1.5rem 0 2rem 0;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    text-align: justify;
 }
 
 .information {
     display: flex;
-    color: #555;
+    color: #313131;
     margin: 0.7rem 0;
     align-items: center;
-    font-size: 0.95rem;
+    font-size: 1rem;
 }
 
 .icon {
@@ -326,15 +335,15 @@ textarea.input {
 .square {
     position: absolute;
     height: 400px;
-    top: 15%;
-    left: 55%;
+    top: 14%;
+    left: 45%;
     transform: translate(250%, 11%);
     opacity: 0.4;
 }
 
 .contact-deals {
     display: flex;
-    height: 400px;
+    height: 350px;
     width: 85%;
     background-color: #333;
     border-radius: 300px;
@@ -344,7 +353,7 @@ textarea.input {
 
 .deal-content {
     position: absolute;
-    margin-top: 6%;
+    margin-top: 7%;
     padding-left: 7%;
     width: 27%;
     font-size: 2.3rem;
@@ -353,7 +362,7 @@ textarea.input {
 
 .deal-sub-content {
     position: absolute;
-    margin-top: 9%;
+    margin-top: 10%;
     padding-left: 3%;
     padding-top: 7px;
     width: 50%;
@@ -365,7 +374,7 @@ textarea.input {
 .deal-content-2 {
     position: absolute;
     padding-left: 48%;
-    margin-top: 3%;
+    margin-top: 4%;
     width: 100%;
     font-size: 2.3rem;
     font-family: 'Arima';
@@ -374,8 +383,8 @@ textarea.input {
 
 .deal-sub-content-2 {
     position: absolute;
-    margin-top: 6%;
-    padding-left: 50.5%;
+    margin-top: 7%;
+    padding-left: 50%;
     padding-top: 15px;
     width: 100%;
     font-size: 1.8rem;
@@ -385,8 +394,8 @@ textarea.input {
 
 .deal-code {
     position: absolute;
-    margin-top: 10%;
-    padding-left: 52.5%;
+    margin-top: 11.5%;
+    padding-left: 52%;
     width: 100%;
     font-size: 2rem;
     font-family: 'Arima';
@@ -400,27 +409,27 @@ textarea.input {
 
 .ad-deal {
     position: relative;
-    margin-left: 23%;
+    margin-left: 20%;
     top: 13%;
 }
 
 .pet-sub-food {
     position: absolute;
     left: 43%;
-    margin-top: 11%;
+    margin-top: 15%;
 }
 
 .contact-deals button {
     position: absolute;
     background-color: #FF6B35;
     color: white;
-    width: 10%;
-    height: 60px;
+    width: 8%;
+    height: 50px;
     border-radius: 40px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
     border: none;
-    margin-top: 15%;
+    margin-top: 16%;
     left: 60%;
     cursor: pointer;
 }
@@ -517,5 +526,5 @@ textarea.input {
 #footer {
     position: absolute;
     width: 100%;
-    top: 300vh;
+    top: 350vh;
 }
