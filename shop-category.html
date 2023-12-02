@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <script src="./js/link_header_footer.js"></script> 
+    <script src="./js/link_header_footer.js"></script>
     <title>All pets</title>
 </head>
+
 <body>
     <!-- Header-->
     <div id="header"></div>
@@ -33,12 +35,12 @@
             <!-- Filter Price -->
             <div class="filter-block filter-price" id="filterPrice">
                 <div class="filter-title">
-                    <h4 id="togglePrice">Giá</h4 >
+                    <h4 id="togglePrice">Giá</h4>
                 </div>
-                
+
                 <div class="range-price">
                     <div class="price-input">
-                        <div class="field" >
+                        <div class="field">
                             <input type="number" value="0" class="min-input" placeholder="min-price">
                         </div>
                         <div class="seperator">-</div>
@@ -46,11 +48,11 @@
                             <input type="number" value="30000000" class="max-input" placeholder="max-price">
                         </div>
                     </div>
-    
+
                     <div class="slider">
                         <div class="progress"></div>
                     </div>
-    
+
                     <div class="range-input">
                         <input type="range" min="0" max="30000000" value="0" class="min-range" step="50000">
                         <input type="range" min="0" max="30000000" value="30000000" class="max-range" step="50000">
@@ -61,30 +63,30 @@
             <!-- Filter Dog -->
             <div class="filter-block filter-dog" id="filterDog">
                 <div class="filter-title">
-                    <h4 id="toggleDog">Chó</h4 >
+                    <h4 id="toggleDog">Chó</h4>
                     <div class="checkbox-all">
                         <label for="dogs">
                             <span class="pets-name">Chọn tất cả</span>
-                        </label> 
+                        </label>
                         <input type="checkbox" name="checkbox" id="dogs">
                     </div>
-                </div> 
-                
+                </div>
+
                 <ul class="pets-checkbox" id="filterOptionsDog"></ul>
             </div>
 
             <!-- Filter Cat -->
             <div class="filter-block filter-cat" id="filterCat">
                 <div class="filter-title">
-                    <h4 id="toggleCat">Mèo</h4 >
+                    <h4 id="toggleCat">Mèo</h4>
                     <div class="checkbox-all">
                         <label for="cats">
                             <span class="pets-name">Chọn tất cả</span>
-                        </label> 
+                        </label>
                         <input type="checkbox" name="checkbox" id="cats">
                     </div>
-                </div> 
-                
+                </div>
+
                 <ul class="pets-checkbox" id="filterOptionsCat"></ul>
             </div>
         </div>
@@ -94,26 +96,26 @@
             <div class="results-header">
                 <!-- Showing num product available -->
                 <div class="result-count">
-                    
+
                 </div>
-        
+
                 <!-- Sort options -->
                 <div class="sort-options">
                     <select class="sort-select">
-                        <option selected>Sắp xếp theo</option>
+                        <option disabled selected hidden>Sắp xếp theo</option>
                         <option value="low-to-high">Giá: Thấp đến cao</option>
                         <option value="high-to-low">Giá: Cao đến thấp</option>
                     </select>
                 </div>
             </div>
-        
+
             <!-- Product list -->
             <div id="product-list"></div>
             <!-- Pagination -->
             <div class="pagination-container">
                 <!-- <div class="pagination"> -->
-                </div>
             </div>
+        </div>
         </div>
     </section>
 
@@ -123,4 +125,5 @@
 
     <script type="module" src="./js/shop-category.js"></script>
 </body>
+
 </html>

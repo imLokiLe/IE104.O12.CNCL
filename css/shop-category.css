@@ -313,10 +313,14 @@ input[type="checkbox"]:checked:after {
     height: 38px;
     border-radius: 35px;
     text-align: center;
-    background: #FF8C4D;
+    background: #fd743e;
     font-size: 18px;
     cursor: pointer;
     /* appearance: none; */
+}
+
+.sort-options .sort-select option {
+    background-color: #fff;
 }
 
 /* Product list */
@@ -335,7 +339,7 @@ input[type="checkbox"]:checked:after {
     height: 300px;
     text-align: center;
     border-radius: 19.203px;
-    background-image: linear-gradient(to bottom, #FF9933, #fc591e);
+    background-image: linear-gradient(to bottom, #ff9933e8, #fc591ed9);
     box-shadow: 1.88px 3.88px 3.88px 0px rgba(0, 0, 0, 0.5);
     align-self: center;
     justify-self: center;
@@ -424,8 +428,9 @@ input[type="checkbox"]:checked:after {
 .product .product-information .name-product {
     color: #000;
     font-size: 1.125rem;
-    font-weight: 400;
+    font-weight: 500;
     text-align: left;
+    padding-top: 5px;
 }
 
 /* Pagination */
