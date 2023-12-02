@@ -25,6 +25,15 @@
         <button class="go_top_btn">
             <img src="./assets/images/Home1/To-Top.png" alt="img up" id="to_top">
         </button>
+        <!-- popup -->
+        <div id="popup" class="popup">
+            <div id="popupContent">
+                <p>Thông tin của bạn đã được gửi thành công! <br>Petty sẽ liên hệ với bạn trong thời gian sớm nhất có
+                    thể ❤️
+                </p>
+                <button id="btn_agree">Đồng ý</button>
+            </div>
+        </div>
         <div class="bg_overlay"></div>
         <div class="page-ruler">
             <a href="./Home.html">TRANG CHỦ</a> > <b> LIÊN HỆ</b></a>
@@ -99,7 +108,7 @@
                                     <label for="">Lời nhắn</label>
                                     <span>Lời nhắn</span>
                                 </div>
-                                <input type="submit" value="Gửi" class="btn" />
+                                <input type="submit" value="Gửi" class="btn" id="btn_complete" />
                             </form>
                         </div>
                     </div>
@@ -161,8 +170,10 @@
     </div>
 
     <div id="footer"></div>
-    <script src="./js/contact.js"></script>
+
+
 
 </body>
+<script src="./js/contact.js"></script>
 
 </html>

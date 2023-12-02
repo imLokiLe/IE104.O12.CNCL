@@ -1,3 +1,28 @@
+
+// Hiển thị pop up khi Liên hệ
+let popup = document.getElementById('popup');
+let btnSubmit = document.getElementById('btn_complete');
+
+btnSubmit.addEventListener('click', function(event) {
+    // Ngăn chặn hành vi mặc định của form (nếu có)
+    event.preventDefault();
+
+    popup.style.display = 'block';
+});
+
+function hidePopup() {
+  let popup = document.getElementById('popup');
+  popup.style.display = 'none';
+}
+
+let btnAgree = document.getElementById('btn_agree');
+btnAgree.addEventListener('click', function() {
+    hidePopup();
+});
+
+
+
+// Các hàm focus và blur giữ nguyên
 const inputs = document.querySelectorAll(".input");
 
 function focusFunc() {
@@ -35,3 +60,7 @@ goTopBtn.addEventListener('click', () =>{
         behavior: "smooth"
     })
 })
+
+
+
+
