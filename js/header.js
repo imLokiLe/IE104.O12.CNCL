@@ -162,7 +162,7 @@ function setStyleLocation(href){
             }
         }
     }
-    else if (href == 'http://127.0.0.1:5500/shop-category.html'){
+    else if ((href == 'http://127.0.0.1:5500/shop-category.html') || (href.slice(0, 42) == 'http://127.0.0.1:5500/details.html?id=shop')){
         for (let i=0; i<locationList.length; i++){
             if (i==1){
                 document.getElementById(locationList[i]).style.color = '#fc591e';
@@ -173,7 +173,7 @@ function setStyleLocation(href){
             }
         }
     }
-    else if (href == 'http://127.0.0.1:5500/pet-category.html'){
+    else if ((href == 'http://127.0.0.1:5500/pet-category.html') || (href.slice(0, 41) == 'http://127.0.0.1:5500/details.html?id=pet')){
         for (let i=0; i<locationList.length; i++){
             if (i==2){
                 document.getElementById(locationList[i]).style.color = '#fc591e';

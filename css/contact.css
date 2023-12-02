@@ -2,7 +2,7 @@ body {
     font-family: 'Quicksand', sans-serif;
     margin: 0 0;
     background-color: #fffaf0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     /* font-size: 1.4rem; */
 }
 .go_top_btn{
