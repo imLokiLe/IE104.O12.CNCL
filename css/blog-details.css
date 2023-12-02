@@ -9,6 +9,12 @@ body {
     font-size: 1.2rem;
 
 }
+.page-ruler a{
+    color: #000;
+}
+.page-ruler a:visited{
+    color: #000;
+}
 .go_top_btn{
     position: fixed;
     bottom: 35px;
