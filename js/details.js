@@ -30,6 +30,7 @@ function fetchProductDetails(productInfo) {
 
 function renderProductDetails(productDetails) {
     if (productDetails) {
+        document.querySelector('.address .product-link.current-link').innerHTML = `${productDetails.name}`;
         document.querySelector('.page-container .product-infomation .image').innerHTML = 
             `<div class="img-large"><img class="img" src=${productDetails.image} alt=${productDetails.featured.type.name}></div>
             <div class="img-small-group">

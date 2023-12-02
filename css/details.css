@@ -106,7 +106,7 @@ a {
 .img-small {
     width: 50%;
     padding: 5px;
-    border: 2px solid #000;
+    border: 1px solid #ccc7c7;
     border-radius: 20px;
     cursor: pointer;
 }
