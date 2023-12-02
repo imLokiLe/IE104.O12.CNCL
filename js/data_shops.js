@@ -1,217 +1,217 @@
 const shops = [
     {
         id: 1,
-        image: '../assets/images/products/image-1.jpg',
-        name: 'Xúc xích cho chó 150gr', 
-        price: '11,000,000',
+        image: '../assets/images/products/cát-mèo2.png',
+        name: 'Cát đậu nành vệ sinh mèo Tofu 6L', 
+        price: '100,000',
         unit: 'đ',
         rating: '5',
         featured: {
-            genus: 'dog',
+            genus: 'cat',
             type: {
-                id: 'food',
-                name: 'Thức ăn cho chó'
+                id: 'accessories',
+                name: 'Cát vệ sinh cho mèo'
             },
         }
     },
     {
         id: 2,
-        image: '../assets/images/Pets/alaska.png',
-        name: 'Alaska Malamute trắng xám 2', 
-        price: '19,000,000',
+        image: '../assets/images/products/lược_chải_lông_-2.png',
+        name: 'Lược chải lông cho thú cưng', 
+        price: '50,000',
         unit: 'đ',
         rating: '4',
         featured: {
-            genus: 'dog',
+            genus: 'cat',
             type: {
-                id: 'akita',
-                name: 'Akita'
+                id: '',
+                name: 'Lược chải lông'
             },
         }
     },
     {
         id: 3,
-        image: '../assets/images/Pets/alaska.png',
-        name: 'Alaska Malamute trắng xám 3', 
-        price: '13,000,000',
+        image: '../assets/images/products/kiềm_cắt_móng-2.png',
+        name: 'Kìm bấm móng cho thú cưng', 
+        price: '95,000',
         unit: 'đ',
         rating: '2',
         featured: {
-            genus: 'dog',
+            genus: 'cat',
             type: {
-                id: 'akita',
-                name: 'Akita'
+                id: 'accessories',
+                name: 'Kìm bấm móng'
             },
         }
     },
     {
         id: 4,
-        image: '../assets/images/Pets/alaska.png',
-        name: 'Alaska Malamute trắng xám 4', 
-        price: '26,000,000',
+        image: '../assets/images/products/nhà_mèo.png',
+        name: ' Nhà cho mèo Hipipet tai thỏ', 
+        price: '400,000',
         unit: 'đ',
         rating: '5',
         featured: {
-            genus: 'dog',
+            genus: 'cat',
             type: {
-                id: 'alaska',
-                name: 'Alaska'
+                id: 'accessories',
+                name: 'Nhà cho mèo'
             },
         }
     },
     {
         id: 5,
-        image: '../assets/images/Pets/alaska.png',
-        name: 'Alaska Malamute trắng xám 5', 
-        price: '14,000,000',
+        image: '../assets/images/products/chén-mèo.png',
+        name: 'Chén đựng thức ăn cho mèo', 
+        price: '120,000',
         unit: 'đ',
         rating: '4',
         featured: {
-            genus: 'dog',
+            genus: 'cat',
             type: {
-                id: 'akita',
-                name: 'Akita'
+                id: 'accessories',
+                name: 'Chén đựng thức ăn'
             },
         }
     },
     {
         id: 6,
-        image: '../assets/images/Pets/alaska.png',
-        name: 'Alaska Malamute trắng xám 5', 
-        price: '14,000,000',
+        image: '../assets/images/products/đồ_mèo.png',
+        name: 'Áo ba lỗ cho mèo màu Pastel', 
+        price: '50,000',
         unit: 'đ',
         rating: '4',
         featured: {
             genus: 'cat',
             type: {
-                id: 'british-shorthair',
-                name: 'Anh lông ngắn'
+                id: 'accesories',
+                name: 'Quần áo'
             },
         }
     },
     {
         id: 7,
-        image: '../assets/images/Pets/alaska.png',
-        name: 'Alaska Malamute trắng xám 5', 
-        price: '24,000,000',
+        image: '../assets/images/products/giường-cào.png',
+        name: 'Mrbunny Giường cào mèo bằng gỗ ', 
+        price: '280,000',
         unit: 'đ',
         rating: '5',
         featured: {
             genus: 'cat',
             type: {
-                id: 'scottish-fold',
-                name: 'Anh tai cụp'
+                id: 'accessories',
+                name: 'Giường cào'
             },
         }
     },
     {
         id: 8,
-        image: '../assets/images/Pets/alaska.png',
-        name: 'Alaska Malamute trắng xám 5', 
-        price: '18,000,000',
+        image: '../assets/images/products/food2.png',
+        name: 'Hạt ngũ cốc cho mèo con', 
+        price: '180,000',
         unit: 'đ',
         rating: '3',
         featured: {
             genus: 'cat',
             type: {
-                id: 'british-shorthair',
-                name: 'Anh lông ngắn'
+                id: 'food',
+                name: 'Đồ ăn cho mèo'
             },
         }
     },
     {
         id: 9,
-        image: '../assets/images/Pets/alaska.png',
-        name: 'Alaska Malamute trắng xám 1', 
-        price: '11,000,000',
+        image: '../assets/images/products/food1.png',
+        name: 'Đồ ăn hạt hỗ trợ tiêu hoá cho chó', 
+        price: '200,000',
         unit: 'đ',
-        rating: '5',
+        rating: '4',
         featured: {
             genus: 'dog',
             type: {
-                id: 'akita',
-                name: 'Akita'
+                id: 'food',
+                name: 'Đồ ăn cho chó'
             },
         }
     },
     {
         id: 10,
-        image: '../assets/images/Pets/alaska.png',
-        name: 'Alaska Malamute trắng xám 2', 
-        price: '9,000,000',
-        unit: 'đ',
-        rating: '4',
-        featured: {
-            genus: 'dog',
-            type: {
-                id: 'akita',
-                name: 'Akita'
-            },
-        }
-    },
-    {
-        id: 11,
-        image: '../assets/images/Pets/alaska.png',
-        name: 'Alaska Malamute trắng xám 3', 
-        price: '13,000,000',
-        unit: 'đ',
-        rating: '2',
-        featured: {
-            genus: 'dog',
-            type: {
-                id: 'akita',
-                name: 'Akita'
-            },
-        }
-    },
-    {
-        id: 12,
-        image: '../assets/images/Pets/alaska.png',
-        name: 'Alaska Malamute trắng xám 4', 
-        price: '1,000,000',
-        unit: 'đ',
-        rating: '5',
-        featured: {
-            genus: 'dog',
-            type: {
-                id: 'alaska',
-                name: 'Alaska'
-            },
-        }
-    },
-    {
-        id: 13,
-        image: '../assets/images/Pets/alaska.png',
-        name: 'Alaska Malamute trắng xám 5', 
-        price: '500,000',
-        unit: 'đ',
-        rating: '4',
-        featured: {
-            genus: 'dog',
-            type: {
-                id: 'akita',
-                name: 'Akita'
-            },
-        }
-    },
-    {
-        id:  14,
-        image: '../assets/images/Pets/alaska.png',
-        name: 'Alaska Malamute trắng xám 5', 
-        price: '14,000,000',
+        image: '../assets/images/products/đồ-chơi.png',
+        name: 'Đồ chơi bóng chuột bằng sắt ', 
+        price: '45,000',
         unit: 'đ',
         rating: '4',
         featured: {
             genus: 'cat',
             type: {
-                id: 'british-shorthair',
-                name: 'Anh lông ngắn'
+                id: 'accessories',
+                name: 'Đồ chơi cho mèo'
+            },
+        }
+    },
+    {
+        id: 11,
+        image: '../assets/images/products/khay-cát.png',
+        name: 'Nhà vệ sinh cho mèo', 
+        price: '500,000',
+        unit: 'đ',
+        rating: '2',
+        featured: {
+            genus: 'cat',
+            type: {
+                id: 'accessories',
+                name: 'Nhà vệ sinh cho mèo'
+            },
+        }
+    },
+    {
+        id: 12,
+        image: '../assets/images/products/đồ-mèo-2.png',
+        name: 'Set đồ dễ thương cho chó mèo', 
+        price: '75,000',
+        unit: 'đ',
+        rating: '5',
+        featured: {
+            genus: 'dog',
+            type: {
+                id: 'accessories',
+                name: 'Quần áo'
+            },
+        }
+    },
+    {
+        id: 13,
+        image: '../assets/images/products/Rectangle-37.png',
+        name: 'Áo hai dây ba lỗ mùa hè cho cún', 
+        price: '50,000',
+        unit: 'đ',
+        rating: '4',
+        featured: {
+            genus: 'dog',
+            type: {
+                id: 'accessories',
+                name: 'Quần áo'
+            },
+        }
+    },
+    {
+        id: 14,
+        image: '../assets/images/products/khay-cát.png',
+        name: 'Nhà vệ sinh cho mèo', 
+        price: '500,000',
+        unit: 'đ',
+        rating: '2',
+        featured: {
+            genus: 'cat',
+            type: {
+                id: 'accessories',
+                name: 'Nhà vệ sinh cho mèo'
             },
         }
     },
     {
         id: 15,
-        image: '../assets/images/Pets/alaska.png',
+        image: '../assets/images/products/chén-mèo.png',
         name: 'Alaska Malamute trắng xám 5', 
         price: '24,000,000',
         unit: 'đ',
@@ -226,16 +226,16 @@ const shops = [
     },
     {
         id: 16,
-        image: '../assets/images/Pets/alaska.png',
-        name: 'Alaska Malamute trắng xám 5', 
-        price: '18,000,000',
+        image: '../assets/images/products/giường-cào.png',
+        name: 'Mrbunny Giường cào mèo bằng gỗ ', 
+        price: '280,000',
         unit: 'đ',
-        rating: '3',
+        rating: '5',
         featured: {
             genus: 'cat',
             type: {
-                id: 'british-shorthair',
-                name: 'Anh lông ngắn'
+                id: 'accessories',
+                name: 'Giường cào'
             },
         }
     },
