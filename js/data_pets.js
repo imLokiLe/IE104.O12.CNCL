@@ -1,7 +1,7 @@
 const pets = [
     {
         id: 1,
-        image: '../assets/images/Pets/alaska.png',
+        image: '../assets/images/Pets/pet-1.png',
         name: 'Alaska Malamute trắng xám ', 
         price: '11,000,000',
         unit: 'đ',
@@ -16,128 +16,129 @@ const pets = [
     },
     {
         id: 2,
-        image: '../assets/images/Pets/akita-0.png',
-        name: 'Akita vàng trắng', 
+        image: '../assets/images/Pets/pet-20.png',
+        name: 'Anh lông dài màu choco', 
         price: '19,000,000',
         unit: 'đ',
         rating: '4',
         featured: {
-            genus: 'dog',
+            genus: 'cat',
             type: {
-                id: 'akita',
-                name: 'Akita'
+                id: 'british-long',
+                name: 'british-long'
             },
         }
     },
+
     {
-        id: 3,
-        image: '../assets/images/Pets/akita-1.png',
-        name: 'Akita đen nâu trắng', 
-        price: '26,500,000',
+        id: 18,
+        image: '../assets/images/Pets/pet-18.png',
+        name: 'Pomeranian trắng', 
+        price: '28,000,000',
         unit: 'đ',
-        rating: '2',
+        rating: '5',
         featured: {
             genus: 'dog',
             type: {
-                id: 'akita',
-                name: 'Akita'
+                id: 'pomeranian',
+                name: 'pomeranian'
             },
         }
     },
     {
         id: 4,
-        image: '../assets/images/Pets/shiba-0.png',
-        name: 'Shiba vàng thuần', 
+        image: '../assets/images/Pets/pet-4.png',
+        name: 'Anh tai cụp xám vàng', 
         price: '26,000,000',
         unit: 'đ',
         rating: '5',
         featured: {
-            genus: 'dog',
+            genus: 'cat',
             type: {
-                id: 'shiba',
-                name: 'Shiba'
+                id: 'british-long',
+                name: 'british-long'
             },
         }
     },
     {
         id: 5,
-        image: '../assets/images/Pets/shiba-1.png',
-        name: 'Shiba đen trắng', 
-        price: '42,000,000',
+        image: '../assets/images/Pets/pet-5.png',
+        name: 'Ba Tư đen trắng', 
+        price: '12,000,000',
         unit: 'đ',
         rating: '4',
         featured: {
-            genus: 'dog',
+            genus: 'cat',
             type: {
-                id: 'shiba',
-                name: 'Shiba'
+                id: 'british',
+                name: 'british'
             },
         }
     },
     {
         id: 6,
-        image: '../assets/images/Pets/british-shorthair-0.png',
-        name: 'Anh lông ngắn xám', 
-        price: '14,000,000',
+        image: '../assets/images/Pets/pet-6.png',
+        name: 'Pomeranian nâu trắng', 
+        price: '24,000,000',
         unit: 'đ',
         rating: '4',
         featured: {
-            genus: 'cat',
+            genus: 'dog',
             type: {
-                id: 'british-shorthair',
-                name: 'Anh lông ngắn'
+                id: 'pomeranian',
+                name: 'pomeranian'
             },
         }
     },
     {
         id: 7,
-        image: '../assets/images/Pets/scottish-fold-0.png',
-        name: 'Anh tai cụp xám vàng', 
-        price: '17,000,000',
+        image: '../assets/images/Pets/pet-8.png',
+        name: 'Golden Retriever vàng', 
+        price: '27,000,000',
         unit: 'đ',
-        rating: '5',
+        rating: '3',
         featured: {
-            genus: 'cat',
+            genus: 'dog',
             type: {
-                id: 'scottish-fold',
-                name: 'Anh tai cụp'
+                id: 'golden',
+                name: 'golden'
             },
         }
     },
     {
         id: 8,
-        image: '../assets/images/Pets/british-shorthair-1.png',
-        name: 'Anh lông ngắn nâu', 
+        image: '../assets/images/Pets/pet-7.png',
+        name: 'Anh lông ngắn xám xanh', 
         price: '18,000,000',
         unit: 'đ',
-        rating: '3',
+        rating: '5',
         featured: {
             genus: 'cat',
             type: {
-                id: 'british-shorthair',
-                name: 'Anh lông ngắn'
+                id: 'british',
+                name: 'british'
             },
         }
     },
     {
         id: 9,
-        image: '../assets/images/Pets/poodle-0.png',
-        name: 'Poodle nâu', 
-        price: '17,000,000',
+        image: '../assets/images/Pets/pet-9.png',
+        name: 'Anh lông ngắn Gray', 
+        price: '27,000,000',
         unit: 'đ',
         rating: '5',
         featured: {
-            genus: 'dog',
+            genus: 'cat',
             type: {
-                id: 'poodle',
-                name: 'Poodle'
+                id: 'british',
+                name: 'british'
             },
         }
     },
     {
         id: 10,
-        image: '../assets/images/Pets/poodle-1.png',
-        name: 'Poodle trắng', 
+        image: '../assets/images/Pets/pet-11.png',
+        name: 'Poodle nâu', 
         price: '9,000,000',
         unit: 'đ',
         rating: '4',
@@ -145,202 +146,202 @@ const pets = [
             genus: 'dog',
             type: {
                 id: 'poodle',
-                name: 'Poodle'
+                name: 'poodle'
             },
         }
     },
     {
         id: 11,
-        image: '../assets/images/Pets/pomeranian-0.png',
+        image: '../assets/images/Pets/pet-12.png',
         name: 'Pomeranian đen vàng', 
         price: '30,000,000',
-        unit: 'đ',
-        rating: '2',
-        featured: {
-            genus: 'dog',
-            type: {
-                id: 'pomeranian',
-                name: 'Pomeranian'
-            },
-        }
-    },
-    {
-        id: 12,
-        image: '../assets/images/Pets/pomeranian-1.png',
-        name: 'Pomeranian nâu trắng', 
-        price: '37,000,000',
-        unit: 'đ',
-        rating: '5',
-        featured: {
-            genus: 'dog',
-            type: {
-                id: 'pomeranian',
-                name: 'Pomeranian'
-            },
-        }
-    },
-    {
-        id: 13,
-        image: '../assets/images/Pets/golden-retriever-0.png',
-        name: 'Golden Retriever vàng', 
-        price: '500,000',
         unit: 'đ',
         rating: '4',
         featured: {
             genus: 'dog',
             type: {
-                id: 'golden-retriever',
-                name: 'Golden Retriever'
+                id: 'pomeranian',
+                name: 'pomeranian'
+            },
+        }
+    },
+    {
+        id: 12,
+        image: '../assets/images/Pets/pet-13.png',
+        name: 'Poodle trắng', 
+        price: '7,000,000',
+        unit: 'đ',
+        rating: '2',
+        featured: {
+            genus: 'dog',
+            type: {
+                id: 'poodle',
+                name: 'poodle'
+            },
+        }
+    },
+    {
+        id: 13,
+        image: '../assets/images/Pets/pet-2.png',
+        name: 'Anh lông ngắn xám', 
+        price: '12,000,000',
+        unit: 'đ',
+        rating: '4',
+        featured: {
+            genus: 'cat',
+            type: {
+                id: 'british',
+                name: 'british'
             },
         }
     },
     {
         id:  14,
-        image: '../assets/images/Pets/persian-0.png',
-        name: 'Ba Tư đen trắng', 
+        image: '../assets/images/Pets/pet-15.png',
+        name: 'Pomeranian lai Perkin', 
         price: '14,000,000',
         unit: 'đ',
         rating: '4',
         featured: {
             genus: 'cat',
             type: {
-                id: 'Persian',
-                name: 'Ba Tư'
+                id: 'Pomeranian',
+                name: 'Pomeranian'
             },
         }
     },
     {
         id: 15,
-        image: '../assets/images/Pets/persian-1.png',
-        name: 'Ba Tư nâu nhạt', 
+        image: '../assets/images/Pets/pet-16.png',
+        name: 'Akita 6 tháng tuổi', 
         price: '24,000,000',
         unit: 'đ',
         rating: '5',
         featured: {
-            genus: 'cat',
+            genus: 'dog',
             type: {
-                id: 'Persian',
-                name: 'Ba Tư'
+                id: 'akita',
+                name: 'akita'
             },
         }
     },
     {
         id: 16,
-        image: '../assets/images/Pets/corgi-0.png',
-        name: 'Corgi nâu vàng trắng', 
+        image: '../assets/images/Pets/pet-14.png',
+        name: 'Shiba vàng thuần', 
         price: '18,000,000',
         unit: 'đ',
         rating: '3',
         featured: {
             genus: 'dog',
             type: {
-                id: 'corgi',
-                name: 'Corgi'
+                id: 'shiba',
+                name: 'shiba'
             },
         }
     },
     {
         id: 17,
-        image: '../assets/images/Pets/corgi-1.png',
-        name: 'Corgi vàng trắng', 
+        image: '../assets/images/Pets/pet-17.png',
+        name: 'Pomeranian vàng trắng', 
         price: '28,000,000',
         unit: 'đ',
         rating: '3',
         featured: {
             genus: 'dog',
             type: {
-                id: 'corgi',
-                name: 'Corgi'
+                id: 'pomeranian',
+                name: 'pomeranian'
             },
         }
     },
     {
-        id: 18,
-        image: '../assets/images/Pets/chihuahua-0.png',
-        name: 'Chihuahua trắng', 
-        price: '28,000,000',
+        id: 3,
+        image: '../assets/images/Pets/pet-3.png',
+        name: 'Corgi vàng trắng ', 
+        price: '26,500,000',
         unit: 'đ',
-        rating: '3',
+        rating: '2',
         featured: {
             genus: 'dog',
             type: {
-                id: 'chihuahua',
-                name: 'Chihuahua'
+                id: 'corgi',
+                name: 'corgi'
             },
         }
     },
     {
         id: 19,
-        image: '../assets/images/Pets/ragdoll-0.png',
-        name: 'Ragdoll Lilac Lynx', 
+        image: '../assets/images/Pets/pet-2.png',
+        name: 'Mèo anh lông ngắn xám', 
         price: '22,000,000',
         unit: 'đ',
         rating: '3',
         featured: {
             genus: 'cat',
             type: {
-                id: 'ragdoll',
-                name: 'Ragdoll'
+                id: 'british',
+                name: 'british'
             },
         }
     },
     {
         id: 20,
-        image: '../assets/images/Pets/chihuahua-1.png',
-        name: 'Chihuahua vàng', 
+        image: '../assets/images/Pets/pet-21.png',
+        name: 'Anh lông ngắm xám trắng', 
+        price: '38,000,000',
+        unit: 'đ',
+        rating: '3',
+        featured: {
+            genus: 'cat',
+            type: {
+                id: 'british',
+                name: 'british'
+            },
+        }
+    },
+    {
+        id: 21,
+        image: '../assets/images/Pets/pet-24.png',
+        name: 'Pomeranian trắng thuần', 
         price: '38,000,000',
         unit: 'đ',
         rating: '3',
         featured: {
             genus: 'dog',
             type: {
-                id: 'chihuahua',
-                name: 'Chihuahua'
-            },
-        }
-    },
-    {
-        id: 21,
-        image: '../assets/images/Pets/persian-2.png',
-        name: 'Ba Tư xám', 
-        price: '38,000,000',
-        unit: 'đ',
-        rating: '3',
-        featured: {
-            genus: 'cat',
-            type: {
-                id: 'Persian',
-                name: 'Ba Tư'
+                id: 'pomeranian',
+                name: 'pomeranian'
             },
         }
     },
     {
         id: 22,
-        image: '../assets/images/Pets/ragdoll-1.png',
-        name: 'Ragdoll Lilac Lynx', 
-        price: '38,000,000',
+        image: '../assets/images/Pets/pet-25.png',
+        name: 'Alaska 3 tháng tuổi', 
+        price: '18,000,000',
         unit: 'đ',
         rating: '3',
         featured: {
-            genus: 'cat',
+            genus: 'dog',
             type: {
-                id: 'ragdoll',
-                name: 'Ragdoll'
+                id: 'alaska',
+                name: 'alaska'
             },
         }
     },
     {
         id: 23,
-        image: '../assets/images/Pets/munchkin-0.png',
-        name: 'Munchkin đen trắng', 
-        price: '38,000,000',
+        image: '../assets/images/Pets/pet-26.png',
+        name: 'Pomeranian nâu thuần', 
+        price: '22,000,000',
         unit: 'đ',
         rating: '3',
         featured: {
-            genus: 'cat',
+            genus: 'dog',
             type: {
-                id: 'munchkin',
-                name: 'Chân ngắn Munchkin'
+                id: 'pomeranian',
+                name: 'pomeranian'
             },
         }
     },
@@ -361,16 +362,16 @@ const pets = [
     },
     {
         id: 25,
-        image: '../assets/images/Pets/munchkin-2.png',
-        name: 'Munchkin trắng vàng', 
+        image: '../assets/images/Pets/pet-23.png',
+        name: 'Munchkin tam thể', 
         price: '21,000,000',
         unit: 'đ',
-        rating: '3',
+        rating: '4',
         featured: {
             genus: 'cat',
             type: {
-                id: 'munchkin',
-                name: 'Chân ngắn Munchkin'
+                id: 'british-long',
+                name: 'british-long'
             },
         }
     },
