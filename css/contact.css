@@ -327,7 +327,7 @@ textarea.input {
 
 .deal-content {
     position: absolute;
-    bottom: 10.5%;
+    margin-top: 6%;
     padding-left: 7%;
     width: 27%;
     font-size: 2.3rem;
@@ -336,7 +336,7 @@ textarea.input {
 
 .deal-sub-content {
     position: absolute;
-    bottom: 7%;
+    margin-top: 9%;
     padding-left: 3%;
     padding-top: 7px;
     width: 50%;
@@ -348,15 +348,16 @@ textarea.input {
 .deal-content-2 {
     position: absolute;
     padding-left: 48%;
-    bottom: 12%;
+    margin-top: 3%;
     width: 100%;
     font-size: 2.3rem;
     font-family: 'Arima';
+    color: #FFC312;
 }
 
 .deal-sub-content-2 {
     position: absolute;
-    bottom: 9%;
+    margin-top: 6%;
     padding-left: 50.5%;
     padding-top: 15px;
     width: 100%;
@@ -367,7 +368,7 @@ textarea.input {
 
 .deal-code {
     position: absolute;
-    bottom: 5%;
+    margin-top: 10%;
     padding-left: 52.5%;
     width: 100%;
     font-size: 2rem;
@@ -390,6 +391,26 @@ textarea.input {
     position: absolute;
     left: 43%;
     margin-top: 11%;
+}
+
+.contact-deals button {
+    position: absolute;
+    background-color: #FF6B35;
+    color: white;
+    width: 10%;
+    height: 60px;
+    border-radius: 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    margin-top: 15%;
+    left: 60%;
+    cursor: pointer;
+}
+
+.contact-deals button:hover {
+    background-color: #FFC312;
+    color: black;
 }
 
 /* partner */
