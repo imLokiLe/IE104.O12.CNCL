@@ -24,7 +24,7 @@ const shops = [
         featured: {
             genus: 'cat',
             type: {
-                id: '',
+                id: 'comb',
                 name: 'Lược chải lông'
             },
         }
@@ -39,7 +39,7 @@ const shops = [
         featured: {
             genus: 'cat',
             type: {
-                id: 'accessories',
+                id: 'nail_clippers',
                 name: 'Kìm bấm móng'
             },
         }
@@ -54,7 +54,7 @@ const shops = [
         featured: {
             genus: 'cat',
             type: {
-                id: 'accessories',
+                id: 'house_cat',
                 name: 'Nhà cho mèo'
             },
         }
@@ -69,7 +69,7 @@ const shops = [
         featured: {
             genus: 'cat',
             type: {
-                id: 'accessories',
+                id: 'bowls_cat',
                 name: 'Chén đựng thức ăn'
             },
         }
@@ -84,7 +84,7 @@ const shops = [
         featured: {
             genus: 'cat',
             type: {
-                id: 'accesories',
+                id: 'clothes_cat',
                 name: 'Quần áo'
             },
         }
@@ -99,7 +99,7 @@ const shops = [
         featured: {
             genus: 'cat',
             type: {
-                id: 'accessories',
+                id: 'rake_bed',
                 name: 'Giường cào'
             },
         }
@@ -114,7 +114,7 @@ const shops = [
         featured: {
             genus: 'cat',
             type: {
-                id: 'food',
+                id: 'food_cat',
                 name: 'Đồ ăn cho mèo'
             },
         }
@@ -129,7 +129,7 @@ const shops = [
         featured: {
             genus: 'dog',
             type: {
-                id: 'food',
+                id: 'food_dog',
                 name: 'Đồ ăn cho chó'
             },
         }
@@ -144,7 +144,7 @@ const shops = [
         featured: {
             genus: 'cat',
             type: {
-                id: 'accessories',
+                id: 'toy_cat',
                 name: 'Đồ chơi cho mèo'
             },
         }
@@ -153,13 +153,13 @@ const shops = [
         id: 11,
         image: '../assets/images/products/khay-cát.png',
         name: 'Nhà vệ sinh cho mèo', 
-        price: '500,000',
+        price: '800,000',
         unit: 'đ',
-        rating: '2',
+        rating: '3',
         featured: {
             genus: 'cat',
             type: {
-                id: 'accessories',
+                id: 'toilet_cat',
                 name: 'Nhà vệ sinh cho mèo'
             },
         }
@@ -174,7 +174,7 @@ const shops = [
         featured: {
             genus: 'dog',
             type: {
-                id: 'accessories',
+                id: 'clothes_dog',
                 name: 'Quần áo'
             },
         }
@@ -189,7 +189,7 @@ const shops = [
         featured: {
             genus: 'dog',
             type: {
-                id: 'accessories',
+                id: 'clothes_dog',
                 name: 'Quần áo'
             },
         }
@@ -204,7 +204,7 @@ const shops = [
         featured: {
             genus: 'cat',
             type: {
-                id: 'accessories',
+                id: 'toilet_cat',
                 name: 'Nhà vệ sinh cho mèo'
             },
         }
@@ -228,13 +228,13 @@ const shops = [
         id: 16,
         image: '../assets/images/products/giường-cào.png',
         name: 'Mrbunny Giường cào mèo bằng gỗ ', 
-        price: '280,000',
+        price: '2,080,000',
         unit: 'đ',
-        rating: '5',
+        rating: '4',
         featured: {
             genus: 'cat',
             type: {
-                id: 'accessories',
+                id: 'rake_bed',
                 name: 'Giường cào'
             },
         }
