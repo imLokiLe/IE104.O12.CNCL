@@ -105,7 +105,7 @@ moments.forEach(function(element){
     })
     element.addEventListener('mouseleave', function(){
         let img = element.getElementsByTagName('img');
-        img[0].style.scale = "1.07";
+        img[0].style.scale = "1.1";
         let text = element.getElementsByTagName('h5');
         text[0].style.color = "whitesmoke";
     })
@@ -162,3 +162,21 @@ function updateSlider() {
 }
 product_next.addEventListener('click', moveNext);
 product_prev.addEventListener('click', movePrev);
+
+// scroll to top
+let goTopBtn = document.querySelector('.go_top_btn');
+window.addEventListener('scroll', checkHeight)
+
+function checkHeight(){
+    if (window.scrollY > 200){
+        goTopBtn.style.display = 'flex';
+    }else{
+        goTopBtn.style.display = 'none'
+    }
+}
+goTopBtn.addEventListener('click', () =>{
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
+})
