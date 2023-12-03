@@ -32,5 +32,5 @@ document.addEventListener("DOMContentLoaded", function () {
   setTimeout(function () {
       document.querySelector(".loading-overlay").style.display = "none";
       document.querySelector(".content").style.display = "block";
-  }, 3000); // Adjust the delay time as needed
+  }, 1000); // Adjust the delay time as needed
 });

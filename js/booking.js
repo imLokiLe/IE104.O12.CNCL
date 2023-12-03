@@ -123,5 +123,5 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(function () {
         document.querySelector(".loading-overlay").style.display = "none";
         document.querySelector(".content").style.display = "block";
-    }, 1000); // Adjust the delay time as needed
+    }, 500); // Adjust the delay time as needed
 });

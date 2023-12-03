@@ -217,7 +217,7 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(function () {
         document.querySelector(".loading-overlay").style.display = "none";
         document.querySelector(".content").style.display = "block";
-    }, 2000); // Adjust the delay time as needed
+    }, 700); // Adjust the delay time as needed
 });
 
 function renderPetSuggest(productGenus, productId){
