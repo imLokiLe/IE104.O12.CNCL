@@ -151,19 +151,20 @@ const shops = [
     },
     {
         id: 11,
-        image: '../assets/images/products/khay-cát.png',
-        name: 'Nhà vệ sinh cho mèo', 
-        price: '800,000',
+        image: '../assets/images/products/nhà-wc.png',
+        name: 'Nhà vệ sinh tự động cho mèo', 
+        price: '6,680,000',
         unit: 'đ',
-        rating: '3',
+        rating: '4',
         featured: {
             genus: 'cat',
             type: {
-                id: 'toilet_cat',
+                id: 'cat_toilet',
                 name: 'Nhà vệ sinh cho mèo'
             },
         }
     },
+   
     {
         id: 12,
         image: '../assets/images/products/đồ-mèo-2.png',
@@ -211,19 +212,20 @@ const shops = [
     },
     {
         id: 15,
-        image: '../assets/images/products/chén-mèo.png',
-        name: 'Chén đựng thức ăn', 
-        price: '180,000',
+        image: '../assets/images/products/tỉa-lông.png',
+        name: 'Bộ dụng cụ tỉa lông', 
+        price: '212,000',
         unit: 'đ',
-        rating: '4',
+        rating: '3',
         featured: {
-            genus: 'dog',
+            genus: 'cat',
             type: {
-                id: 'bowls_dog',
-                name: 'Chén đựng thức ăn'
+                id: 'hair_cut',
+                name: 'Bộ dụng cụ tỉa lông'
             },
         }
     },
+   
     {
         id: 16,
         image: '../assets/images/products/giường-cào.png',
@@ -241,16 +243,16 @@ const shops = [
     },
     {
         id: 17,
-        image: '../assets/images/products/lược_chải_lông_-2.png',
-        name: 'Lược chải lông cho thú cưng', 
-        price: '80,000',
+        image: '../assets/images/products/máy-sấy-lông.png',
+        name: 'Máy sấy lông cho mèo', 
+        price: '2,000,000',
         unit: 'đ',
         rating: '4',
         featured: {
-            genus: 'dog',
+            genus: 'cat',
             type: {
-                id: 'comb_dog',
-                name: 'Lược chải lông'
+                id: 'hair_dryer',
+                name: 'Máy sấy lông'
             },
         }
     },
