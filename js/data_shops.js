@@ -24,7 +24,7 @@ const shops = [
         featured: {
             genus: 'cat',
             type: {
-                id: 'comb',
+                id: 'comb_cat',
                 name: 'Lược chải lông'
             },
         }
@@ -39,7 +39,7 @@ const shops = [
         featured: {
             genus: 'cat',
             type: {
-                id: 'nail_clippers',
+                id: 'nail_clippers_cat',
                 name: 'Kìm bấm móng'
             },
         }
@@ -212,15 +212,15 @@ const shops = [
     {
         id: 15,
         image: '../assets/images/products/chén-mèo.png',
-        name: 'Alaska Malamute trắng xám 5', 
-        price: '24,000,000',
+        name: 'Chén đựng thức ăn', 
+        price: '180,000',
         unit: 'đ',
-        rating: '5',
+        rating: '4',
         featured: {
-            genus: 'cat',
+            genus: 'dog',
             type: {
-                id: 'scottish-fold',
-                name: 'Anh tai cụp'
+                id: 'bowls_dog',
+                name: 'Chén đựng thức ăn'
             },
         }
     },
@@ -236,6 +236,36 @@ const shops = [
             type: {
                 id: 'rake_bed',
                 name: 'Giường cào'
+            },
+        }
+    },
+    {
+        id: 17,
+        image: '../assets/images/products/lược_chải_lông_-2.png',
+        name: 'Lược chải lông cho thú cưng', 
+        price: '80,000',
+        unit: 'đ',
+        rating: '4',
+        featured: {
+            genus: 'dog',
+            type: {
+                id: 'comb_dog',
+                name: 'Lược chải lông'
+            },
+        }
+    },
+    {
+        id: 18,
+        image: '../assets/images/products/kiềm_cắt_móng-2.png',
+        name: 'Kìm bấm móng cho thú cưng', 
+        price: '105,000',
+        unit: 'đ',
+        rating: '2',
+        featured: {
+            genus: 'dog',
+            type: {
+                id: 'nail_clippers_dog',
+                name: 'Kìm bấm móng'
             },
         }
     },

@@ -104,11 +104,12 @@ import { updateCartLocalStorage, getArrCart } from '../js/data_cart.js';
 let arrCart = getArrCart();
 let cart = document.querySelector(".cart-number");
 // Tùy duyên
-console.log(parseInt(cart.textContent));
-let numberCart = parseInt(cart.textContent);
+// console.log(parseInt(cart.textContent));
+// let numberCart = parseInt(cart.textContent);
 function addToCartHandler(product) {
     let flag = false;
     let value = 0;
+    let numberCart = parseInt(cart.textContent);
     numberCart += product.quantity;
     cart.innerHTML = numberCart;
 
@@ -368,6 +369,7 @@ Slider('shop');
 function addToCartSuggestHandler(product) {
     let flag = false;
     let value = 0;
+    let numberCart = parseInt(cart.textContent);
     numberCart++;
     cart.innerHTML = numberCart;
     

@@ -92,24 +92,36 @@ window.addEventListener("load", function () {
 const searchInput = document.getElementById('searchInput');
 const autocomBox = document.querySelector('.autocom-box');
 
+import { pets } from '../js/data_pets.js';
+import { shops } from '../js/data_shops.js';
+const suggestions = [];
+pets.forEach(pet => {
+    let petId = "pet" + pet.id;
+    suggestions.push({ id: petId, name: pet.name });
+});
+shops.forEach(shop => {
+    let shopId = "shop" + shop.id;
+    suggestions.push({ id: shopId, name: shop.name });
+});
+console.log(suggestions);
 // Một mảng giả định các đề xuất tìm kiếm
-const suggestions = [
-    'Đồ ăn cho chó',
-    'Đồ ăn cho mèo',
-    'Phụ kiện thú cưng',
-    'Dụng cụ huấn luyện',
-    'Đồ chơi cho thú cưng',
-    'Chó Alaska',
-    'Chó Pom',
-    'Chó Phốc sóc',
-    'Chó Corgi',
-];
+// const suggestions = [
+//     'Đồ ăn cho chó',
+//     'Đồ ăn cho mèo',
+//     'Phụ kiện thú cưng',
+//     'Dụng cụ huấn luyện',
+//     'Đồ chơi cho thú cưng',
+//     'Chó Alaska',
+//     'Chó Pom',
+//     'Chó Phốc sóc',
+//     'Chó Corgi',
+// ];
 
 // Sự kiện khi người dùng nhập vào ô tìm kiếm
 searchInput.addEventListener('input', function () {
     const searchTerm = this.value.toLowerCase();
     let matches = suggestions.filter(suggestion =>
-        suggestion.toLowerCase().startsWith(searchTerm)
+        suggestion.name.toLowerCase().startsWith(searchTerm)
     );
 
     if (searchTerm.length === 0) {
@@ -130,10 +142,13 @@ function showSuggestions(matches) {
     autocomBox.innerHTML = '';
     matches.forEach(match => {
         const listItem = document.createElement('li');
-        listItem.innerText = match + ' '; // Thêm khoảng trắng vào cuối từ khóa
+        listItem.innerText = match.name + ' '; // Thêm khoảng trắng vào cuối từ khóa
         listItem.addEventListener('click', function () {
-            searchInput.value = match;
-            autocomBox.style.display = 'none';
+            // searchInput.value = match.name;
+            // autocomBox.style.display = 'none';
+            const productId = match.id;
+            // Replace 'product-page' with the actual URL of your product page
+            window.location.href = `details.html?id=${productId}`;
         });
         autocomBox.appendChild(listItem);
     });
