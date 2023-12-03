@@ -1,0 +1,97 @@
+p,
+h3,
+h4,
+body {
+    margin: 0;
+    font-family: Quicksand;
+    /* text-align: justify; */
+}
+.loading-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ededed;
+    z-index: 9999;
+}
+
+.loading-gif {
+    width: 300px; /* Adjust the width as needed */
+    height: auto;
+}
+.go_top_btn {
+    position: fixed;
+    bottom: 35px;
+    right: 35px;
+    cursor: pointer;
+    height: 70px;
+    width: 70px;
+    background: none;
+    border: none;
+    display: none;
+    justify-content: center;
+    align-content: center;
+    z-index: 99;
+}
+
+#to_top {
+    width: 70px;
+    height: 70px;
+}
+.not-found{
+    margin-top: 110px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    background: #fffaf0;
+    padding: 5% 0 15%;
+}
+.not-found .info{
+    padding-left: 15%;
+}
+.not-found .info h1{
+    font-size: 6.25rem;
+    font-weight: lighter;
+    position: relative;
+    transform: translateY(16px);
+}
+.not-found .info h2{
+    font-size: 6rem;
+    font-weight: bold;
+    position: relative;
+    transform: translateY(-16px);
+}
+.not-found .info hr{
+    width: 20.25rem;
+    border: 4px solid #ff6b35;
+    border-radius: 5px;
+}
+.not-found .info p{
+    font-size: 1.75rem;
+    margin: 2% 0;
+}
+.not-found .info button{
+    border-radius: 37px;
+    border: 1px solid #ff6b35;
+    background: #ff6b35;
+    padding: 2% 3%;
+    font-size: 1rem;
+    margin-top: 2%;
+    color: #ededed;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0.7;
+    cursor: pointer;
+}
+.not-found .info button:hover{
+    opacity: 1;
+}
+#footer{
+    position: absolute;
+    width: 100%;
+    top: 105vh;
+}

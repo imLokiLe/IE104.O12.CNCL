@@ -139,7 +139,7 @@ function showSuggestions(matches) {
         const searchBtnActive = document.querySelector('.searchBtn.active');
         searchBtnActive.addEventListener('click', function(event){
             event.preventDefault();
-            window.location.href = `../Home.html`
+            window.location.href = `../404-Oops.html`
         })
         return;
     }
