@@ -1,15 +1,20 @@
 let btn = document.getElementById('selected_option');
 let cat = document.getElementById('menu_cat');
 let dog = document.getElementById('menu_detail');
+let btn_menu_text = document.getElementsByClassName('toggle_btn');
 
 function leftClick() {
 	btn.style.left = '0';
+    btn_menu_text[0].style.color = 'white';
+    btn_menu_text[1].style.color = 'black';
 	cat.style.display = 'none';
 	dog.style.display = 'block';
 }
 
 function rightClick() {
 	btn.style.left = '110px';
+    btn_menu_text[1].style.color = 'white';
+    btn_menu_text[0].style.color = 'black';
 	cat.style.display = 'block';
 	dog.style.display = 'none';
 }
