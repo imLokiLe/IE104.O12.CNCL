@@ -31,6 +31,7 @@ function fetchProductDetails(productInfo) {
         document.querySelector('.address a:nth-child(3)').href = '../shop-category.html';
         return shops.find(shop => shop.id.toString() === productInfo.id) || null;
     } else {
+        // window.location.href = '../Home.html';
         return null;
     }
 }
@@ -74,8 +75,11 @@ function renderProductDetails(productDetails) {
 }
 const productInfo = getProductInfoFromUrl();
 const productDetails = fetchProductDetails(productInfo);
+if(productDetails == null){
+    window.location.href = '../Home.html'
+};
 renderProductDetails(productDetails);
-console.log(productDetails.featured.genus)
+// console.log(productDetails.featured.genus)
 
 function updateQuantity(change){
     const quantityElement = document.querySelector(".quantity-num");

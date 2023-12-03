@@ -136,6 +136,11 @@ searchInput.addEventListener('input', function () {
 function showSuggestions(matches) {
     if (matches.length === 0) {
         autocomBox.style.display = 'none';
+        const searchBtnActive = document.querySelector('.searchBtn.active');
+        searchBtnActive.addEventListener('click', function(event){
+            event.preventDefault();
+            window.location.href = `../Home.html`
+        })
         return;
     }
 
