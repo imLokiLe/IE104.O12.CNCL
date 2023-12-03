@@ -516,3 +516,78 @@ a {
 .evaluate .evaluate-text {
     font-size: 18px;
 }
+
+/* partner */
+.partner{
+    position: relative;
+    background: #FF8C4E;
+    height: 80vh;
+    background-image: url(../assets/backgrounds/bg-partner-overlay.png);
+}
+.partner>h1{
+    position: relative;
+    text-align: center;
+    padding-top: 80px;
+    font-size: 2.5rem;
+}
+.partner>svg{
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    fill: white;
+    left: 47%;
+    top: 50px;
+}
+.partner_list{
+    display: flex;
+    width: 100%;
+    animation: slide 40s infinite linear;
+}
+.partner_wrapper{
+    width: 85%;
+    overflow: hidden;
+    position: relative;
+    top: 10vh;
+    left: 7%;
+}
+@keyframes slide {
+    0%{
+        transform: translateX(0);
+    }
+    10%{
+        transform: translateX(-15%);
+    }
+    20%{
+        transform: translateX(-30%);
+    }
+    30%{
+        transform: translateX(-40%);
+    }
+    40%{
+        transform: translateX(-50%);
+    }
+    50%{
+        transform: translateX(-60%);
+    }
+    60%{
+        transform: translateX(-50%);
+    }
+    70%{
+        transform: translateX(-40%);
+    }
+    80%{
+        transform: translateX(-30%);
+    }
+    90%{
+        transform: translateX(-15%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+#footer{
+    position: absolute;
+    width: 100%;
+    top: 532vh;
+}
