@@ -41,8 +41,9 @@ function renderProductDetails(productDetails) {
         if(flag_product == 'pet'){
             document.querySelector('.product-suggest.shop .sub-title').innerHTML = `Sản phẩm dành cho ${productDetails.name}`;
         } else {
-            document.querySelector('.product-suggest.pet').classList.add('hidden');
+            // document.querySelector('.product-suggest.pet').classList.add('hidden');
             document.querySelector('.product-suggest.shop .sub-title').innerHTML = `Sản phẩm tương tự`;
+            document.querySelector('.product-suggest.pet .sub-title').innerHTML = `Các sản phẩm khác`;
         }
         document.querySelector('.address .product-link.current-link').innerHTML = `${productDetails.name}`;
         document.querySelector('.page-container .product-infomation .image').innerHTML = 
