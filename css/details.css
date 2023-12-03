@@ -411,6 +411,7 @@ a {
     border: none;
     color: #FF6B35;
     font-size: 92px;
+    cursor: pointer;
 }
 .slider-dot {
     grid-column: span 6;
