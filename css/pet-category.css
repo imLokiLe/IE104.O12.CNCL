@@ -335,6 +335,9 @@ input[type="checkbox"]:checked:after {
     cursor: pointer;
     /* appearance: none; */
 }
+.sort-options .sort-select option {
+    background-color: #fff;
+}
 
 /* Product list */
 #product-list {
