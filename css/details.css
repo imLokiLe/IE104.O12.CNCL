@@ -528,7 +528,8 @@ a {
 .partner>h1{
     position: relative;
     text-align: center;
-    padding-top: 80px;
+    padding-top: 20px;
+    top: 15px;
     font-size: 2.5rem;
 }
 .partner>svg{
@@ -537,7 +538,7 @@ a {
     position: absolute;
     fill: white;
     left: 47%;
-    top: 50px;
+    top: 10px;
 }
 .partner_list{
     display: flex;
@@ -590,5 +591,5 @@ a {
 #footer{
     position: absolute;
     width: 100%;
-    top: 532vh;
+    top: 510vh;
 }

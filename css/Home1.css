@@ -165,6 +165,9 @@
     box-shadow: 2px 2px 2px grey;
     font-size: 1.2rem;
 }
+.btn:hover{
+    background-color: #000;
+}
 .btn i{
     position: relative;
     top: 11px;
@@ -474,6 +477,9 @@
     font-size: 1.2rem;
     border-radius: 40px;
     cursor: pointer;
+}
+.img_form_content>form button:hover{
+    background-color: #000;
 }
 .form_content_right svg{
     width: 3rem;
