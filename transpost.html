@@ -76,24 +76,36 @@
                     <tr>
                         <td class="transpost-name">Tỉnh/Thành phố</td>
                         <td class="transpost-text">
-                            <select>
-                                <option value="">Chọn Tỉnh/Thành phố</option>
+                            <select id="tinhThanhPho">
+                                <option value="" disabled selected hidden >Chọn Tỉnh/Thành phố</option>
+                                <optgroup label="Miền Bắc">
+                                    <option value="ha_noi">Hà Nội</option>
+                                    <option value="hai_phong">Hải Phòng </option>
+                                </optgroup>
+                                <optgroup label="Miền Trung">
+                                    <option value="dak_lak">Đắk Lắk</option>
+                                    <option value="gia_lai"> Gia Lai</option>
+                                </optgroup>
+                                <optgroup label="Miền Nam">
+                                    <option value="hcm">Thành phố Hồ Chí Minh</option>
+                                    <option value="tien_giang">Tiền Giang</option>
+                                </optgroup>
                             </select>
                         </td>
                     </tr>
                     <tr>
                         <td class="transpost-name">Quận/Huyện</td>
                         <td class="transpost-text">
-                            <select>
-                                <option value="">Chọn Quận/Huyện</option>
+                            <select id="quanHuyen" disabled>
+                                <option value="" disabled selected hidden>Chọn Quận/Huyện</option>
                             </select>
                         </td>
                     </tr>
                     <tr>
                         <td class="transpost-name">Phường/Xã</td>
                         <td class="transpost-text">
-                            <select>
-                                <option value="">Chọn Phường/Xã</option>
+                            <select id="phuongXa" disabled>
+                                <option value="" disabled selected hidden>Chọn Phường/Xã</option>
                             </select>
                         </td>
                     </tr>

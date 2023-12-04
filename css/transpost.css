@@ -168,9 +168,17 @@ body {
 
 .transpost-text input::placeholder,
 .transpost-text textarea::placeholder,
-.transpost-text select {
+.transpost-text select  {
     color: #bbb;
     font-family: Quicksand;
+}
+.transpost-text input:focus,
+.transpost-text textarea:focus,
+.transpost-text select:focus {
+    outline: none;
+}
+.transpost-text select.selected {
+    color: #000;
 }
 
 /* Input radio */
