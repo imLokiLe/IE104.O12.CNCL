@@ -163,7 +163,7 @@ function displayFilteredPets(allCheckbox_dogs, allCheckbox_cats,  minPrice, maxP
         return petPrice >= minPrice && petPrice <= maxPrice;
     });
     const result = document.querySelector(".result-count")
-    result.innerHTML = `<p>Hiển thị ${finalFilteredPets.length} trong số ${shops.length} thú cưng</p>`
+    result.innerHTML = `<p>Hiển thị ${finalFilteredPets.length} trong số ${shops.length} sản phẩm</p>`
     
     const sortSelect = document.querySelector('.sort-select');
     let selectedSortOption = sortSelect.value; // Initialize selectedSortOption
