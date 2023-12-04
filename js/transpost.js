@@ -4,10 +4,10 @@ document.querySelector('.btn-cancel').addEventListener('click', function() {
 document.querySelector('.pre.cart-page').addEventListener('click', function() {
     window.location.href = '../cart.html';
 });
-document.querySelector('.btn-accept').addEventListener('click', function() {
-    window.location.href = '../payment.html';
-});
+
 import { resetDelivery } from '../js/data_delivery.js';
+import { arrTranspost, updateTranspostLocalStorage, resetTranspost } from '../js/data_transpost.js';
+resetTranspost();
 resetDelivery();
 
 // scroll to top
@@ -118,17 +118,33 @@ function getPhuongXaData(quanHuyen) {
     }
 }
 
+let transport_tinhThanhPho;
 document.getElementById("tinhThanhPho").addEventListener("change", function() {
     this.classList.add("selected");
+    transport_tinhThanhPho = this.options[this.selectedIndex].innerHTML;
     loadQuanHuyen();
 });
-
+let transport_quanHuyen;
 document.getElementById("quanHuyen").addEventListener("change", function() {
     this.classList.add("selected");
+    transport_quanHuyen = this.options[this.selectedIndex].innerHTML;
     loadPhuongXa();
 });
-
+let transport_phuongXa;
 document.getElementById("phuongXa").addEventListener("change", function() {
     this.classList.add("selected");
-
+    transport_phuongXa = this.options[this.selectedIndex].innerHTML;
+});
+document.querySelector('.btn-accept').addEventListener('click', function() {
+    let user_transport = {
+        user_name: document.querySelector(".transpost-text .name").value,
+        user_phone: document.querySelector(".transpost-text .phone").value,
+        user_direction: document.querySelector(".transpost-text .direction").value,
+        user_phuongXa: transport_phuongXa,
+        user_quanHuyen: transport_quanHuyen,
+        user_tinhThanhPho: transport_tinhThanhPho,
+    }
+    arrTranspost.push(user_transport);
+    updateTranspostLocalStorage();
+    window.location.href = '../payment.html';
 });

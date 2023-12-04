@@ -1,7 +1,9 @@
 // cart.js
 import { resetCart, getArrCart, updateCartLocalStorage} from '../js/data_cart.js';
 import { resetDelivery } from '../js/data_delivery.js';
+import { resetTranspost } from '../js/data_transpost.js';
 resetDelivery();
+resetTranspost();
 // Xóa dữ liệu trong arrCart và cập nhật Local Storage
 // resetCart();
 // Lấy dữ liệu từ Local Storage hoặc sử dụng mảng trống nếu không có dữ liệu

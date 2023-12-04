@@ -1,6 +1,7 @@
 import { getArrCart, removeDuplicatesBetweenArrays} from '../js/data_cart.js';
 import { getArrPayment, resetPayment} from '../js/data_payment.js';
 import { getDataDelivery, resetDelivery} from '../js/data_delivery.js';
+import { resetTranspost } from '../js/data_transpost.js';
 
 let arrCart = getArrCart();
 let arrPayment = getArrPayment();
@@ -47,6 +48,7 @@ document.querySelector('.return-home').addEventListener('click', function() {
     removeDuplicatesBetweenArrays(arrCart, arrPayment);
     resetPayment();
     resetDelivery();
+    resetTranspost();
     window.location.href = '../Home.html';
 });
 

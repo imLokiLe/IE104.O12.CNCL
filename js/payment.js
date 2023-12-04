@@ -171,3 +171,33 @@ goTopBtn.addEventListener('click', () =>{
         behavior: "smooth"
     })
 })
+
+import { arrTranspost } from '../js/data_transpost.js';
+function renderUserTranspost(user){
+    const userTranspost = document.querySelector(".delivery-address");
+    const list = [...new Set(user)];
+    userTranspost.innerHTML = list.map((item) =>{
+        const { user_name, user_phone, user_direction, user_phuongXa, user_quanHuyen, user_tinhThanhPho } = item;
+        return (
+            `<p>Giao tới</p>
+            <p class="change-delivery transpost">Thay đổi</p>
+            <div class="user">
+                <p class="user-name">${user_name}</p>
+                <p>|</p>
+                <p class="user-phone">${user_phone} </p>
+            </div>
+            <div class="user-address">
+                <span>Nhà</span>
+                <p>${user_direction}, ${user_phuongXa}, ${user_quanHuyen}, ${user_tinhThanhPho} </p>
+            </div>`
+        );
+    }).join('');
+}
+renderUserTranspost(arrTranspost);
+
+document.querySelector(".change-delivery.transpost").addEventListener("click", function() {
+    window.location.href = `../transpost.html`
+});
+document.querySelector(".change-delivery.cart").addEventListener("click", function() {
+    window.location.href = `../cart.html`
+});

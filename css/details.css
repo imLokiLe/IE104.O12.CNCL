@@ -236,6 +236,10 @@ a {
 .infomation .btn-cart-buy .add-cart {
     border: 1px solid #000;
 }
+.infomation .btn-cart-buy .add-cart:hover {
+    background: #e2e2e2;
+    border: 1px solid #e2e2e2;
+}
 
 .infomation .btn-cart-buy .buy-now {
     border: 1px solid #fc591e;
