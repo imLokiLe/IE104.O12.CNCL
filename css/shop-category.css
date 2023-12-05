@@ -4,6 +4,7 @@ body {
     background: #fffaf0;
     font-family: Quicksand;
 }
+
 .loading-overlay {
     display: flex;
     justify-content: center;
@@ -18,9 +19,11 @@ body {
 }
 
 .loading-gif {
-    width: 300px; /* Adjust the width as needed */
+    width: 300px;
+    /* Adjust the width as needed */
     height: auto;
 }
+
 a {
     text-decoration: none;
 }
@@ -366,6 +369,11 @@ input[type="checkbox"]:checked:after {
     height: 65%;
     border-radius: 19.2px;
     background: #fff;
+}
+
+.product:hover {
+    box-shadow: 4.88px 4.88px 6.88px 0px rgba(0, 0, 0, 0.5);
+    background-color: #f14000;
 }
 
 .product .product-image .star-and-bag_plus {
