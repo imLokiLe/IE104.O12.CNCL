@@ -1,1 +1,2 @@
-# IE104.O12.CNCL
+# Petty website
+Create front-end website provide some pet services with HTML, CSS and JavaScript
